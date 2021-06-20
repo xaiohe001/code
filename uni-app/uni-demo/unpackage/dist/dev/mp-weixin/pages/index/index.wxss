@@ -1,0 +1,227 @@
+
+.tags {
+	display: inline-block;
+	border: 1rpx solid #eee;
+	color: #666;
+	font-size: 24rpx;
+	padding: 0 4rpx;
+	margin-top: 15rpx;
+}
+.store-price {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	margin-top: 15rpx;
+}
+.start-price {
+	color: #666;
+	font-size: 24rpx;
+}
+.store-time {
+	color: #999;
+	font-size: 24rpx;
+}
+.store-star {
+	margin-top: 15rpx;
+}
+.store-name {
+	color: #333;
+	font-size: 30rpx;
+	font-weight: bold;
+}
+.store-star {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+.owner-send {
+	color: #fff;
+	font-size: 24rpx;
+	padding: 0 4rpx;
+	border-radius: 4rpx;
+	background-image: -webkit-linear-gradient(45deg, #0085ff, #0af);
+	background-image: linear-gradient(45deg, #0085ff, #0af);
+}
+.star-left {
+	color: #666;
+	font-size: 24rpx;
+}
+.store-list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding: 30rpx 20rpx;
+	border-bottom: 1rpx solid #eee;
+}
+.store-list image {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 140rpx;
+	        flex: 0 0 140rpx;
+	width: 140rpx;
+	border: 2rpx solid #eee;
+}
+.store-text {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	margin-left: 20rpx;
+}
+.list-tab {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	margin-top: 40rpx;
+	margin-bottom: 20rpx;
+}
+.list-item {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	text-align: center;
+	color: #666;
+	font-size: 28rpx;
+}
+.lists {
+	margin-top: 40rpx;
+}
+.lists-title {
+	position: relative;
+	color: #333;
+	font-size: 30rpx;
+	text-align: center;
+}
+.lists-title:before {
+	display: inline-block;
+	content: '一一';
+	font-size: 20rpx;
+	color: #999;
+	margin-right: 20rpx;
+}
+.lists-title:after {
+	display: inline-block;
+	content: '一一';
+	font-size: 20rpx;
+	color: #999;
+	margin-left: 20rpx;
+}
+.vip {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	background-image: -webkit-linear-gradient(left,#ffefc4,#f3dda0);
+	background-image: linear-gradient(90deg,#ffefc4,#f3dda0);
+	padding: 20rpx;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	margin-top: 10rpx;
+}
+.text1 {
+	display: inline-block;
+	margin-right: 10rpx;
+	color: #333;
+	font-size: 28rpx;
+	font-weight: bold;
+}
+.text2 {
+	color: #333;
+	font-size: 24rpx;
+}
+.text3 {
+	margin-left: auto;
+	color: #333;
+	font-size: 24rpx;
+}
+.vip image {
+	width: 35rpx;
+}
+.banner_text text:nth-of-type(1) {
+	color: #333;
+	font-size: 34rpx;
+	font-weight: bold;
+}
+.banner_text text:nth-of-type(2) {
+	color: #666;
+	font-size: 26rpx;
+	margin: 10rpx 0 15rpx 0;
+}
+.banner_text text:nth-of-type(3) {
+	color: #af8260;
+	font-size: 23rpx;
+	font-weight: bold;
+}
+.banner image {
+	width: 300rpx;
+}
+.banner {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	background: -webkit-linear-gradient(bottom,#f4f4f4 5%,#fafafa 95%);
+	padding: 30rpx 30rpx 15rpx 30rpx;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+.banner_text text {
+	display: block;
+}
+.main {
+	margin-top: 40rpx;
+	padding: 0 20rpx;
+}
+.top-nav {
+	width: 100%;
+	margin: auto;
+	padding: 40rpx 20rpx 18rpx 20rpx;
+	background-image: -webkit-linear-gradient(left,#0af,#0085ff);
+	background-image: linear-gradient(90deg,#0af,#0085ff);
+	box-sizing: border-box;
+}
+.location image {
+	width: 30rpx;
+	height: 30rpx;
+}
+.location text {
+	display: inline-block;
+	margin-left: 10rpx;
+	color: #fff;
+	font-size: 34rpx;
+	font-weight: bold;
+}
+.top-nav input {
+	background: #fff;
+	height: 70rpx;
+	margin: 30rpx 0 0 0;
+	text-align: center;
+	color: #999;
+	font-size: 30rpx;
+}
+.menu {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.menu-items {
+	width: 20%;
+	padding: 15rpx 30rpx;
+	box-sizing: border-box;
+	text-align: center;
+}
+.menu-items image {
+	width: 100%;
+}
+.menu-items text {
+	display: block;
+	color: #666;
+	font-size: 24rpx;
+}
+

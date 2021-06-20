@@ -1,0 +1,20 @@
+<view class="map">
+  <map 
+    class="info" 
+    longitude="{{lon}}" 
+    latitude="{{lat}}"
+    markers="{{markers}}"
+    polyline="{{polyline}}"
+  >
+  </map>
+  <view class="search">
+    <input type="text" bindinput="getWords"/>
+    <text bindtap="search">搜索</text>
+  </view>
+  <view class="lists" wx:if="{{show}}">
+    <view class="title" wx:for="{{lists}}" wx:key="index" bindtap="getmark" data-item="{{item}}">{{item.title}}</view>
+  </view>
+  <view class="tabs">
+    <view class="tab-items" wx:for="{{tabs}}" wx:key="index" bindtap="getItem" data-item="{{item}}">{{item}}</view>
+  </view>
+</view>

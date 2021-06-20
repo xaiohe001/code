@@ -1,0 +1,89 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index"
+		},
+		{
+            "path" : "pages/list/list"
+           
+        }
+        ,{
+            "path" : "pages/mine/mine"
+            
+        }
+        ,{
+            "path" : "pages/shop/shop"
+        }
+        ,{
+            "path" : "pages/pay/pay",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/Test/Test",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/order/order",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "确认订单",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor":"#007AFF"
+            }
+            
+        }
+        ,{
+            "path" : "pages/map/map",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/chat/chat",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationStyle": "custom"
+	},
+	"tabBar": {
+	    "color": "#8e8e93",
+	    "selectedColor": "#0af",
+	    "borderStyle": "black",
+	    "backgroundColor": "#ffffff",
+	    "list": [{
+	        "pagePath": "pages/index/index",
+	        "iconPath": "static/img/index.png",
+	        "selectedIconPath": "static/img/index_select.png",
+	        "text": "首页"
+	    }, {
+	        "pagePath": "pages/list/list",
+	        "iconPath": "static/img/order.png",
+	        "selectedIconPath": "static/img/order_select.png",
+	        "text": "订单"
+	    },{
+	        "pagePath": "pages/mine/mine",
+	        "iconPath": "static/img/mine.png",
+	        "selectedIconPath": "static/img/mine_select.png",
+	        "text": "我的"
+	    }]
+	}
+}

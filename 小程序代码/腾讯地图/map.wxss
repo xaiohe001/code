@@ -1,0 +1,75 @@
+.info {
+  width: 100%;
+  height: 100vh;
+}
+.map {
+  position: relative;
+}
+.search {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.search input {
+  float: left;
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-right: 2%;
+  border: 1px solid #ccc;
+  background: #fff;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+.search text {
+  display: block;
+  float: left;
+  width: 18%;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #cb3232;
+  color: #fff;
+}
+.lists {
+  position: absolute;
+  top: 116rpx;
+  left: 40rpx;
+  background: #fff;
+  width: 71.2%;
+  border: 2rpx solid #ccc;
+}
+.title {
+  color: #333;
+  font-size: 24rpx;
+  margin: 13rpx;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10rpx;
+}
+.title:last-child {
+  border-bottom: none;
+}
+.tabs {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  text-align: center;
+  z-index: 999
+}
+.tab-items {
+  flex: 1;
+  color: #333;
+  font-size: 30rpx;
+}

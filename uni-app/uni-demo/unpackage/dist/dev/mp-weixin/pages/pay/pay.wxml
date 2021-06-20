@@ -1,0 +1,1 @@
+<view><input type="number" value=""/><button type="default" data-event-opts="{{[['tap',[['pay',['$event']]]]]}}" bindtap="__e">支付</button><passkeyborad vue-id="4fb6422e-1" show="{{show}}" bind:__l="__l"></passkeyborad></view>

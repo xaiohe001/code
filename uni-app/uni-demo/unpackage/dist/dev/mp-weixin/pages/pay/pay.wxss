@@ -1,0 +1,9 @@
+
+input {
+	width: 80%;
+	height: 50rpx;
+	line-height: 50rpx;
+	border: 2rpx solid #eee;
+	margin: 20rpx auto;
+}
+

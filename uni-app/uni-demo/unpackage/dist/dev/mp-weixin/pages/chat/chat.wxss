@@ -1,0 +1,133 @@
+
+.title {
+	height: 70rpx;
+	line-height: 70rpx;
+	text-align: center;
+}
+.chat-send textarea {
+	float: left;
+	width: 80%;
+	height: 70rpx;
+	border: 2rpx solid #ccc;
+	padding: 10rpx;
+	color: #666;
+	font-size: 24rpx;
+	box-sizing: border-box;
+}
+.send {
+	float: right;
+	width: 16%;
+	height: 70rpx;
+	line-height: 70rpx;
+	background-color: #82ED6B;
+	text-align: center;
+	border-radius: 10rpx;
+	font-size: 28rpx;
+	color: #fff;
+}
+.chat-send {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 15rpx 20rpx;
+	height: 100rpx;
+	box-sizing: border-box;
+}
+.left {
+	float: left;
+	width: 100%;
+	margin-bottom: 80rpx;
+}
+.left text::before {
+	position: absolute;
+	left: -20rpx;
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 10rpx solid transparent;
+	border-right: 20rpx solid #fff;
+	border-bottom: 10rpx solid transparent;
+	z-index: 99;
+}
+.left text::after {
+	position: absolute;
+	top: 8rpx;
+	left: -26rpx;
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 13rpx solid transparent;
+	border-right: 26rpx solid #ccc;
+	border-bottom: 13rpx solid transparent;
+	z-index: 9;
+}
+.right text::before {
+	position: absolute;
+	top: 8rpx;
+	right: -26rpx;
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 13rpx solid transparent;
+	border-left: 26rpx solid #82ED6B;
+	border-bottom: 13rpx solid transparent;
+	z-index: 9;
+}
+.left image {
+	float: left;
+	margin-right: 30rpx;
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 15rpx;
+}
+.left text {
+	position: relative;
+	display: inline-block;
+	margin-top: 10rpx;
+	padding: 10rpx 20rpx;
+	background-color: #fff;
+	border: 2rpx solid #ccc;
+	color: #666;
+	font-size: 28rpx;
+	border-radius: 15rpx;
+}
+.right {
+	float: right;
+	width: 100%;
+	margin-bottom: 80rpx;
+}
+.right image {
+	float: right;
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 15rpx;
+}
+.right text {
+	position: relative;
+	display: inline-block;
+	margin-top: 10rpx;
+	float: right;
+	margin-right: 30rpx;
+	background-color: #82ED6B;
+	border: 2rpx solid #82ED6B;
+	color: #666;
+	padding: 10rpx 20rpx;
+	font-size: 28rpx;
+	border-radius: 15rpx;
+}
+.chat-list {
+	position: fixed;
+	top: 70rpx;
+	bottom: 100rpx;
+	left: 0;
+	right: 0;
+	overflow: auto;
+	padding: 30rpx 40rpx;
+	background: #F6F6F6;
+	box-sizing: border-box;
+}
+
