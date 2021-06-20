@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="container">内容</div>
+    <script>
+        /*     
+            jQuery  框架  库 工具集
+        
+            cdn 内容分发网络,让用户最快地访问到
+
+            jQuery的宗旨: write less, do more
+            
+            api  看文档
+            jquery的特点: 轻量级框架  支持css3选择器 跨浏览器(chrome ie safari)
+
+            jQuery 历史版本
+            2006年9月 正式版1.0发布 已经有15年了
+
+            jQuery兼容
+            1.xx 兼容ie8及以下
+            2.xx 不兼容ie8及以下
+            3.xx 不兼容ie8及以下
+
+            我们在选择任意框架版本号时, 建议不要选最新的, 要选稳定版本
+
+            jQuery 缩写写法 $  jQuery对象
+
+            // 以后所说的jQuery对象是通过$获取的元素
+
+            // 声明变量的规范, 以$开头; demo: $container; 可以不必遵循该规范
+
+            // jsdom对象
+            // jquerydom对象
+            // js获取的dom,只能用js的方法和属性
+            // jQuery获取的dom,只能用jQuery的方法和属性
+
+            // jsdom对象和jQuerydom对象相互转换
+            jQuerdom对象 转 jsdom对象
+            jQuerdom对象[下标]
+            jQuerydom对象.get(下标)
+
+            jsdom对象 转 jQuerdom对象
+            $(jsdom对象)
+        */
+
+        window.onload = function(){
+            // 逻辑代码
+        }
+
+        // 考点: onload ready
+        // onload 页面所有资源都加载完成(dom css 图片 js等资源)
+        // ready 只需dom加载完成即可
+        $(document).ready(function(){
+            // jQuery代码
+        })
+        // 换一种写法, 功能同上
+        $(function(){
+            var $container = $('.container');
+            var container = document.querySelector('.container');
+            // container.style.color = 'red';
+            $container.css('color', 'red');
+            // console.log([container]);
+            console.log($container[0] === container);
+            console.log($container.get(0) === container);
+            console.log($(container));
+            $(container).css('font-size','20px');
+        })
+    </script>
+</body>
+</html>

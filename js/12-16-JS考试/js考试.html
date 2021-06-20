@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var arr = [2, 3, 4, 5, 6];
+        // var sum = 0; 
+        // for (var i = 1; i < arr.length; i++) {
+        //      sum += arr[i] 
+        // } 
+        // console.log(sum);
+
+        // var a = b = 10;  
+        // b = 10;  // 全局作用变量
+        // var a = b;
+        // function func(){ 
+        //     // var a=b=20;
+        //     b = 20;
+        //     var a = b;
+        // }; 
+        // func (); 
+        // console.log(a);  // 10
+        // console.log(b);  // 20
+
+        // var a=[1, 2, 3]; 
+        // console.log(a.join());  // 以逗号分隔
+
+        // 字符串 + 任意类型 = 新的字符串
+        // console.log("1555" + 3);  // "15553"
+
+        // var a = 888; 
+        // ++a;  // 889
+        // alert(a++);  // 890 先输出再运算
+
+        // for(var i = 0; i < 10; i++) {
+        //     for(var j = 0; j < 6; j++) {
+        //         k = i + j;
+        //     }
+        // }
+
+        // console.log(k);
+
+        // var x = 1; 
+        // //没有写返回值,函数默认返回undefined
+        // function fn(n){n = n+1};  
+        // y = fn(x);
+        // console.log(y);
+
+        // console.log([1,2,3,4].join('0').split(''));
+
+        // function fn1() { 
+        //     alert(1); 
+        // }; 
+        // // 先执行fn1(),然后再执行alert( fn1() )   //  fn1() 值是undefined
+        // alert( fn1() );
+
+        // var fn1 = function(a){  // 形参, 没有赋值的时候是undefined
+        //     alert(a); 
+        // }; 
+        // fn1();
+
+        // indexOf有第二参数,表示开始查找的索引值
+        // var n = "miao wei ke tang".indexOf("wei",6);   // -1
+
+        // console.log("miao wei ke tang".indexOf("wei"));
+
+        // console.log(String(12));
+
+        // var a = 100;
+        // function fn1() {
+        //     a--;  // 99
+        //     alert(a);  // 99
+        //     a++;  // 100
+        //     return a;  // 100
+        // };
+        // alert(fn1());
+
+        // var arr = [1,2]; 
+        // var arr2 = arr.concat(); // [1,2] 
+        // arr2.push( arr.splice(1,0) );  // push []
+
+        // var arr = new Array(5); // 长度5
+        // arr[1] = 1;
+        // arr[5] = 2;  // 第六个元素, 6
+        // console.log(arr.length); // 6
+
+        // console.log(undefined == false);
+
+        // var s="abcdefg"; 
+        // alert(s.substring(1,2));  // 包含1,不包含2
+
+        // max = arr[0]; 
+        // sort()
+        // var arr = [-1,-2,1,10,4,5,8];
+        // var newArr = arr.sort(function(a, b){
+        //     return a-b;
+        // });
+
+        // console.log(newArr[newArr.length - 1]);
+
+        // var arr = [{ name: "xxx", age: 18 }, { name: "xx", age: 20 }];
+
+        // function func(arr) {
+        //     // 传建一个新的数组,存放age的值
+        //     var newArr = [];
+
+        //     for (var i = 0; i < arr.length; i++) {
+
+        //         newArr.push(arr[i].age);
+        //         // console.log(arr[i].age);
+        //     }
+
+        //     return newArr.sort(function (a, b) {
+        //         return a - b;
+        //     })
+        // }
+
+        // console.log(func(arr));
+
+        // indexOf(), 第二个参数,开始进行查找的索引值
+        var str = "abcabcabcabcabcabda";
+        // 用于存放查出来的"ab"字符串的索引值
+        var arr = [];
+        var n = 0;
+
+        for (var i = 0; i < str.length; i++) {
+
+            // 当前ab的索引值
+            var index = str.indexOf("ab", n);
+
+            // 当查到"ab"这个字符串的时候
+            if (index != -1) {  // 当index不为-1时,说明还没查询完
+                arr.push(index);
+                n = index + 2;
+            }
+        }
+
+        console.log(arr);
+        console.log(arr.length);
+        // console.log(str.indexOf("ab", n)); // 0
+        // // 从当前索引值往后数第三个开始查
+        // n = str.indexOf("ab", n) + 2;
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

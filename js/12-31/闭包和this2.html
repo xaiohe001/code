@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var counter = function() {
+            var num = 0;
+            var add = function() {
+                num += 1;
+                console.log(num);
+            };
+            var reset = function() {
+                num = 0;
+                console.log(num);
+            }
+
+            return {
+                add: add,
+                reset: reset
+            }
+        }
+        var counter1 = counter();
+        var counter2 = counter();
+        counter1.add();
+        counter1.add();
+        counter1.add();
+        counter1.add();
+        // counter1.reset();
+        // counter1.add();
+        counter2.add();
+    </script>
+</body>
+</html>

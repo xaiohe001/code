@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+</style>
+<body>
+    <!-- 
+        canvas绘制图片
+            drawImage(image,x,y)
+                image 要绘制的图片
+                x y 在画布中图片的x y坐标位置
+
+                width  可选
+                height  可选
+                    如果使用图像 想要控制图像的宽度和高度可以使用当前两个属性
+
+                    注意:
+                        如果你使用width height这两个可选参数  那么这两个参数必须同时进行设置  否则不显示图像
+     -->
+    <img src="01.png" alt="" id="img">
+    <img src="02.png" alt="" id="img1">
+    <canvas id="canvas" width="500" height="500" style="border: 1px solid #ccc;"></canvas>
+
+    <script>
+        var canvas=document.getElementById('canvas')
+        var ctx=canvas.getContext('2d')
+        var img=document.getElementById('img')
+        var img1=document.getElementById('img1')
+        
+        window.onload=function() {
+            // ctx.drawImage(img, 10, 10)
+            ctx.drawImage(img, 10, 10, 100, 100)
+            ctx.drawImage(img1, 50, 50, 100, 100)
+        }
+    </script>
+</body>
+</html>

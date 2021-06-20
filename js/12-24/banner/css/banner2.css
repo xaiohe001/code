@@ -1,0 +1,20 @@
+.banner {
+  width: 600px;
+  height: 300px;
+  margin: 100px auto 0;
+  overflow: hidden;
+}
+.img-list {
+  width: 600px;
+  height: 300px;
+}
+.tran {
+  transition: transform 1s;
+}
+.banner img {
+  width: 600px;
+  height: 300px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  float: left;
+}

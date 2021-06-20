@@ -1,0 +1,32 @@
+.box {
+    ul {
+        li {
+            a {
+                img {
+                    width: 100px;
+                }
+                span {
+                    color: red;
+                }
+            }
+        }
+    }
+    li {
+        border: 1px solid #000;
+    }
+    a {
+        display: block;
+    }
+    li>a {
+        color: blue;
+        &:hover {
+            color: red;
+        }
+    }
+    img {
+        width: 200px;
+    }
+    span {
+        color: blue;
+    }
+}

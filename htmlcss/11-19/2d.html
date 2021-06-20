@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin: 100px auto;
+            background-color: orangered;
+            transition: all .2s;
+            /* 2d转换: 
+                平移
+                    translate(x,y) 设置标签的移动
+                    translateX() 设置x轴偏移量
+                    translateY() 设置Y轴偏移量
+                旋转 
+                    rotate(0deg); 设置旋转的度数 正值是顺时针 负值就逆时针 
+                缩放
+                    scale() 值是缩放比例
+                切斜
+                    skew() 值是斜切的度数
+               */
+            /* transform: translateX(50%) translateY(50px); */
+
+            /* 设置转换的原点 默认是center center 
+            第一个值是x轴的位置 left center right 0%-100%
+            第二个值是y轴的位置 top center buttom 0%-100%
+             */
+            /* transform-origin: left top; */
+            /* 设置  deg是度数  梯度100grad==90deg 弧度1.57rad==90deg 圈0.25turn==90deg*/
+            /* transform: rotate(45deg); */
+
+            /* transform: scale(1.5); */
+
+            /* transform: skew(25deg); */
+
+
+            transform: rotate(45deg) scale(1.5) skew(25deg);
+
+        }
+        /* div:hover{
+            transform: scale(1.5);
+        } */
+        section{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(9, 255, 0);
+        }
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <section></section>
+</body>
+</html>

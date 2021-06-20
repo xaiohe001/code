@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 视频标签
+        src:是引入的视频路径
+        autoplay:自动播放
+        controls:控制器
+        loop:重复播放
+        poster:海报
+    -->
+    <video src="movie.mp4" autoplay="autoplay" controls poster="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3922290090,3177876335&fm=26&gp=0.jpg">
+        浏览器不支持时的提示信息,该浏览器不支持
+    </video>
+
+    <!-- 一种兼容写法 -->
+    <video width="320" height="240" controls>
+        <source src="movie.mp4"  type="video/mp4">
+        <source src="movie.ogg"  type="video/ogg">
+        您的浏览器不支持 HTML5 video 标签。
+    </video>
+
+      <audio src="https://www.runoob.com/try/demo_source/horse.ogg" controls autoplay></audio>
+
+      <button onclick="run()">点击</button>
+      <script>
+          function run(){
+              document.querySelector("audio").play()
+          }
+      </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 
+            过渡:当样式从一个状态更改到另一个状态的过程叫过渡
+            过渡默认是瞬间完成的 需要设置过渡时间才能看见 需要监听是哪个样式更改了需要设置时间
+             */
+
+             /* 设置监听哪个样式的更改 */
+             /* transition-property: width; */
+             transition-property: all;
+             /* 设置监听到更改这个样式过渡的时间 */
+             transition-duration: 3s;
+            /* 设置过渡曲线 linear匀速执行 */
+            transition-timing-function: ease-in-out;
+            /* 设置延迟时间 */
+            transition-delay: 2s;
+
+            /* 复合属性 */
+            transition: all .2s linear;
+
+        }
+        div:hover{
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

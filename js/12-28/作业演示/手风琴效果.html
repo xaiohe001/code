@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    li{
+      list-style: none;
+    }
+    .box ul{
+      width: 200px;
+      border: 1px solid #aaa;
+      margin: 200px auto;
+    }
+    .box li{
+      width: 200px;
+      height: 50px;
+      line-height: 50px;
+      border-bottom: 1px solid #aaa;
+      transition: height .5s;
+    }
+    .box li.active{
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <ul>
+      <li data-index='0' data-id="xxx">1</li>
+      <li data-index='1'>2</li>
+      <li data-index='2'>3</li>
+      <li data-index='3'>4</li>
+      <li data-index='4'>5</li>
+    </ul>
+  </div>
+  <script>
+    // 用委托的形式
+    var ul = document.querySelector('ul');
+    var lis = document.querySelectorAll('li');
+
+    // 给ul绑定click事件
+    ul.onclick = function(evt) {
+      var event = evt || window.event;
+      var index = event.target.dataset.index; // 返回值类型是个字符串;
+      var tagName = event.target.tagName; // localName nodeName
+      console.log(tagName);
+      if(tagName.toLowerCase() === 'li') {
+        for(var i=0; i<lis.length; i++) {
+          if(parseInt(index) === i) {
+            // lis[i].classList.add('active');
+            lis[i].classList.toggle('active');
+          } else {
+            lis[i].classList.remove('active');
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

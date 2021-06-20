@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 多态
+        // 引用类型在不同条件下,有不同的状态
+
+        var Duck = function() {};
+        Duck.prototype.sound = function() {
+            console.log('嘎嘎嘎');
+        }
+        var Chiken = function() {};
+        Chiken.prototype.sound = function() {
+            console.log('唧唧唧唧');
+        }
+
+        function makeSound(animal) {
+            animal.sound();
+        }
+        makeSound(new Duck());
+        makeSound(new Chiken());
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">内容内容</div>
+    </div>
+    <script>
+        var container = document.querySelector('.container');
+        var box = document.querySelector('.box');
+        container.onclick = function() {
+            alert('container被点击了');
+        }
+        box.onclick = function(evt) {
+
+            alert('box被点击了');
+            // 阻止事件冒泡
+            // event.stopPropagation();
+            stopEventPropagation(evt);
+        }
+
+        // 阻止冒泡 兼容了ie的写法 封装在一个函数内
+        function stopEventPropagation(evt) {
+            var event = evt || window.event;
+            if (event.stopPropagation) {
+                event.stopPropagation();
+            } else if (event.cancelBubble) {
+                event.cancelBubble = true;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

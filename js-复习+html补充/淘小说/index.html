@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <title>Document</title>
+</head>
+<style>
+    html, body {
+        position: relative;
+        height: 100%;
+        font-size: 10px;
+    }
+    p, ul, h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    #app {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        background: #fff;
+    }
+    .sortList {
+        display: flex;
+        padding: 3% 0;
+        border-bottom: .0672rem solid #f9f9f9;
+    }
+    .listItem {
+        flex: 1;
+        text-align: center
+    }
+    .listItem img  {
+        width: 50%;
+        height: auto;
+    }
+    .listItem p {
+        margin-top: -2%;
+    }
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+    }
+    .title {
+        display: flex;
+        padding: 6% 2%;
+        justify-content: space-between;
+    }
+    .title-left {
+        flex: 0 0 100px;
+        width: 100px;
+    }
+    .tag {
+        float: left;
+        width: 3px;
+        height: 16px;
+        background: #ffbb1b;
+        margin-right: 3%;
+        margin-top: 4%;
+    }
+    .title-left {
+        overflow: hidden;
+    }
+    .title-left p {
+        float: left;
+        color: #333;
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+    .title-rig {
+        flex: 1;
+        overflow: hidden;
+    }
+    .title-rig img {
+        float: right;
+    }
+    .title-rig p {
+        float: right;
+        color: #999;
+        font-size: 1.5rem;
+    }
+    .items li {
+        list-style: none;
+        padding: 4% 5%;
+        border-bottom: 1px solid #ededed;
+    }
+    .book-list {
+        display: flex;
+    }
+    .book-list img {
+        flex: 0 0 20%;
+        width: 20%;
+        height: auto;
+    }
+    .book-text {
+        flex: 1;
+    }
+    .book-text h2 {
+        color: #333;
+        font-size: 1.4rem;
+        margin-bottom: 4%;
+    }
+    .book-text p {
+        color: #999;
+        font-size: 1.3rem;
+        line-height: 17px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+    }
+</style>
+<body>
+    <div id="app">
+        <div class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="sortList">
+            <div class="listItem">
+                <img src="images/01.png" alt="">
+                <p>榜单</p>
+            </div>
+            <div class="listItem">
+                <img src="images/02.png" alt="">
+                <p>完结</p>
+            </div>
+            <div class="listItem">
+                <img src="images/03.png" alt="">
+                <p>免费</p>
+            </div>
+            <div class="listItem">
+                <img src="images/04.png" alt="">
+                <p>新书</p>
+            </div>
+            <div class="listItem">
+                <img src="images/05.png" alt="">
+                <p>分类</p>
+            </div>
+        </div>
+        <!-- <div class="recommend"></div> -->
+        <div class="common-list">
+            
+        </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="swiper.min.js"></script>
+    <script>
+        $.ajax({
+            url: 'http://m.taoyuewenhua.com/ajax/book_mall?ctype=2&seed=9937',
+            methods: 'GET',
+            success: function(res) {
+                console.log(res)
+                //获取banner
+                var imgs=''
+                for(var i=0; i<res.data.bannerList.length; i++) {
+                    imgs+=`
+                        <div class="swiper-slide">
+                            <img src="${res.data.bannerList[i].bannerUrl}">    
+                        </div>
+                    `
+                }
+                $(".swiper-wrapper").html(imgs)
+                // 获取潜力新书
+                // var books1=''
+                // var data1=res.data.channelList[1].bookList
+                // for(var i=0; i<data1.length; i++) {
+                //     books1+=`
+                //         <li>
+                //             <div class="book-list">
+                //                 <img src="${data1[i].coverUrl}" alt="" class="book-img">
+                //                 <div class="book-text">
+                //                     <h2>${data1[i].title}</h2>
+                //                     <p>${data1[i].intro}</p>
+                //                 </div>
+                //             </div>
+                //         </li>
+                //     `
+                // }
+                // $(".items").html(books1)
+                // 循环显示首页的分类
+                var lists=''
+                var arr=res.data.channelList.slice(1,5)
+                console.log(arr)
+                var l1=[]
+                var t1=''
+                var l2=[]
+                var t2=''
+                var l3=[]
+                var t3=''
+                var l4=[]
+                var t4=''
+                for(var i=0; i<arr.length; i++) {
+                    for(var j=0; j<arr[i].bookList.length; j++) {
+                        // console.log(5555,arr[i].bookList[j])
+                        if(arr[i].bookList[j].mcid==7) {
+                            l1.push(arr[i].bookList[j])
+                        }else if(arr[i].bookList[j].mcid==8) {
+                            l2.push(arr[i].bookList[j])
+                        }else if(arr[i].bookList[j].mcid==15) {
+                            l3.push(arr[i].bookList[j])
+                        }else if(arr[i].bookList[j].mcid==10) {
+                            l4.push(arr[i].bookList[j])
+                        }
+                    }
+                    lists+=`
+                        <div class="common-item">
+                            <div class="title">
+                                <div class="title-left">
+                                    <div class="tag"></div>
+                                    <p>${arr[i].title}</p>
+                                </div>
+                                <div class="title-rig">
+                                    <img src="" alt="">
+                                    <p>查看更多</p>
+                                </div>
+                            </div>
+                            <ul class="items t1">
+                                
+                            </ul>
+                            <ul class="items t2">
+                                
+                            </ul>
+                            <ul class="items t3">
+                                
+                            </ul>
+                            <ul class="items t4">
+                                
+                            </ul>
+                        </div>
+                    `
+                    
+                }
+                $(".common-list").html(lists)
+                console.log($(".title-left p"))
+            
+                // console.log(2222,l1)
+                for(var a=0; a<l1.length; a++) {
+                    t1+=`
+                        <li>
+                            <div class="book-list">
+                                <img src="${l1[a].coverUrl}" alt="" class="book-img">
+                                <div class="book-text">
+                                    <h2>${l1[a].title}</h2>
+                                    <p>${l1[a].intro}</p>
+                                </div>
+                            </div>
+                        </li>
+                    `
+                }
+                for(var a=0; a<l2.length; a++) {
+                    t2+=`
+                        <li>
+                            <div class="book-list">
+                                <img src="${l2[a].coverUrl}" alt="" class="book-img">
+                                <div class="book-text">
+                                    <h2>${l2[a].title}</h2>
+                                    <p>${l2[a].intro}</p>
+                                </div>
+                            </div>
+                        </li>
+                    `
+                }
+                for(var a=0; a<l3.length; a++) {
+                    t3+=`
+                        <li>
+                            <div class="book-list">
+                                <img src="${l3[a].coverUrl}" alt="" class="book-img">
+                                <div class="book-text">
+                                    <h2>${l3[a].title}</h2>
+                                    <p>${l3[a].intro}</p>
+                                </div>
+                            </div>
+                        </li>
+                    `
+                }
+                for(var a=0; a<l4.length; a++) {
+                    t4+=`
+                        <li>
+                            <div class="book-list">
+                                <img src="${l4[a].coverUrl}" alt="" class="book-img">
+                                <div class="book-text">
+                                    <h2>${l4[a].title}</h2>
+                                    <p>${l4[a].intro}</p>
+                                </div>
+                            </div>
+                        </li>
+                    `
+                }
+                // $(".title-left p").get().forEach((item, index)=> {
+                //     console.log(66666,item.innerHTML)
+                //     if(item.innerHTML=='潜力新书') {
+                //         $(".t1").html(t1)
+                //         $(".t2").hide()
+                //     }else if(item.innerHTML=='女生精选') {
+                //         $(".t2").html(t2)
+                //         $(".t2").show()
+                //     }else if(item.innerHTML=='浪漫言情') {
+                //         $(".t3").html(t3)
+                //     }else if(item.innerHTML=='主编力荐') {
+                //         $(".t4").html(t4)
+                //     }
+                // })
+                for(var i=0; i<$(".title-left p").length; i++) {
+                    if($('.title-left p')[i].innerHTML=='潜力新书') {
+                        // $(".t1").html(t1)\
+                        console.log($('.t1').get(0).innerHTML=t1)
+                    }else if($('.title-left p')[i].innerHTML=='女生精选') {
+                        // $("#t2").html(t2)
+                        console.log($('.t2').get(1).innerHTML=t2)
+                    }else if($('.title-left p')[i].innerHTML=='浪漫言情') {
+                        // $("#t3").html(t3)
+                        console.log($('.t3').get(2).innerHTML=t3)
+                    }else if($('.title-left p')[i].innerHTML=='主编力荐') {
+                        // $("#t4").html(t4)
+                        console.log($('.t4').get(3).innerHTML=t4)
+                    }
+                }
+                
+                
+            },
+            fail: function(err) {
+                console.log(err)
+            }
+        })
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 2500,
+            autoplayDisableOnInteraction: false
+        });
+    </script>
+</body>
+</html>

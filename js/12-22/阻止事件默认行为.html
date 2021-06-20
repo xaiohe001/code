@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://baidu.com" id="go-baidu">百度</a>
+    <script>
+        var goBaidu = document.getElementById('go-baidu');
+        goBaidu.onclick = function(evt) {
+            preventEventDefault();
+        }
+
+        function preventEventDefault(evt) {
+            var event = evt || window.event;
+            if(event.preventDefault) {
+                event.preventDefault();
+            } else if(event.returnValue) {
+                event.returnValue = false;
+            }
+        }
+    </script>
+</body>
+</html>

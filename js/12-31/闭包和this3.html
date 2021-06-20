@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应用场景</title>
+</head>
+
+<body>
+    <ul>
+        <li>内容</li>
+        <li>内容</li>
+        <li>内容</li>
+    </ul>
+    <script>
+        // 应用场景
+        // 一: 函数立即执行
+        // 好处, 变量不会污染到全局 但是会占内存
+        // 函数立即执行的常见方式:
+        // (function(i){})(i)
+        // var some = function(){}()
+        // var some = !function(){}()
+        // var some = +function(){}()
+        // 给每一个绑定事件,会需要获取到当前被点击元素的索引值
+        var ul = document.querySelector('ul');
+        var lis = document.querySelectorAll('li');
+        var len = lis.length;
+
+        // 方式一: setAttribute
+        // for(var i=0; i<len;i++) {
+        //     lis[i].setAttribute('data-index', i);
+        //     lis[i].onclick = function() {
+        //         var index = this.getAttribute('data-index');
+        //         console.log(index);
+        //     }
+        // }
+        // 方式二: dom.index = i
+        // for(var i=0; i<len;i++) {
+        //     lis[i].index = i;
+        //     lis[i].onclick = function() {
+        //         var index = this.index;
+        //         console.log(index);
+        //     }
+        // }
+        // 方式三: 函数立即去执行
+        //    for(var i=0; i<len;i++) {
+        //         (function(i){
+        //             lis[i].onclick = function() {
+        //                 console.log(i);
+        //             }
+        //         })(i)
+        //     }
+
+            (function (i) { // i 就是当前的私有变量, 它会存到一个新的对象,然后把这个新对象放在它的作用域链上
+                lis[i].onclick = function () {
+                    console.log(i);
+                }
+            })(0);
+
+            (function (i) {
+                lis[i].onclick = function () {
+                    console.log(i);
+                }
+            })(1);
+
+            (function (i) {
+                lis[i].onclick = function () {
+                    console.log(i);
+                }
+            })(2);
+
+
+
+    </script>
+</body>
+
+</html>

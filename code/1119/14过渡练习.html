@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        nav {
+            height: 100px;
+            background-color: thistle;
+        }
+        
+        nav li ul {
+            width: 150px;
+            background-color: palevioletred;
+            position: absolute;
+            color: blue;
+            box-sizing: border-box;
+            height: 250px;
+            height: 0;
+            overflow: hidden;
+            text-align: center;
+            transition: all .2 linear;
+        }
+        /* nav>ul {
+            height: 200px;
+        }
+    } */
+        /* nav>ul>li {
+            position: relative;
+        }
+         */
+        
+        nav>ul>li:hover ul {
+            height: 250px;
+        }
+        
+        nav a {
+            display: block;
+            /* float: left; */
+            width: 150px;
+            /* margin: 0 50px; */
+            line-height: 60px;
+            text-align: center;
+            border: 1px solid #000;
+            color: rgb(247, 213, 255);
+            text-decoration: none;
+        }
+        
+        nav li li {
+            line-height: 50px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav>ul>(li>a{这是导航$}+ul>li{这是li内容$$}*5)*6 -->
+    <nav>
+        <ul>
+            <li>
+                <a href="">这是导航1</a>
+                <ul>
+                    <li>这是li内容01</li>
+                    <li>这是li内容02</li>
+                    <li>这是li内容03</li>
+                    <li>这是li内容04</li>
+                    <li>这是li内容05</li>
+                </ul>
+            </li>
+            <li>
+                <a href="">这是导航2</a>
+                <ul>
+                    <li>这是li内容01</li>
+                    <li>这是li内容02</li>
+                    <li>这是li内容03</li>
+                    <li>这是li内容04</li>
+                    <li>这是li内容05</li>
+                </ul>
+            </li>
+            <li>
+                <a href="">这是导航3</a>
+                <ul>
+                    <li>这是li内容01</li>
+                    <li>这是li内容02</li>
+                    <li>这是li内容03</li>
+                    <li>这是li内容04</li>
+                    <li>这是li内容05</li>
+                </ul>
+            </li>
+            <li>
+                <a href="">这是导航4</a>
+                <ul>
+                    <li>这是li内容01</li>
+                    <li>这是li内容02</li>
+                    <li>这是li内容03</li>
+                    <li>这是li内容04</li>
+                    <li>这是li内容05</li>
+                </ul>
+            </li>
+            <li>
+                <a href="">这是导航5</a>
+                <ul>
+                    <li>这是li内容01</li>
+                    <li>这是li内容02</li>
+                    <li>这是li内容03</li>
+                    <li>这是li内容04</li>
+                    <li>这是li内容05</li>
+                </ul>
+            </li>
+            <li>
+                <a href="">这是导航6</a>
+                <ul>
+                    <li>这是li内容01</li>
+                    <li>这是li内容02</li>
+                    <li>这是li内容03</li>
+                    <li>这是li内容04</li>
+                    <li>这是li内容05</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

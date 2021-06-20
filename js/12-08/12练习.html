@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- <table>
+        <tr>
+            <td>${data[n].}</td>
+            <td>${data[n].}</td>
+            <td>${data[n].}</td>
+            <td>${data[n].}</td>
+            <td>${data[n].}</td>
+            <td>${data[n].}</td>
+            <td>${data[n].}</td>
+        </tr>
+    </table> -->
+    <script src="./student.js"></script>
+    <script>
+
+        var str = "<table class='table'>";
+
+        // 2.在table中间添加tr标签,添加43个(data.length)
+        // str += "<tr></tr>"
+        for(var n = 0;n < data.length;n++){
+            console.log(data[n]);
+
+            var sex = data[n].sex ? "女" : "男";
+
+            var age = data[n].age == undefined ? 0 : data[n].age;
+
+            str += `<tr>
+                <td>${data[n].name}</td>
+                <td>${sex}</td>
+                <td>${age}</td>
+                <td>${data[n].fav}</td>
+                <td>${data[n].height}</td>
+                <td>${data[n].phone}</td>
+                <td>${data[n].des}</td>
+            </tr>`;
+        }
+        
+        //1.2但是需要在table中间设置添加tr标签,所以给开始标签与结束标签拆开 
+        str += "</table>"
+
+        console.log(str);
+
+        document.write(str);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // console.log(data);
+        // // 1.1需要一个table
+        // var str = "<table class='table'>";
+
+        // // 2.在table中间添加tr标签,添加43个(data.length)
+        // // str += "<tr></tr>"
+        // for(var n = 0;n < data.length;n++){
+        //     // 3.1在tr中需要添加td标签,所以给tr的开始标签与结束标签拆开
+        //     str += "<tr>"
+
+        //     // 根据索引值获取了数组内每个对象
+        //     // console.log(data[n]);
+            
+        //     //4.需要根据数组内对象内的属性长度绝定添加几个td 获取对象内所有属性
+        //     for(var key in data[n]){
+        //         // 获取对象内的每个属性值
+        //         console.log(data[n][key]);
+        //         str += `<td>${data[n][key]}</td>`
+        //     }
+
+
+        //     // 3.2
+        //     str += "</tr>"
+        // }
+        
+        // //1.2但是需要在table中间设置添加tr标签,所以给开始标签与结束标签拆开 
+        // str += "</table>"
+
+        // console.log(str);
+
+        // document.write(str);
+
+
+    </script>
+</body>
+</html>

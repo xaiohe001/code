@@ -1,0 +1,218 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>计算器1</title>
+</head>
+<style>
+  div {
+    width: 160px;
+  }
+
+  #show {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 35px;
+    height: 25px;
+  }
+</style>
+
+<body>
+  <div>
+    <form>
+      <input id="show" type="text" value="" readonly />
+      <input id="v7" type="button" value="7" />
+      <input id="v8" type="button" value="8" />
+      <input id="v9" type="button" value="9" />
+      <input id="chu" type="button" value="÷" />
+      <input id="v4" type="button" value="4" />
+      <input id="v5" type="button" value="5" />
+      <input id="v6" type="button" value="6" />
+      <input id="cheng" type="button" value="×" />
+      <input id="v1" type="button" value="1" />
+      <input id="v2" type="button" value="2" />
+      <input id="v3" type="button" value="3" />
+      <input id="jian" type="button" value="﹣" />
+      <input id="v0" type="button" value="0" />
+      <input id="jia" type="button" value="+" />
+      <input id="qing" type="button" value="C" />
+      <input id="deng" type="button" value="=" />
+    </form>
+  </div>
+  <script>
+    var show = document.getElementById('show');
+    var v0 = document.getElementById('v0');
+    var v1 = document.getElementById('v1');
+    var v2 = document.getElementById('v2');
+    var v3 = document.getElementById('v3');
+    var v4 = document.getElementById('v4');
+    var v5 = document.getElementById('v5');
+    var v6 = document.getElementById('v6');
+    var v7 = document.getElementById('v7');
+    var v8 = document.getElementById('v8');
+    var v9 = document.getElementById('v9');
+
+    var jia = document.getElementById('jia');
+    var jian = document.getElementById('jian');
+    var cheng = document.getElementById('cheng');
+    var chu = document.getElementById('chu');
+
+    var deng = document.getElementById('deng');
+    var qing = document.getElementById('qing');
+
+    var plus = false,
+        minus = false,
+        times = false,
+        divider = false;
+
+    var preValue = 0,
+        nextValue = 0;
+
+    v0.onclick = function() {
+      // show.value = show.value + v0.value; 
+      show.value = show.value + this.value; // this 会指向绑定的元素
+      if(plus || minus || times || divider) {
+        nextValue = parseFloat(show.value);
+      } else {
+        preValue = parseFloat(show.value);
+      }
+    }
+    v1.onclick = function() {
+      // show.value = show.value + v0.value; 
+      show.value = show.value + this.value; // this 会指向绑定的元素
+      if(plus || minus || times || divider) {
+        nextValue = parseFloat(show.value);
+      } else {
+        preValue = parseFloat(show.value);
+      }
+    }
+    v2.onclick = function() {
+      // show.value = show.value + v0.value; 
+      show.value = show.value + this.value; // this 会指向绑定的元素
+      if(plus || minus || times || divider) {
+        nextValue = parseFloat(show.value);
+      } else {
+        preValue = parseFloat(show.value);
+      }
+    }
+    v3.onclick = function() {
+      // show.value = show.value + v0.value; 
+      show.value = show.value + this.value; // this 会指向绑定的元素
+      if(plus || minus || times || divider) {
+        nextValue = parseFloat(show.value);
+      } else {
+        preValue = parseFloat(show.value);
+      }
+    }
+    v4.onclick = function() {
+      // show.value = show.value + v0.value; 
+      show.value = show.value + this.value; // this 会指向绑定的元素
+      if(plus || minus || times || divider) {
+        nextValue = parseFloat(show.value);
+      } else {
+        preValue = parseFloat(show.value);
+      }
+    }
+    v5.onclick = function() {
+      // show.value = show.value + v0.value; 
+      show.value = show.value + this.value; // this 会指向绑定的元素
+      if(plus || minus || times || divider) {
+        nextValue = parseFloat(show.value);
+      } else {
+        preValue = parseFloat(show.value);
+      }
+    }
+    v6.onclick = function() {
+      // show.value = show.value + v0.value; 
+      show.value = show.value + this.value; // this 会指向绑定的元素
+      if(plus || minus || times || divider) {
+        nextValue = parseFloat(show.value);
+      } else {
+        preValue = parseFloat(show.value);
+      }
+    }
+    v7.onclick = function() {
+      // show.value = show.value + v0.value; 
+      show.value = show.value + this.value; // this 会指向绑定的元素
+      if(plus || minus || times || divider) {
+        nextValue = parseFloat(show.value);
+      } else {
+        preValue = parseFloat(show.value);
+      }
+    }
+    v8.onclick = function() {
+      // show.value = show.value + v0.value; 
+      show.value = show.value + this.value; // this 会指向绑定的元素
+      if(plus || minus || times || divider) {
+        nextValue = parseFloat(show.value);
+      } else {
+        preValue = parseFloat(show.value);
+      }
+    }
+    v9.onclick = function() {
+      // show.value = show.value + v0.value; 
+      show.value = show.value + this.value; // this 会指向绑定的元素
+      if(plus || minus || times || divider) {
+        nextValue = parseFloat(show.value);
+      } else {
+        preValue = parseFloat(show.value);
+      }
+    }
+
+    jia.onclick = function() {
+      plus = true;
+      minus = false;
+      times = false;
+      divider = false;
+      show.value = '';
+    }
+    jian.onclick = function() {
+      plus = false;
+      minus = true;
+      times = false;
+      divider = false;
+      show.value = '';
+    }
+    cheng.onclick = function() {
+      plus = false;
+      minus = false;
+      times = true;
+      divider = false;
+      show.value = '';
+    }
+    chu.onclick = function() {
+      plus = false;
+      minus = false;
+      times = false;
+      divider = true;
+      show.value = '';
+    }
+
+    deng.onclick = function() {
+      if(plus) {
+        show.value = preValue + nextValue;
+      } else if(minus) {
+        show.value = preValue - nextValue;
+      } else if(times) {
+        show.value = preValue * nextValue;
+      } else if(divider) {
+        show.value = preValue / nextValue
+      }
+    }
+
+    qing.onclick = function() {
+      plus = false;
+      minus = false;
+      times = false;
+      divider =  false;
+      show.value = '';
+    }
+  </script>
+</body>
+
+</html>

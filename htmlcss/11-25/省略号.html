@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            border: 1px solid #000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+        p{
+            width: 200px;
+            border: 1px solid #000;
+
+            /* animation: ; */
+
+            /* 设置标签为可伸缩盒子 */
+            display: -webkit-box;
+            /* 设置标签内容的排列方式 */
+            -webkit-box-orient: vertical;
+            /* 设置显示行数,需要跟-webkit-box-orient与-webkit-box一起结合使用 */
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</div>
+    <p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p>
+</body>
+</html>

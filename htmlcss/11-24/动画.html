@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation-name: aName;
+            animation-duration: 1s;
+            animation-timing-function: step-end;
+            /* animation-delay: 2s; */
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-fill-mode: forwards;
+
+            animation-play-state: running
+        }
+        @keyframes aName{
+            0%{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+            20%{
+                width: 300px;
+                height: 300px;
+                background-color: blue;
+            }
+            100%{
+                width: 600px;
+                height: 600px;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

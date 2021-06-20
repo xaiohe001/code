@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 变量的声明,使用关键字var来声明一个变量
+        // 申请一个内存,用于存储数据
+        // var age;
+
+        // console.log(age); // undefined没有赋值,声明以后,它的默认值就是undefined
+        // console.log(aa); // ReferenceError: aa is not defined
+
+        // 赋值 使用=来赋值
+        // age = 18;
+
+        // console.log(age);
+
+        // age = 80;
+
+        // console.log(age);
+
+        // 声明并赋值,又叫做变量的初始化
+        // var myName = "李雷"; 
+
+        // 声明多个变量,用逗号隔开,结束语还是分号
+        // 姓名,年龄,性别
+        // var myName = "李雷";
+        // var age = 18;
+        // var sex = 2;
+        // var myName = "李雷",
+        //     age = 18,
+        //     sex = 2;
+
+        // console.log(myName)
+        // console.log(age)
+        // console.log(sex)
+
+        // 不声明,直接赋值
+        // num = 88;
+        // console.log(num);
+
+        // 案例,弹出输入框prompt,输出alert
+        // 先声明一个变量,再赋值
+        // var userName = prompt('请输入用户的姓名');
+        // alert将userName输出到页面
+        // alert(userName);
+
+        // 交换变量,pear = '鸭梨', apple  = '苹果'
+        var pear = '鸭梨';
+        var apple  = '苹果';
+
+        // 需要在声明一个临时存储地
+        var temp;
+        temp = pear;
+        pear = apple;
+        apple = temp;
+
+        console.log(temp, "临时变量");
+        console.log(pear, "pear");
+        console.log(apple, "apple");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

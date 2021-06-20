@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input" />
+    <script>
+        var input = document.getElementById('input');
+        input.onclick = function(evt) {
+            // 在ie下会自动生成一个event,如果接收不到这个event对象,就从window这个全局变量下去找 window.event
+            var event = evt || window.event;
+            // 目标源,发生当前发生事件的载体
+            var target = event.target || event.srcElement;
+            console.log(target);
+            console.log(event);
+            console.log('input 被点击了')
+        }
+    </script>
+</body>
+
+</html>

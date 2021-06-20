@@ -1,0 +1,42 @@
+@charset "UTF-8";
+nav {
+  height: 100px;
+  background-color: red;
+  /*
+        css的选择器全部保留
+        选择器的嵌套(推荐不要太深
+
+    */
+}
+
+nav div {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+nav div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav div ul li a {
+  font-size: 20px;
+}
+
+nav .lis1 {
+  background-color: pink;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav a:hover {
+  color: blue;
+}
+
+nav section > a {
+  color: green;
+}
+/*# sourceMappingURL=scss选择器嵌套.css.map */

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body > div{
+            border: 2px solid #00ff00;
+        }
+        .box{
+            width: 1200px;
+            margin: 0 auto;
+            border: 2px solid rgb(151, 10, 10);
+            display: flex;
+        }
+        .box > ul{
+            border: 2px solid #00f;
+            width: 20%;
+        }
+        .box > div{
+            border: 2px solid #00f;
+            width: 75%;
+            margin-left: 10px;
+            padding: 10px;
+        }
+        .box h3{
+            border: 2px solid #000;
+            height: 40px;
+        }
+        .box h3 + ul{
+            border: 2px solid #000;
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box h3 + ul > li{
+            height: 100px;
+            width: 28%;
+            border: 2px solid rgb(19, 53, 163);
+            margin-right: 10px;
+            margin-bottom: 10px;
+            list-style: none;
+        }
+        .box ol{
+            display: flex;
+            list-style: none;
+            display: none;
+            flex-wrap: wrap;
+        }
+        .box ol > li{
+            height: 40px;
+            width: 28%;
+            background-color: #333;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+        }
+
+        
+        @media all and (max-width: 1220px){
+            .box{
+                width: 98%;
+            }
+        }
+        @media all and (max-width: 1025px){
+            .box h3 + ul > li{
+                width: 44%;
+            }
+        }
+        @media all and (max-width: 770px){
+            .box > ul{
+                display: none;
+            }
+            .box > div{
+                width: 100%;
+            }
+        }
+        @media all and (max-width: 480px){
+            .box ol{
+                display: flex;
+            }
+            .box h3 + ul{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box">
+            <ul></ul>
+            <div>
+                <h3></h3>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

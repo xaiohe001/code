@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = init;
+
+        function init() {
+            // 获取这个元素
+            // var txtInput = document.getElementById("txtInput");
+
+            // 获取表单元素的value值, 以字符串的方式返回
+            // console.log(txtInput.value);
+
+            // 设置表单元素的value值
+            // txtInput.value = 66;
+
+            // console.log(txtInput.value);
+
+            // 点击事件onclick
+            // 获取元素
+            // var pre1 = document.getElementById('pre1');
+            // var pre2 = document.getElementById('pre2');
+            // var q = document.getElementById('q');
+            // var result = document.getElementById('result');
+
+            // // 点击事件
+            // q.onclick = function () {
+            //     // 获取pre1和pre2的value值
+            //     var pre1Val = pre1.value * 1;
+            //     var pre2Val = pre2.value * 1;
+
+            //     // 运算结果存放一个变量
+            //     var sum = pre1Val + pre2Val;
+
+            //     result.value = sum;
+            // }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <input id="pre1" type="button" value="10" />
+    <input id="plus" type="button" value="+" />
+    <input id="pre2" type="button" value="12" />
+    <input id="q" type="button" value="=" />
+    <input id="result" type="text" value="" /> -->
+
+    <section>
+        <style>
+            #box {
+                width: 100px;
+                height: 100px;
+                background-color: #f80;
+                position: absolute;
+            }
+
+            .btn {
+                position: absolute;
+                bottom: 200px;
+            }
+
+            #resetBtn {
+                left: 200px;
+            }
+        </style>
+
+        <div id="box">
+            我是一个滑块
+        </div>
+
+        <button id="startBtn" class="btn">开始按钮</button>
+        <button id="resetBtn" class="btn">重置按钮</button>
+    </section>
+
+    <script>
+        // 先获取到元素
+        var box = document.getElementById('box');
+        var startBtn = document.getElementById('startBtn');
+        var resetBtn = document.getElementById('resetBtn');
+
+        box.style.left = '0';
+        box.style.top = '0';
+
+
+        /* 
+            用于提取数值
+        */
+        function getNum(str) {
+            var index = str.indexOf('px');
+            var result = str.slice(0, index);
+
+            return result;
+        }
+
+        // 声明定时器
+        var timer;
+        // 点击开始按钮事件
+        startBtn.onclick = function () {
+            var left = getNum(box.style.left);
+            var top = getNum(box.style.top);
+
+            // 计时器 记得清除
+            timer = setInterval(function () {
+                left++;
+
+                // 更新位置
+                box.style.left = left + 'px';
+                box.style.top = '0';
+            }, 50);
+        }
+
+        // 点击重置按钮
+        resetBtn.onclick = function () {
+            // 清除定时器
+            clearInterval(timer);
+            // var timer = null;
+            // box回位
+            box.style.left = '0';
+            box.style.top = '0';
+        }
+    </script>
+</body>
+
+</html>

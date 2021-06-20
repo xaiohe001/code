@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Animal1() {
+            this.species = '动物';
+        }
+
+        Animal1.prototype.sayName = function() {
+            console.log(this.species);
+        }
+
+        function Cat(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        // Cat.prototype = Animal.prototype;  // 在这里重写了 Cat 的原型对象, 用原型链实现继承
+        // Cat.prototype = new Animal1();  // 在这里重写了 Cat 的原型对象, 用原型链实现继承 , 这时候它的construcotor 指向的是 Animal
+
+        // Object.create() 是创建一个新对象的方式
+        // 实际开发过程中 还是建议用字面量的形式 var obj = {};
+        Cat.prototype = Object.create(new Animal1());  // 在这里重写了 Cat 的原型对象, 用原型链实现继承 , 这时候它的construcotor 指向的是 Animal
+
+        var cat1 = new Cat('小黄', 3);
+        var cat2 = new Cat('大黑', 10);
+        console.log(cat1, cat2, '==========');
+        console.log(cat1 instanceof Animal1, '=====LLLLL'); // true
+        console.log(cat1 instanceof Cat, '=====LLLLL'); // true
+    </script>
+</body>
+</html>

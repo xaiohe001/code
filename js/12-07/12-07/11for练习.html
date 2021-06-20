@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 获取1-100之间的所有偶数
+        // for(var i = 1;i <= 100;i++){
+        //     if(i % 2 == 0){
+        //         console.log(i);
+        //     }
+        // }
+
+        // for(var a = 2;a <= 100;a+=2){
+        //     console.log(a);
+        // }
+
+        // var m = 0;
+        // 当一个for循环有多个判断条件时,根据后面的判断条件走
+        // for (var i = 10, j = 20; i < 20, j < 23; i++, j++) {
+        //     m += i + j;
+        //     // 0 + 10 + 20
+        //     // 30 + 11 + 21
+        //     // 62 + 12 + 22
+        //     // 96
+        // }
+        // console.log(m);
+
+        for (var n = 100; n < 1000; n++) {
+            var g = n % 10;
+            var s = (n % 100 - g) / 10;
+            var b = (n - n % 100) / 100;
+            if (n == g * g * g + s * s * s + b * b * b) {
+                console.log(n);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

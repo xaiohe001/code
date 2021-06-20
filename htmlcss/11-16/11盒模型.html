@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        盒模型: content padding border margin
+        content: 内容 标签包裹的内容撑开的标签的大小(或者直接设置的)
+
+        padding:内边距 标签距离内容之间的距离
+         */
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            background-clip: content-box;
+
+            padding: 50px;
+            padding: 50px 40px;
+            padding: 50px 40px 30px;
+            padding: 50px 40px 30px 20px;
+            padding-left: 100px;
+
+            border-color: teal;
+            border-width: 10px;
+            border-style: solid;
+
+            border-top-color: red;
+
+            border-left: 1px solid blue;
+
+            border: 20px solid #000;
+
+            /* outline: 1px solid #000; */
+
+            /* 默认标签的内边距与边框会撑开标签大小(即设置的宽高只是设置了标签的内容大小) */
+
+            /* 设置标签盒子类型
+            border-box:标签的内边距和边框不会撑开标签大小(即设置的宽高是设置了标签的整个大小)
+            content-box:默认标签的内边距与边框会撑开标签大小(即设置的宽高只是设置了标签的内容大小)
+              */
+            box-sizing: border-box;
+
+        }
+        span{
+            border: 50px solid #000;
+            border-left-color: rgba(255, 0, 0, 0);
+            border-top-color: rgba(0, 0, 255, 0.746);
+            border-right-color: rgba(0, 128, 0, 0);
+        }
+        input{
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        文字
+        <a href="">这是a</a>
+    </div>
+    <!-- <span></span>
+    <input type="text"> -->
+</body>
+
+</html>

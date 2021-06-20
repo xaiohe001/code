@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [{
+            name: "赵元凯",
+            age: 21,
+            tc: ["头发长", "白"]
+        }, {
+            name: "王苗迪",
+            age: 21,
+            tc: ["腿长", '玩游戏', "唱跳"]
+        }];
+
+        console.log(arr[0].name);
+
+        console.log(arr[0].tc[0]);
+
+
+        for (var i = 0; i < arr[1].tc.length; i++) {
+            console.log(arr[1].tc[i]);
+        }
+
+        var arr1 = ["a", "b", "c", "d", ["A", "B", "C"]];
+
+        console.log(arr1[1]);
+        console.log(arr1[4][1]);
+
+        var obj = {
+            name: "obj",
+            obj1: {
+                name: "obj1",
+                obj2: {
+                    name: "obj2"
+                }
+            }
+        }
+
+        console.log(obj.name);
+
+        console.log(obj.obj1.name);
+
+        console.log(obj.obj1.obj2.name);
+    </script>
+</body>
+
+</html>

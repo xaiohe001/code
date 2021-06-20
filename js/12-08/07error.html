@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // ReferenceError：引用的变量不存在
+        // 07error.html:10 Uncaught ReferenceError: a is not defined
+        // 单词打错了(找到这个变量用的地方和声明的地方查看单词是否一致)
+        console.log(a);
+
+        // 语法错误
+        // 07error.html:14 Uncaught SyntaxError: missing ) after argument list
+        // 看页面有没有报红,查看标签嵌套层是否少括号
+
+
+        // 范围错误
+        // 07error.html:22 Uncaught RangeError: toFixed() digits argument must be between 0 and 100
+        // at Number.toFixed (<anonymous>)
+        // var num = 10.25687;
+        // console.log(num.toFixed(-2))
+
+        // 类型错误 (使用了不是该类型的调用方法)
+        // 07error.html:28 Uncaught TypeError: num is not a function
+        // at 07error.html:28
+        // num();
+        
+        // 这是一个函数 函数是封装一块代码 默认代码不会执行
+        // function name1(){
+        //     console.log("===");
+        // }
+        // // 调用函数才会执行, 只用 函数名称(); 调用一个函数
+        // name1();
+
+    </script>
+</body>
+</html>

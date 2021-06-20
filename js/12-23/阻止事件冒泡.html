@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>lkdlklkfd</div>
+        <div class="box">box</div>
+    </div>
+    <script>
+        // js中事件流处理流程的三个阶段
+        // 第一阶段: 事件捕获阶段
+        // 第二阶段: 事件目标的阶段
+        // 第三阶段: 事件冒泡阶段
+        var container = document.querySelector('.container');
+        var box = document.querySelector('.box');
+        
+        
+        container.onclick = function() {
+            console.log('container被点击了');
+        }
+        
+        box.onclick = function(evt) {
+            var event = evt || window.event;
+            // 如何去阻止冒泡
+            event.stopPropagation();
+            // ie低版本 阻止冒泡的方法(了解)
+            // event.cancelBubble = true;
+            console.log('box被点击了');
+        }
+
+       
+
+
+        
+    </script>
+</body>
+</html>

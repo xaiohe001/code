@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 浮动:在块标签需要横向排列的时候使用的(设置给需要排布的标签的) */
+        li{
+
+            /* 脱离文档流 会更改标签的类型(宽度由内容撑开 不独占一行) */
+            float: left;
+        }
+        li:nth-child(2){
+            /* float: left; */
+        }
+        ul{
+            border: 1px solid #000;
+            /* 清浮动
+                1.加高(让父标签给子标签占据这个位置)
+                2.overflow(生成一个新的文档流在ul里)
+                3.给ul最下边添加一个块标签设置clear: both;
+             */
+            /* height: 50px; */
+
+
+            /* overflow: hidden; */
+        }
+
+        .action::after{
+            content: "";
+            display: block;
+            clear: both;
+            visibility: hidden;
+        }
+        /* ul > div{
+            (生成一个新的文档流在ul里)
+            clear: both;
+            设置标签隐藏
+            visibility: hidden;
+        } */
+        body > div{
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul class="action">
+        <li>这是li1</li>
+        <li>这是li2</li>
+        <li>这是li3</li>
+        <li>这是li4</li>
+        <li>这是li5</li>
+        <!-- <div></div> -->
+    </ul>
+    <div></div>
+</body>
+</html>

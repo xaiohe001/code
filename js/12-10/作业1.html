@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 先判断是否为质数,判断一个值是否为质数,需要一个形参将值传进函数中
+        // 如果是一个质数,返回true
+        function isPrimeNumber(num){
+            // 质数,只能被1和自身整除的自然数,1不是质数也不是合数
+            if(isNaN(num) || num <= 1){
+                return false;
+            } else{
+                // flag如果为true说明,是一个质数,反之,不是质数
+                // 初始化认为他是一个质数
+                var flag = true;
+
+                // 3 是否能被2整除, 4 判断是否能被2,3, 5判断2,3,4
+                for(var i = 2; i < num; i++){ // 9, 
+                    // 判断是否为质数
+                    // 如果该数值能够被它前面的除1之外的任一个数字整除,
+                    // 就说明他不是一个质数
+                    if(num % i == 0){  
+                        flag = false;
+                        // alert('你是一个质数!')
+                    }
+                }
+
+                return flag;
+            }
+        } 
+
+        // 要判断最小值与最大值直之间有几个质数
+        // 最大值 max 最小值 min
+        function getPrimeNum(min, max){
+            // 存放min到max之间所有质数的个数的变量
+            var sumNum = 0;
+            // 先获取min到max的所有的数
+            for(var i = min; i <= max; i++){
+                // 判断i是质数
+                if(isPrimeNumber(i)){ // isPrimeNumber(i)要么是true,要么是false
+                    sumNum ++;
+                }
+            }
+
+            // 将min到max之间所有质数的个数返回给函数
+            return sumNum;
+        }
+
+        alert(getPrimeNum(1, 72));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

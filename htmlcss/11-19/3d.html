@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            background-color: orangered;
+            background: url(https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2771978851,2906984932&fm=26&gp=0.jpg);
+            margin: 200px auto;
+            transition: all 3s;
+
+
+            /* 
+            3d
+                perspective(500px) 设置焦点(透视点)距离标签的距离
+                平移
+                translateX()
+                translateY()
+                translateZ()
+                translate3d(x,y,z);
+                旋转
+                rotateX() 设置根据x轴旋转 正值向上 负值向下
+                rotateY() 设置根据y轴旋转 正值向右 负值向左
+                rotateZ()
+                rotate3d(x,y,z,a); x,y,z轴是矢量值,a是度数
+                缩放
+                scale(x,y); 如果只设置一个值 是设置x并同时设置y
+                scaleX();
+                scaleY();
+                scale3d();
+                斜切
+                skew(x,y); 设置一个值是y轴默认0
+
+             */
+
+             transform: perspective(500px) skewY();
+            /* 设置图背面隐藏 */
+             /* backface-visibility: hidden; */
+        }
+
+        body:hover div{
+            transform: perspective(500px) skewY(45deg);
+            /* background: url("https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1830914723,3154965800&fm=26&gp=0.jpg"); */
+        }
+
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+            /* perspective: 200px; */
+            transform:perspective(200px) rotateX(20deg);
+            /* 设置视角点  */
+            perspective-origin: right bottom;
+        }
+        li{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background-color: palegreen;
+            float: left;
+            margin: 30px;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <ul>
+        <li>zheshi01</li>
+        <li>zheshi02</li>
+        <li>zheshi03</li>
+        <li>zheshi04</li>
+        <li>zheshi05</li>
+        <li>zheshi06</li>
+        <li>zheshi07</li>
+        <li>zheshi08</li>
+        <li>zheshi09</li>
+        <li>zheshi10</li>
+        <li>zheshi11</li>
+        <li>zheshi12</li>
+    </ul>
+
+</body>
+</html>

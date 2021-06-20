@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+        var arr = ['王斌', '陈家鑫', '孙世源', '张于亮', '赵元凯', '梅永康', '张涛', '武福涛', '常红雷', '杨通', '王卡', '王苗迪', '郭旭', '刘畅', '刘政', '胡金龙', '从超超', '张靖阳', '罗艳龙', '张欣梦', '王润达', '邢朝令', '梁申涛', '孙天利', '赵修淼', '张家祥', '陈新宇', '朱家臣', '张梦秋', '宋昂', '郭辰露', '尚帅宏', '曾庆贺', '张浩哲', '魏一凡', '王松威', '石博', '王文龙', '胡俊', '张浩林', '刘力源', '肖雪雨'];
+
+
+        // document.write("<div><ul>")
+
+        // 4.声明一个变量记录包裹标签的开始标签
+        var str = "<div class='box'><ul>";
+
+        // 1.获取从0到arr.length-1之间的数字
+        for(var i = 0; i< 5;i++){
+            // console.log(i);
+            // 2.根据获取的数字,将数字作为索引值获取数组内的每一个值
+            // console.log(arr[i]);
+            // 3.直接将值打印在页面上 但是这样无法直接设置样式,需要嵌套在标签内
+            // document.write(arr[i])
+            // document.write("</br>")
+
+
+            // document.write(`<li>${arr[i]}</li>`)
+
+            // console.log(str);
+            // 5.使用字符串拼接，累计li标签与数组内的每一个值
+            str = str + `<li>${arr[i]}</li>`;
+            console.log(str);
+        }
+        // 6.给累计完的li最后加上ul的结束标签
+        str += "</ul></div>";
+        console.log(str);
+        // 7.一次性打印整个字符串
+        document.write(str);
+
+        // document.write("</ul></div>")
+    </script>
+</body>
+</html>

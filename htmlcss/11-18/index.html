@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        nav > div{
+            /* border: 1px solid #0f0; */
+            height: 100px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        nav > div >div{
+            float: right;
+        }
+        nav ul{
+            height: 100px;
+            /* width: 100px; */
+            /* border: 1px solid #0000bb; */
+            float: left;
+        }
+       
+        nav > div >img{
+            margin-top: 25px;
+        }
+        nav li{
+            float: left;
+            line-height: 100px;
+            padding: 0 15px;
+        }
+        nav li > a{
+            text-decoration: none;
+            color: #666;
+            font-family: "微软雅黑";
+            font-weight: bold;
+            font-size: 14px;
+            position: relative;
+        }
+        nav li > a > span{
+            position: absolute;
+            width: 1px;
+            height: 10px;
+            background-image: url(./image/nav-li.png);
+            top:5px;
+            right: -16px;
+        }
+        nav li:nth-child(1){
+            position: relative;
+        }
+        nav li > i{
+            position: absolute;
+            background-image: url(./image/navline-em.jpg);
+            background-repeat: no-repeat;
+            background-position: 17px 0;
+            height: 4px;
+            width: 42px;
+            border-bottom: 4px solid rgb(14, 152, 163);
+            bottom: 0;
+            left: 12px;
+        }
+        nav li > div{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100px;
+            line-height: 45px;
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: all .2s linear;
+            z-index: 100;
+        }
+        nav li >div >a{
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav li:hover >div{
+            opacity: 1;
+        }
+
+        nav section{
+            height: 100px;
+            /* width: 100px; */
+            /* border: 1px solid #0000bb; */
+            float: left;
+        }
+        nav .sea{
+            float: left;
+
+        }
+        nav .sea:hover > input{
+            opacity: 1;
+            width: 180px;
+        }
+        nav .sea > input{
+            height: 35px;
+            width: 180px;
+            padding-left: 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 2px solid rgb(14, 152, 163);
+            margin-top: 30px;
+            opacity: 0;
+            width: 0;
+            transition: all .2s linear;
+        }
+        nav .sea > span{
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-image: url(./image/search.png);
+            background-repeat: no-repeat;
+            background-position: 10px 8px;
+            /* border: 1px solid #000; */
+            /* margin-top: 30px; */
+            position: relative;
+            top: 12px;
+            left: -4px;
+        }
+        nav .che{
+            float: left;
+            position: relative;
+            line-height: 100px;
+        }
+        nav .che > a{
+            text-decoration: none;
+            font-size: 14px;
+            color: #666;
+            font-weight: bold;
+        }
+        nav .che:hover > div{
+            /* top: 100px; */
+            height: 45px;
+        }
+        nav .che > div{
+            position: absolute;
+            line-height: 45px;
+            top: 100px;
+            left: -100px;
+            /* border: 1px solid #000; */
+            width: 193px;
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: all .2s linear;
+            height: 0;
+            overflow: hidden;
+            z-index: 100;
+        }
+        nav .che > div > a{
+            text-decoration: none;
+            color: #fff;
+            margin: 0 8px;
+            font-size: 14px;
+        }
+
+        /* ********************************************************** */
+        header{
+            height: 495px;
+            background-image: url(./image/17.jpg);
+            background-size: 100% 100%;
+            position: relative;
+            animation: index 10s linear infinite;
+        }
+        header > div{
+            position: absolute;
+            left: 0;
+            bottom: 100px;
+            overflow: hidden;
+            /* border: 1px solid #000; */
+        }
+        header > div > div{
+            float: left;
+
+        }
+        @keyframes i{
+            0%{
+                background-image: url(./image/17.jpg);
+            }
+
+            50%{
+                background-image: url(./image/18.jpg);
+            }
+
+            99%{
+                background-image: url(./image/17.jpg);
+            }
+            100%{
+                background-image: url(./image/17.jpg);
+            }
+        }
+        @keyframes index{
+            0%{
+                background-image: url(./image/17.jpg);
+            }
+
+            49%{
+                background-image: url(./image/17.jpg);
+            }
+            51%{
+                background-image: url(./image/18.jpg);
+            }
+
+            98%{
+                background-image: url(./image/18.jpg);
+            }
+            100%{
+                background-image: url(./image/17.jpg);
+            }
+        }
+        header section{
+            height: 2px;
+            /* width: 100%; */
+            background-color: rgb(14, 152, 163);
+            animation: j 5s linear infinite;
+        }
+        @keyframes j{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+        header > div > div:nth-child(1){
+            width: 350px;
+            height: 2px;
+            background-color: #fff;
+            margin-top: 12px;
+        }
+        header > div > div:nth-child(2){
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin-top: 8px;
+        }
+        header > div > div:nth-child(3){
+            color: #fff;
+            font-size: 18px;
+            margin-left: 30px;
+        }
+
+        /* *********************************************************** */
+        #pro{
+            background-color: rgb(234, 234, 234);
+            overflow: hidden;
+        }
+        #pro > div{
+            float: left;
+        }
+        #pro > div:nth-child(1){
+            width: 62.6%;
+            background-color: #fff;
+        }
+        #pro > div:nth-child(2){
+            width: 34%;
+            /* height: 100px;
+            background-color: red; */
+        }
+        #pro .ps{
+            overflow: hidden;
+            color: #666;
+        }
+        #pro .ps> div{
+            float: right;
+            width: 840px;
+        }
+        #pro .ps > div > div{
+            float: left;
+        }
+        #pro .ps ul{
+            float: right;
+        }
+        #pro .ps li{
+            float: left;
+            /* border: 1px solid #000; */
+        }
+        #pro .ps li > a{
+            display: block;
+            height: 160px;
+            text-decoration: none;
+            color: #666;
+            width: 90px;
+            text-align: center;
+        }
+        #pro .ps li > a:hover{
+            background-color: rgb(234, 234, 234);
+        }
+        #pro .ps li img{
+            margin-top: 50px;
+        }
+        #pro .ps li p{
+            margin-top: 30px;
+        }
+
+        #pro .ps h3{
+            margin: 40px 0 15px;
+            color: #666;
+        }
+
+        #pro .ps + div{
+            overflow: hidden;
+        }
+        #pro .left{
+            float: left;
+            background-image: url(./image/main-left.jpg);
+            background-size: 100% 100%;
+            width: calc(100% - 360px);
+            height: 160px;
+        }
+        #pro .left > div{
+            height: 160px;
+            width: 480px;
+            float: right;
+            background-image: url(./image/main-bg1.png);
+            background-position: 49px 49px;
+            background-repeat: no-repeat;
+        }
+        #pro .left h3,#pro .right h3{
+            color: #333;
+            font-weight: 400;
+            margin-top: 30px;
+        }
+        #pro .right{
+            float: left;
+            background-image: url(./image/main-bg2.jpg);
+            height: 160px;
+            width: 340px;
+            padding-left: 20px;
+        }
+        #pro .proR{
+            width: 320px;
+            padding: 20px;
+            height: 280px;
+            background-color: rgb(244, 244, 244);
+        }
+        #pro .proR > img{
+            width: 100%;
+        }
+        #pro .proR > h3{
+            color: #000;
+            font-weight: 400;
+            margin: 8px 0;
+        }
+        #pro .proR > p{
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 5px;
+        }
+        #pro .proR > a{
+            color: orange;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        /* ********************************************** */
+        #nong{
+            background-color: #fff;
+        }
+        #nong > div{
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #nong .left{
+            float: left;
+            width: 840px;
+            padding-top: 30px;
+        }
+        #nong .left img{
+            float: left;
+            width: 200px;
+        }
+        #nong .left div{
+            float: left;
+            width: 600px;
+            padding: 0 20px;
+        }
+        #nong .left h3{
+            color: #666;
+            font-size: 18px;
+            margin: 4px;
+        }
+        #nong .left time{
+            font-size: 20px;
+            color: rgb(14, 152, 163);
+        }
+        #nong .left p{
+            color: #999;
+            font-size: 14px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            line-height: 20px;
+            margin: 5px;
+        }
+        #nong .left a{
+            color: orangered;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        #nong .right{
+            float: left;
+            border-left:2px solid rgb(244, 244, 244);
+            width: 340px;
+            box-sizing: border-box;
+            padding: 20px 0 20px 20px;
+        }
+        #nong .right h4{
+            font-size: 14px;
+            color: #333;
+            padding: 20px 0;
+            border-bottom:2px solid rgb(244, 244, 244);
+            position: relative;
+
+        }
+        #nong .right h4:after{
+            position: absolute;
+            content: "";
+            width: 80px;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+        }
+        #nong .right p{
+            color: #999;
+            font-size: 14px;
+            line-height: 25px;
+        }
+        #gu{
+            background-color: rgb(244, 244, 244);
+        }
+        #gu > div{
+            width: 1200px;
+            margin:  0 auto;
+            overflow: hidden;
+            color: #666;
+            font-size: 14px;
+        }
+        #gu .left{
+            float: left;
+            width: 840px;
+            line-height: 70px;
+        }
+        #gu a{
+            display: inline-block;
+            position: relative;
+            width: 36px;
+            height: 36px;
+            top: 12px;
+            background-image: url("https://www.bgy.com.cn/images/logn.png");
+            background-position: 0 0;
+        }
+        #gu a:nth-child(2){
+            background-position: 2px -40px;
+        }
+        #gu .right{
+            float: left;
+            width: 316px;
+            border: 2px solid#fff;
+            border-top:none;
+            border-bottom:none;
+            padding: 0 20px;
+            position: relative;
+            line-height: 70px;
+        }
+        #gu span{  
+            display: inline-block;
+            position: absolute;
+            width: 30px;
+            height: 12px;
+            top: 30px;
+            right: 0;
+            background: url("https://www.bgy.com.cn/images/foot-down.png") no-repeat;
+        }
+        footer{
+            background-color: #fff;
+            padding: 20px 0 50px;
+        }
+        footer > div{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        footer p{
+            color: #999;
+            font-size: 14px;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="./image/logo.png" alt="">
+            <div>
+                <ul>
+                    <!-- (li>a{导航$}+span+div>a{这是a的内容}*5)*7 -->
+                    <li>
+                        <a href="">导航1<span></span></a>
+                        <i></i>
+                    </li>
+                    <li>
+                        <a href="">导航2<span></span></a>
+                        <div>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">导航3<span></span></a>
+                        <div>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">导航4<span></span></a>
+                        <div>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">导航5<span></span></a>
+                        <div>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">导航6<span></span></a>
+                        <div>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">导航7<span></span></a>
+                        <div>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                            <a href="">这是a的内容</a>
+                        </div>
+                    </li>
+                </ul>
+                <section>
+                    <div class="sea">
+                        <input type="text" placeholder="请输入关键字" name="" id="">
+                        <span></span>
+                    </div>
+                    <div class="che">
+                        <a href="">中/EN</a>
+                        <div>
+                            <a href="">中文简体</a>
+                            <a href="">中文繁体</a>
+                            <a href="">EN</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div>
+            <div>
+                <section></section>
+            </div>
+            <div></div>
+            <div>&lt;&#x3000;0/4&#x3000;&gt;</div>
+        </div>
+    </header>
+    <div id="pro">
+        <div>
+            <div class="ps">
+                <div>
+                    <div>
+                        <h3>产品与服务</h3>
+                        <p>PRODUCTS</p>
+                        <p>&SERVICES</p>
+                    </div>
+                    <!-- ul>(li>a>img+p{地产}) -->
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="./image/21.png" alt="">
+                                <p>地产</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./image/21.png" alt="">
+                                <p>地产</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./image/21.png" alt="">
+                                <p>地产</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./image/21.png" alt="">
+                                <p>地产</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./image/21.png" alt="">
+                                <p>地产</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./image/21.png" alt="">
+                                <p>地产</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./image/21.png" alt="">
+                                <p>地产</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="left">
+                    <div>
+                        <h3>碧桂园是啥</h3>
+                        <p>ABOUT</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3>全球布局</h3>
+                    <p>ABOUT</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="proR">
+                <img src="./image/c4.jpg" alt="">
+                <h3>碧桂园森林城市</h3>
+                <p>
+                    森林城市，规划公园层人行系统、车库层及道路交通系统，实现人车分流，是安静怡然的环海岛居生活方式。
+                </p>
+                <a href="">了解更多 ></a>
+            </div>
+        </div>
+    </div>
+    <div id="nong">
+        <div>
+            <div class="left">
+                <img src="./image/3c.jpg" alt="">
+                <div>
+                    <h3>未来农业啥样？全球首个最先进的万亩无人化农场告诉你！</h3>
+                    <time>2020.10.11</time>
+                    <p>秋收时节，金黄的稻穗压弯了腰，广袤的田野里洋溢着丰收的喜悦。在北大荒建三江-碧桂园无人化农场，数十台无人驾驶农机驰骋沃野，上演一场农业科技“大练兵”！高能！看无人驾驶农机“炫技”这上演一场农业科技“大练兵”！高能！看无人驾驶农机“炫技”这</p>
+                    <a href="">了解更多</a>
+                </div>
+            </div>
+            <div class="right">
+                <h4>集团要闻</h4>
+                <p>全球首个最先进的万亩无人化农场告诉你！</p>
+                <p>袤的田野里洋溢着丰收的喜悦</p>
+                <p>广袤的田野里洋溢着丰收的喜悦</p>
+            </div>
+        </div>
+    </div>
+    <div id="gu">
+        <div>
+            <div class="left">
+                关注碧桂园集团
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+            <div class="right">
+                综合业态
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>佛山市顺德区碧桂园物业发展有限公司版权所有 粤ICP备05055114号-1</p>
+            <p>法律声明  · 用户隐私政策  · 网站地图  · 技术支持</p>
+            <p>碧桂园官方客服热线：4008919338</p>
+        </div>
+    </footer>
+</body>
+</html>

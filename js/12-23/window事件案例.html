@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window事件</title>
+    <style>
+        .container {
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        这是container容器里面的内容
+        <img src="https://500px.com.cn/community/photo-details/500px1026153792" alt="">
+    </div>
+    <script>
+        // 页面加载完成 onload
+        window.onload = function() {
+            var container = document.getElementsByClassName('container')[0];
+            container.style.color = 'green';
+        }
+        // 视口发生变化 onresize
+        window.onresize = function() {
+            var container = document.getElementsByClassName('container')[0];
+            var sizes = [12, 20, 28, 36, 44];
+            var sizesLength = sizes.length;
+            var randomNumber = Math.floor(Math.random() * sizesLength); // 随机值, 把随机值当成索引,从sizes数组内取出对应的字体大小的值
+            var randomSize = sizes[randomNumber];
+            container.style.fontSize = randomSize + 'px';
+        }
+
+        // 页面发生滚动时  onscroll
+        window.onscroll = function() {
+            var container = document.getElementsByClassName('container')[0];
+            var colors = ['red', 'yellow', 'orange', 'grey'];
+            var colorsLength = colors.length;
+            var randomNumber = Math.floor(Math.random() * colorsLength);
+            var randomColor = colors[randomNumber];
+            console.log(randomColor);
+            container.style.backgroundColor = randomColor;
+
+        }
+    </script>
+</body>
+</html>

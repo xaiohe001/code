@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            height: 40px;
+            background-color: rgb(20, 10, 10);
+            /* 
+            当设置定位后;会更改标签的类型 (更改成行内块标签,标签宽度由内容撑开)
+            固定定位
+                根据浏览器视图窗口进行偏移
+                脱离文档流
+             */
+             position: fixed;
+             /* width: 100%; */
+             left: 0;
+             right: 0;
+             top: 0;
+             /* bottom: 0; */
+
+        }
+        main{
+            width: 1000px;
+            margin: 0 auto;
+            height: 2000px;
+            background-image: linear-gradient(red,blue);
+        }
+    </style>
+</head>
+<body>
+    <nav></nav>
+    <main>这是内容</main>
+</body>
+</html>

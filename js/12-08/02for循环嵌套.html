@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // for(var i = 0;i < 5;i++){
+
+        //     // console.log(i);//0-4
+        //     // 外边循环执行一次,里面循环执行多次
+        //     for(var k = i;k < 2;k++){
+        //         console.log("k");
+        //     }
+
+        //     // console.log(i);
+
+        // }
+        // console.log(i);
+
+
+
+        // 99乘法表
+        var str;
+        // 1.获取1-9的值和输出9次
+        for(var j = 1;j <= 9;j++){
+            // console.log(j);
+            // 3.声明一个空字符串，在每次需要从新距离新的一行输出时清空
+            str = ""
+
+            // 2.获取1-j的所有值例如 j == 3; m == 1 2 3
+            for(var m = 1; m <= j;m++){
+                //这个输出45次 乘法表需要9次 因为循环之外无法获取每次m的值 所以在循环中记录m的值 给str 在循环外使用
+                // console.log(m + " * " + j); 
+
+                // 4.对m与j的进行记录与拼接
+                // str += m + " * " + j + " ";
+                str += m + " * " + j + " = " + m * j + " ";
+
+            }
+
+            // 5.输出每次m循环结束后拼接到的值
+            console.log(str)
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 语法：var 日期对象=new Date(参数)
+        var date = new Date(); // 声明了一个date对象
+
+        console.log(date);
+
+        // 获取年份
+        // console.log(date.getYear()); //年份的后两位, 不使用
+        console.log(date.getFullYear()); // 四位数的年份
+
+        // 获取月份
+        console.log(date.getMonth() + 1); // 月份,从0开始计算,范围0~11
+
+        // 获取日期
+        console.log(date.getDate()); // 日期
+
+        // 获取星期
+        console.log(date.getDay()); // 星期几, 0~6,从周日计算到周六结束
+
+        // 获取小时
+        console.log(date.getHours()); // 小时
+
+        // 获取分钟
+        console.log(date.getMinutes()); // 分钟
+
+        // 获取秒
+        console.log(date.getSeconds()); // 秒
+
+        // 时间戳
+        console.log(date.getTime()); // 获取时间戳,单位是毫秒,离1970年1月1日0时0分0秒的时间
+
+        // 设置时间
+        date.setFullYear(1969);
+
+        console.log(date.getFullYear()); //1969
+        console.log(date.getTime()); // 获取到的时间戳是负值
+
+        date.setMonth(0); // 范围0~11
+
+        console.log(date.getMonth()); //0
+
+        date.setDate(5);
+        console.log(date.getDate());
+
+        // 定时器
+        // setInterval(function(){}, time) time是间隔时间,单位是毫秒
+        // var timer = setInterval(function(){
+        //     console.log(12);
+        // }, 1000) // 每隔一秒,执行一次函数
+
+        // 清除定时器
+        // clearInterval(timer)
+        var i = 0;
+        var timer = setInterval(function() {
+            if (i >= 10) {
+                clearInterval(timer);
+            } else {
+                i++;
+                console.log(i);
+            }
+        }, 1000);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

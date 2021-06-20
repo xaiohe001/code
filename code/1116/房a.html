@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documenta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .tou {
+            height: 80px;
+            background-color: #059B42;
+        }
+        
+        .toua {
+            width: 1200px;
+            height: 80px;
+            /* background-color: pink; */
+            margin: 0 auto;
+        }
+        
+        .touaa {
+            width: 300px;
+            height: 80px;
+            float: left;
+            overflow: hidden;
+            /* background-color: purple; */
+        }
+        
+        .touaa img {
+            /* border: 1px solid #000; */
+            float: left;
+            position: relative;
+            margin-top: 25px;
+        }
+        
+        .touaa h2 {
+            line-height: 80px;
+            float: left;
+            margin-left: 10px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .touaaa {
+            width: 700px;
+            height: 80px;
+            /* background-color: purple; */
+            float: right;
+            line-height: 80px;
+        }
+        
+        .touaaa>a {
+            text-decoration: none;
+            color: #fff;
+            margin-left: 70px;
+        }
+        
+        .touaaa>a:hover {
+            color: pink;
+        }
+        
+        .beijing {
+            height: 750px;
+            background-image: url('./img/masha.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .beijinga h1 {
+            color: #fff;
+            text-align: center;
+            line-height: 700px;
+            /*  */
+        }
+        
+        .sou {
+            height: 100px;
+            background-color: #EFEFEF;
+        }
+        
+        .soua {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            /* background-color: pink; */
+            display: flex;
+        }
+        
+        .soub {
+            width: 750px;
+            height: 100px;
+            /* background-color: #059B42; */
+        }
+        
+        .soub>form {
+            line-height: 100px;
+        }
+        
+        .soub [name="wd"] {
+            width: 600px;
+            height: 50px;
+        }
+        
+        .soub [type="submit"] {
+            width: 100px;
+            height: 52px;
+            font-size: 16px;
+            background-color: #F15145;
+            vertical-align: middle;
+            border: none;
+            color: #fff;
+            position: relative;
+            left: -5px;
+            cursor: pointer;
+        }
+        
+        .souc {
+            line-height: 100px;
+        }
+        
+        .souc>a {
+            text-decoration: none;
+            color: #6C6C6C;
+            margin-left: 40px;
+        }
+        
+        .souc>a:hover {
+            color: black;
+        }
+        
+        .kan {
+            width: 1200px;
+            height: 300px;
+            /* background-color: pink; */
+            margin: 0 auto;
+        }
+        
+        .kana {
+            text-align: center;
+            position: relative;
+            top: 20px;
+            /* height: 50px; */
+            /* border: 1px solid #000; */
+        }
+        
+        .kana>p {
+            color: #6C6C6C;
+            font-size: 6px;
+            padding-top: 8px;
+        }
+        
+        .kanc {
+            width: 800px;
+            height: 210px;
+            margin: 35px auto;
+            /* background-color: #F15145; */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .kand {
+            width: 130px;
+            height: 130px;
+            text-align: center;
+            /* border: 1px solid #000; */
+            background-color: #53B5F4;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .kand>img {
+            width: 100px;
+            height: 100px;
+            margin-top: 8px;
+            padding-top: 8px;
+            /* margin-left: 5px; */
+        }
+        
+        .kand>p {
+            font-size: 8px;
+            padding-top: 8px;
+            color: #6C6C6C;
+        }
+        
+        .kane {
+            width: 130px;
+            height: 130px;
+            text-align: center;
+            /* border: 1px solid #000; */
+            background-color: #64CB60;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .kane>img {
+            width: 100px;
+            height: 100px;
+            margin-top: 8px;
+            padding-top: 8px;
+            /* margin-left: 5px; */
+        }
+        
+        .kane>p {
+            font-size: 8px;
+            padding-top: 8px;
+            color: #6C6C6C;
+        }
+        
+        .kanf {
+            width: 130px;
+            height: 130px;
+            text-align: center;
+            /* border: 1px solid #000; */
+            background-color: #FD9301;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .kanf>img {
+            width: 100px;
+            height: 100px;
+            margin-top: 8px;
+            padding-top: 8px;
+            /* margin-left: 5px; */
+        }
+        
+        .kanf>p {
+            font-size: 8px;
+            padding-top: 8px;
+            color: #6C6C6C;
+        }
+        
+        .kang {
+            width: 130px;
+            height: 130px;
+            text-align: center;
+            /* border: 1px solid #000; */
+            background-color: #FF6D3E;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .kang>img {
+            width: 100px;
+            height: 100px;
+            margin-top: 8px;
+            padding-top: 8px;
+            /* margin-left: 5px; */
+        }
+        
+        .kang>p {
+            font-size: 8px;
+            padding-top: 8px;
+            color: #6C6C6C;
+        }
+        
+        #zhan {
+            height: 850px;
+            background-color: #EFEFEF;
+        }
+        
+        .zhana {
+            width: 1200px;
+            height: 720px;
+            /* background-color: pink; */
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+        
+        .zhana img {
+            width: 277px;
+            height: 350px;
+            /* border: 1px solid #000; */
+        }
+        
+        .zhanb {
+            height: 350px;
+            background-image: url(./img/guanyu0.jpg);
+        }
+        
+        .zhanb>img {
+            background-color: rgba(0, 255, 0, 0.3);
+        }
+        
+        .wen {
+            height: 620px;
+        }
+        
+        .wena {
+            width: 1200px;
+            height: 500px;
+            /* background-color: pink; */
+            margin: 0 auto;
+        }
+        
+        .wenb {
+            width: 1200px;
+            height: 500px;
+            /* border: 1px solid #000; */
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .wenc {
+            width: 780px;
+            /* border: 1px solid #0f0; */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .wenc>ul {
+            width: 400px;
+            height: 500px;
+            /* border: 1px solid #000; */
+            list-style: none;
+        }
+        
+        .wenc>ul>li {
+            width: 400px;
+            height: 120px;
+            padding-top: 10px;
+            /* border: 1px solid #00f; */
+        }
+        
+        .wenc ul>li>a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+        
+        .wenc ul>li>p {
+            color: #666;
+            margin: 10px auto;
+            font-size: 14px;
+        }
+        
+        .wend {
+            width: 400px;
+            /* border: 1px solid rgb(43, 37, 37); */
+        }
+        
+        .wend>div {
+            /* border: 1px solid #000; */
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 15px;
+            color: #fff;
+            background-color: #F05145;
+        }
+        
+        .wend>ul {
+            list-style: none;
+        }
+        
+        .wend>ul>li {
+            width: 390px;
+            height: 45px;
+            line-height: 45px;
+            /* border: 1px solid #000; */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .wend>ul>li>a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .wend>ul>li>span {
+            font-size: 10px;
+            color: #666;
+        }
+        
+        .hai {
+            height: 700px;
+            background-color: #EFEFEF;
+        }
+        
+        .haia {
+            width: 1200px;
+            height: 630px;
+            margin: 0 auto;
+        }
+        
+        .guo {
+            width: 1200px;
+            height: 600px;
+            /* background-color: blueviolet; */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .guob {
+            width: 350px;
+            height: 600px;
+            /* border: 1px solid #000; */
+            background-color: #fff;
+        }
+        
+        .guo>div:nth-child(2) {
+            width: 800px;
+            height: 600px;
+            /* border: 1px solid #f00; */
+            background-color: #fff;
+        }
+        
+        .guoa {
+            font-size: 30px;
+            margin-left: -180px;
+        }
+        
+        .guo>div:nth-child(1)>ul {
+            list-style: none;
+        }
+        
+        .guo>div:nth-child(1)>ul>li {
+            width: 350px;
+            height: 78px;
+            line-height: 78px;
+            cursor: pointer;
+            /* border: 1px solid #f00; */
+        }
+        
+        .guoc>ul {
+            list-style: none;
+        }
+        
+        .guoc>ul>li {
+            width: 780px;
+            height: 180px;
+            margin-top: 15px;
+            /* border: 1px solid #00f; */
+            display: flex;
+            justify-content: left;
+        }
+        
+        .guoc>ul>li>div:nth-child(1) {
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        
+        .guoc>ul>li>div:nth-child(2) {
+            padding-left: 10px;
+            margin-top: 10px;
+        }
+        
+        .guoc>ul>li>div:nth-child(2) button {
+            width: 50px;
+            height: 20px;
+            /* margin-left: 20px; */
+            margin-top: 20px;
+            color: green;
+            margin-left: -150px;
+        }
+        
+        .guoc>ul>li>div:nth-child(2)>p {
+            margin-top: 70px;
+            margin-left: -250px;
+        }
+        
+        .dai {
+            height: 800px;
+            position: relative;
+            background-image: url(./img/masha.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .daia {
+            height: 800px;
+            background-color: rgba( 0, 255, 0, .3);
+        }
+        
+        .daib {
+            width: 1000px;
+            height: 600px;
+            margin: 0 auto;
+            margin-top: 50px;
+            background-color: rgb(250, 244, 244, .6);
+        }
+        
+        .daic {
+            text-align: center;
+        }
+        
+        .daic [type="text"] {
+            width: 300px;
+            height: 30px;
+            margin-top: 50px;
+            border: none;
+        }
+        
+        .daic [type="text"]:nth-of-type(3) {
+            width: 150px;
+        }
+        
+        .daic [type="text"]:nth-of-type(6) {
+            width: 300px;
+            height: 120px;
+        }
+        
+        .daic [type="submit"]:nth-of-type(4) {
+            width: 150px;
+            height: 29px;
+            background-color: #F15145;
+            color: #fff;
+            border: none;
+            position: relative;
+            margin-left: -5px;
+        }
+        
+        .daic [type="submit"]:nth-of-type(7) {
+            width: 200px;
+            height: 50px;
+            margin-top: 20px;
+            margin-left: -40px;
+            background-color: #F15145;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+        }
+        
+        .zu {
+            height: 1400px;
+            background-color: #EFEFEF;
+        }
+        
+        .zua {
+            width: 1200px;
+            height: 1200px;
+            margin: 0 auto;
+            /* background-color: pink; */
+        }
+        
+        .zub {
+            width: 1200px;
+            height: 1200px;
+            margin-top: 30px;
+            /* background-color: pink; */
+        }
+        
+        .zuc {
+            width: 1200px;
+            height: 150px;
+            color: #666;
+            background-color: #FBFBFB;
+        }
+        
+        .zuc>div:nth-child(1) {
+            width: 1200px;
+            height: 80px;
+            line-height: 80px;
+            /* border: 1px solid #f00; */
+        }
+        
+        .zuc>div:nth-child(1)>a {
+            text-decoration: none;
+            padding-left: 20px;
+            color: #222;
+        }
+        
+        .zuc>div:nth-child(1)>a:hover {
+            color: green;
+        }
+        
+        .zuc>div:nth-child(2) {
+            width: 1200px;
+            height: 70px;
+            line-height: 80px;
+            /* border: 1px solid #000; */
+        }
+        
+        .zuc>div:nth-child(2)>span {
+            padding-left: 20px;
+        }
+        
+        .zud>ul {
+            list-style: none;
+            background-color: #FBFBFB;
+        }
+        
+        .zud>ul>li {
+            width: 1190px;
+            height: 200px;
+            margin-top: 20px;
+            border-bottom: 1px dashed #666;
+            /* border: 1px solid #000; */
+            display: flex;
+            padding-left: 10px;
+        }
+        
+        .zud>ul>li img {
+            margin-top: 15px;
+        }
+        
+        .zud>ul>li>div:nth-child(2) {
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .zud>ul>li>div:nth-child(2)>h3 {
+            padding-top: 8px;
+        }
+        
+        .zud>ul>li>div:nth-child(2)>p {
+            font-size: 14px;
+            color: #666;
+            padding-top: 8px;
+        }
+        
+        .zue {
+            width: 1000px;
+            height: 60px;
+            line-height: 60px;
+            /* border: 1px solid #000; */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .zue b {
+            font-size: 30px;
+            font-weight: 300;
+            color: #F15145;
+        }
+        
+        .zue>button {
+            width: 120px;
+            height: 60px;
+            margin-right: 20px;
+            font-size: 20px;
+            color: #F15145;
+            border-color: #F15145;
+        }
+        
+        .footer {
+            height: 300px;
+            margin-top: 200px;
+            background-color: #313133;
+        }
+        
+        .footera {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            /* background-color: rgb(192, 255, 195); */
+        }
+        
+        .fen {
+            width: 400px;
+            height: 300px;
+            float: left;
+            overflow: hidden;
+            /* background-color: purple; */
+        }
+        
+        .quan>i {
+            position: relative;
+            top: 25px;
+        }
+        
+        .quan>h2 {
+            margin-left: 30px;
+            color: #fff;
+        }
+        
+        .fena {
+            margin-left: 20px;
+        }
+        
+        .fena>a {
+            text-decoration: none;
+            color: #9b9b9b;
+        }
+        
+        .fena>a:hover {
+            color: #fff;
+        }
+        
+        .lv {
+            width: 360px;
+            height: 300px;
+            float: left;
+            overflow: hidden;
+            margin-left: 40px;
+            /* background-color: rgba(65, 17, 65, 0.39); */
+        }
+        
+        .lva {
+            margin-left: 20px;
+        }
+        
+        .lva>span {
+            color: #9b9b9b;
+        }
+        
+        .lva>a {
+            text-decoration: none;
+            color: #9b9b9b;
+        }
+        
+        .lva>a:nth-of-type(2):hover {
+            color: #fff;
+        }
+        
+        .huang {
+            width: 400px;
+            height: 300px;
+            float: left;
+            overflow: hidden;
+            /* background-color: yellowgreen; */
+        }
+        
+        .erweima {
+            width: 400px;
+            height: 250px;
+            overflow: hidden;
+            /* background-color: violet; */
+        }
+        
+        .erweima>div:nth-of-type(1) {
+            width: 150px;
+            height: 250px;
+            color: #fff;
+            float: left;
+            margin-left: 30px;
+        }
+        
+        .erweima p {
+            text-align: center;
+        }
+        
+        .erweima img {
+            width: 150px;
+            height: 150px;
+        }
+        
+        .erweima>div:nth-of-type(2) {
+            width: 150px;
+            height: 250px;
+            color: #fff;
+            float: left;
+            margin-left: 50px;
+        }
+        
+        .zuihou {
+            height: 35px;
+            background-color: #202020;
+        }
+        
+        .zuihoua {
+            width: 600px;
+            height: 35px;
+            /* background-color: pink; */
+            margin: 0 auto;
+            line-height: 35px;
+            text-align: center;
+        }
+        
+        .zuihoua>a {
+            text-decoration: none;
+            font-size: 13px;
+            color: #824418;
+        }
+        
+        .zuihoua>a:nth-of-type(2) {
+            color: #1980B6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- toubu -->
+    <div class="tou">
+        <div class="toua">
+            <div class="touaa">
+                <img src="./img/sdg logo 狗狗 (1).png" alt="">
+                <h2>海外房产网</h2>
+            </div>
+
+            <div class="touaaa">
+                <a href="./房.html">首页</a>
+                <a href="./房a.html">海外房产</a>
+                <a href="./房b.html">房产咨询</a>
+                <a href="http://www.bilibili.com">业内动态</a>
+                <a href="http://www.bilibili.com">特色服务</a>
+            </div>
+        </div>
+    </div>
+    <!-- toubujie -->
+    <div class="beijing">
+        <div class="beijinga">
+            <h1>玛莎拉蒂&nbsp;&nbsp;&nbsp; &nbsp;海王专属座驾</h1>
+        </div>
+    </div>
+    <div class="sou">
+        <div class="soua">
+            <div class="soub">
+                <form action="">
+                    <input type="text" name="wd" placeholder="搜索关键字,国家/地区/城市">
+                    <input type="submit" value="搜索">
+                </form>
+            </div>
+            <div class="souc">
+                <a href="">最新快讯</a>
+                <a href="">热门排行榜</a>
+                <a href="">高清组图</a>
+                <a href="">热点专题</a>
+            </div>
+        </div>
+    </div>
+    <div class="kan">
+        <div class="kana">
+            <h2>看房优势</h2>
+            <p>KANFANGYOUSHI</p>
+        </div>
+        <div class="kanc">
+            <div class="kand">
+                <img src="./img/全程免费服务-01 (1).png" alt=""><br><br>
+                <span> <h4>全程免费</h4> </span> r7/
+                <p>专业接送,免费餐饮</p>
+            </div>
+            <div class="kane">
+                <img src="./img/代看货.png" alt=""><br><br>
+                <span> <h4>专业代看</h4> </span>
+                <p>随时为你解答疑惑</p>
+            </div>
+            <div class="kanf">
+                <img src="./img/优惠 (2).png" alt=""><br><br>
+                <span> <h4>独家优惠</h4> </span>
+                <p>参加看房团得实惠</p>
+            </div>
+            <div class="kang">
+                <img src="./img/线路.png" alt=""><br><br>
+                <span> <h4>线路广布</h4> </span>
+                <p>总有一条你钟意</p>
+            </div>
+        </div>
+    </div>
+    <!-- 房产展会开始 -->
+    <div id="zhan">
+        <div class="kana">
+            <h2>房产展会</h2>
+            <p>KANFANGYOUSHI</p>
+        </div>
+        <div class="zhana">
+            <img src="./img/ce.jpg" alt="">
+            <img src="./img/ce.jpg" alt="">
+            <img src="./img/ce.jpg" alt="">
+            <img src="./img/ce.jpg" alt="">
+            <img src="./img/ce.jpg" alt="">
+            <img src="./img/ce.jpg" alt="">
+            <div class="zhanb"><img alt=""></div>
+
+            <img src="./img/ce.jpg" alt="">
+        </div>
+    </div>
+    <!-- 房产问答开始 -->
+    <div class="wen">
+        <div class="wena">
+            <div class="kana">
+                <h2>房产问答</h2>
+                <p>KANFANGYOUSHI</p>
+            </div>
+            <div class="wenb">
+                <div class="wenc">
+                    <img src="./img/ye.jpg" alt="" width="340" height="500">
+                    <ul>
+                        <li>
+                            <a href="">上海迪士尼效应:未开园周边房地产涨价35%</a>
+                            <p>作为亚洲最大的迪士尼乐园,上海迪士尼乐园不但吸引游客蜂拥而至还带动了周边的房地产项目热卖,形成了"迪士尼效应".</p>
+                            <p> <img src="./img/时间 历史记录 计时 钟表 线性.png" alt="" width="15" height="15"> 2016-06-07</p>
+                        </li>
+                        <li>
+                            <a href="">上海迪士尼效应:未开园周边房地产涨价35%</a>
+                            <p>作为亚洲最大的迪士尼乐园,上海迪士尼乐园不但吸引游客蜂拥而至还带动了周边的房地产项目热卖,形成了"迪士尼效应".</p>
+                            <p> <img src="./img/时间 历史记录 计时 钟表 线性.png" alt="" width="15" height="15"> 2016-06-07</p>
+                        </li>
+                        <li>
+                            <a href="">上海迪士尼效应:未开园周边房地产涨价35%</a>
+                            <p>作为亚洲最大的迪士尼乐园,上海迪士尼乐园不但吸引游客蜂拥而至还带动了周边的房地产项目热卖,形成了"迪士尼效应".</p>
+                            <p> <img src="./img/时间 历史记录 计时 钟表 线性.png" alt="" width="15" height="15"> 2016-06-07</p>
+                        </li>
+                        <li>
+                            <a href="">上海迪士尼效应:未开园周边房地产涨价35%</a>
+                            <p>作为亚洲最大的迪士尼乐园,上海迪士尼乐园不但吸引游客蜂拥而至还带动了周边的房地产项目热卖,形成了"迪士尼效应".</p>
+                            <p> <img src="./img/时间 历史记录 计时 钟表 线性.png" alt="" width="15" height="15"> 2016-06-07</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wend">
+                    <div>房产问答</div>
+                    <ul>
+                        <li> <a href="">房地产行业将会迎来一次很大的…</a> <span>2020-03-23</span> </li>
+                        <li> <a href="">房地产行业将会迎来一次很大的…</a> <span>2020-03-23</span> </li>
+                        <li> <a href="">房地产行业将会迎来一次很大的…</a> <span>2020-03-23</span> </li>
+                        <li> <a href="">房地产行业将会迎来一次很大的…</a> <span>2020-03-23</span> </li>
+                        <li> <a href="">房地产行业将会迎来一次很大的…</a> <span>2020-03-23</span> </li>
+                        <li> <a href="">房地产行业将会迎来一次很大的…</a> <span>2020-03-23</span> </li>
+                        <li> <a href="">房地产行业将会迎来一次很大的…</a> <span>2020-03-23</span> </li>
+                        <li> <a href="">房地产行业将会迎来一次很大的…</a> <span>2020-03-23</span> </li>
+                        <li> <a href="">房地产行业将会迎来一次很大的…</a> <span>2020-03-23</span> </li>
+                        <li> <a href="">房地产行业将会迎来一次很大的…</a> <span>2020-03-23</span> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 房产问答结束 -->
+
+    <!-- 海防百科开始 -->
+    <div class="hai">
+        <div class="haia">
+            <div class="kana">
+                <h2>海防百科</h2>
+                <p>KANFANGYOUSHI</p>
+                <div class="guo">
+                    <div class="guob">
+                        <div class="guoa"><span><img src="./img/书.png" alt="" width="30" height="30"></span>买房知识</div>
+                        <ul>
+                            <li>中国</li>
+                            <li>中国</li>
+                            <li>中国</li>
+                            <li>中国</li>
+                            <li>中国</li>
+                            <li>中国</li>
+                            <li>中国</li>
+                        </ul>
+                    </div>
+                    <div class="guoc">
+                        <ul>
+                            <li>
+                                <div> <img src="./img/lan.jpg" alt=""> </div>
+                                <div>
+                                    <h4>房子登记在子女名下,这些风险你想到了什么?</h4>
+                                    <button>二手房</button>
+                                    <button>购房</button>
+
+                                    <p><span><img src="./img/赞.png" alt="" width="20" height="20"> (99+)</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div> <img src="./img/lan.jpg" alt=""> </div>
+                                <div>
+                                    <h4>房子登记在子女名下,这些风险你想到了什么?</h4>
+                                    <button>二手房</button>
+                                    <button>购房</button>
+
+                                    <p><span><img src="./img/赞.png" alt="" width="20" height="20"> (99+)</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div> <img src="./img/lan.jpg" alt=""> </div>
+                                <div>
+                                    <h4>房子登记在子女名下,这些风险你想到了什么?</h4>
+                                    <button>二手房</button>
+                                    <button>购房</button>
+
+                                    <p><span><img src="./img/赞.png" alt="" width="20" height="20"> (99+)</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 海外房产结束 -->
+    <!-- 我要贷款开始 -->
+    <div class="dai">
+        <div class="daia">
+
+            <div class="kana">
+                <h2>我要贷款买玛莎</h2>
+                <p>KANFANGYOUSHI</p>
+            </div>
+            <div class="daib">
+                <div class="daic">
+                    <form action="demo-form.php">
+                        &nbsp; 姓名 : <input type="text" name="wa" placeholder="输入姓名"><br>&nbsp;&nbsp; 电话 : <input type="text" name="wb" placeholder="输入电话"><br> 验证码 : <input type="text" name="wc" placeholder="输入验证码">
+                        <input type="submit" name="" value="获取验证码">
+                        <br> &nbsp;&nbsp;邮箱 : <input type="text" name="we" placeholder="输入邮箱"><br>&nbsp;&nbsp; 备注 : <input type="text" name="we" placeholder="输入备注"><br>
+                        <input type="submit" value="立即提交">
+                    </form>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- 贷款结束 -->
+    <!-- 房屋租赁开始 -->
+    <div class="zu">
+        <div class="zua">
+            <div class="kana">
+                <h2>房屋租赁</h2>
+                <p>KANFANGYOUSHI</p>
+            </div>
+            <div class="zub">
+                <div class="zuc">
+                    <div>
+                        &nbsp;&nbsp;&nbsp;区域:
+                        <a href="">加州</a>
+                        <a href="">加州</a>
+                        <a href="">加州</a>
+                        <a href="">加州</a>
+                        <a href="">加州</a>
+                        <a href="">加州</a>
+                        <a href="">加州</a>
+                        <a href="">加州</a>
+                        <a href="">加州</a>
+                        <a href="">加州</a>
+                    </div>
+                    <div>
+                        &nbsp;&nbsp;&nbsp;租金:
+                        <span>0-10000</span>
+                        <span>0-10000</span>
+                        <span>0-10000</span>
+                        <span>0-10000</span>
+                        <span>0-10000</span>
+                        <span>0-10000</span>
+                    </div>
+                </div>
+                <div class="zud">
+                    <ul>
+                        <li>
+                            <div>
+                                <img src="./img/shu.jpg" alt="">
+                            </div>
+                            <div>
+                                <h2>梨园小镇</h2>
+                                <h3>整租 <span> | </span>4室2厅 <span> | </span>250m<sup>2</sup><span> | </span>(高层)/共六层 <span> | </span>朝南北</h3>
+                                <p>通州-梨园-梨园小镇</p>
+                                <p>距八通线梨园站约500米,距杨家集(绩溪路)公交站约453米</p>
+                                <div class="zue">
+                                    <div> <b>1000</b><span> 元/月</span></div>
+                                    <button>预约看房</button>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./img/shu.jpg" alt="">
+                            </div>
+                            <div>
+                                <h2>梨园小镇</h2>
+                                <h3>整租 <span> | </span>4室2厅 <span> | </span>250m<sup>2</sup><span> | </span>(高层)/共六层 <span> | </span>朝南北</h3>
+                                <p>通州-梨园-梨园小镇</p>
+                                <p>距八通线梨园站约500米,距杨家集(绩溪路)公交站约453米</p>
+                                <div class="zue">
+                                    <div> <b>1000</b><span> 元/月</span></div>
+                                    <button>预约看房</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./img/shu.jpg" alt="">
+                            </div>
+                            <div>
+                                <h2>梨园小镇</h2>
+                                <h3>整租 <span> | </span>4室2厅 <span> | </span>250m<sup>2</sup><span> | </span>(高层)/共六层 <span> | </span>朝南北</h3>
+                                <p>通州-梨园-梨园小镇</p>
+                                <p>距八通线梨园站约500米,距杨家集(绩溪路)公交站约453米</p>
+                                <div class="zue">
+                                    <div> <b>1000</b><span> 元/月</span></div>
+                                    <button>预约看房</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./img/shu.jpg" alt="">
+                            </div>
+                            <div>
+                                <h2>梨园小镇</h2>
+                                <h3>整租 <span> | </span>4室2厅 <span> | </span>250m<sup>2</sup><span> | </span>(高层)/共六层 <span> | </span>朝南北</h3>
+                                <p>通州-梨园-梨园小镇</p>
+                                <p>距八通线梨园站约500米,距杨家集(绩溪路)公交站约453米</p>
+                                <div class="zue">
+                                    <div> <b>1000</b><span> 元/月</span></div>
+                                    <button>预约看房</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./img/shu.jpg" alt="">
+                            </div>
+                            <div>
+                                <h2>梨园小镇</h2>
+                                <h3>整租 <span> | </span>4室2厅 <span> | </span>250m<sup>2</sup><span> | </span>(高层)/共六层 <span> | </span>朝南北</h3>
+                                <p>通州-梨园-梨园小镇</p>
+                                <p>距八通线梨园站约500米,距杨家集(绩溪路)公交站约453米</p>
+                                <div class="zue">
+                                    <div> <b>1000</b><span> 元/月</span></div>
+                                    <button>预约看房</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="footera">
+                <div class="fen">
+                    <div class="quan">
+                        <i style="width:15px;height:15px;border-radius:50%;background-color:pink;display: block"></i>
+
+                        <h2>友情链接</h2><br>
+                    </div>
+                    <div class="fena">
+                        <a href="http://www.bilibili.com">澳洲房地产网</a>&nbsp;&nbsp;&nbsp;
+                        <a href="http://www.bilibili.com">加帮国际</a>&nbsp;&nbsp;&nbsp;
+                        <a href="http://www.bilibili.com">海外房产网</a>&nbsp;&nbsp;&nbsp;
+                        <a href="http://www.bilibili.com">开封新闻</a><br><br>
+                        <a href="http://www.bilibili.com">开放分类目录加拿大房产网</a>&nbsp;&nbsp;&nbsp;
+                        <a href="http://www.bilibili.com">美国房产网</a>&nbsp;&nbsp;&nbsp;
+                        <a href="http://www.bilibili.com">澳洲房产网</a><br><br>
+                        <a href="http://www.bilibili.com">中房购</a>&nbsp;&nbsp;&nbsp;
+                        <a href="http://www.bilibili.com">申请链接</a>
+                    </div>
+                </div>
+                <div class="lv">
+                    <div class="quan">
+                        <i style="width:15px;height:15px;border-radius:50%;background-color:rgb(18, 119, 86);display: block"></i>
+
+                        <h2>联系我们</h2><br>
+                    </div>
+                    <div class="lva">
+                        <a href="">咨询热线: 4006-081-781</a><br><br> <span>邮箱:</span>
+                        <a href="http://www.bilibili.com"> www.lovekiomon.com</a>
+                    </div>
+                </div>
+                <div class="huang">
+                    <div class="quan">
+                        <i style="width:15px;height:15px;border-radius:50%;background-color:rgb(228, 225, 61);display: block"></i>
+
+                        <h2>关注我们</h2><br>
+                    </div>
+                    <div class="erweima">
+                        <div>
+                            <img src="./img/3.jpg" alt="">
+                            <br>
+                            <p>看一看</p><br>
+                            <p>看我可爱不</p>
+                        </div>
+                        <div>
+                            <img src="./img/4.jpg" alt="">
+                            <br>
+                            <p>瞅一瞅</p><br>
+                            <p>简直太完美了</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 底部结束 -->
+        <div class="zuihou">
+            <div class="zuihoua">
+                <a href="">&copy;</a>
+                <a href="">泸ICP备14054173号</a>&nbsp;&nbsp;&nbsp;
+                <a href="">Copyright</a>&nbsp;&nbsp;&nbsp;
+                <a href="">2020-2021</a>&nbsp;&nbsp;
+                <a href="">黑帮国际</a>&nbsp;&nbsp;
+                <a href="">All Right Reserved</a>
+            </div>
+        </div>
+</body>
+
+</html>

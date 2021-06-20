@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 创建数组的方法
+        // 语法: var 数组名 = new Array();
+        // 创建了一个空数组,名为arr
+        // var arr = new Array(); 
+
+        // // 初始化一个数组, 都是用[]中括号括起来,里面的元素是通过逗号分隔
+        // var arr1 = new Array(1, 12, 3); 
+
+        // // 创建数组,并扩容,默认为你传的值是它的长度
+        // var arr2 = new Array(2);
+        // console.log(arr1);
+        // console.log(arr2);
+
+        // 字面量创建数组
+        // 语法: var 数组名 = []; //你创建了一个空数组
+        // var arr3 = [];
+
+        // // 数组添加元素
+        // var arr4 = [1, 12, 36];
+        // console.log((arr4));
+
+        /* 
+            获取数组中的元素, 通过索引值从0开始计算,
+            如果找第一个,就告诉数组你需要元素的索引值为0;
+            0    第一个元素
+            1    第二个元素
+            2    第三个元素
+            ...
+
+            通过索引值获取元素的方法:
+            数组名[索引值]
+         */
+        //  var arr5 = [12, 89, 56, 90];
+
+        // // 显示56
+        // console.log(arr5[2]);
+
+        //取出其中一个元素'JavaScript',并且输出到页面上
+        // var arr6 = ['HTML', 'CSS', 'JavaScript', 'React', 'Vue', 'Angular', 'Node', 'java'];
+
+        // document.write(arr6[2]);
+
+        // 遍历数组
+        // for(var i=0; i<7; i++){
+        //     // i是0, arr[0], i是1, arr[1]
+        //     console.log(arr6[i]);
+        // }
+
+        // 字符串怎么获取长度,str.length
+        // 获取数组的长度,  语法: 数组名.length
+        // console.log(arr6.length);
+
+        // // 访问到每一个数组的元素
+        // for(var i=0; i<arr6.length; i++){
+        //     console.log(arr6[i])
+        // }
+
+        // 案例一
+        // 数组初始化
+        // var arr = [12, 68, 90, 16, 29, 66];
+        // // 定义一个变量用来存储元素之和
+        // var sum = 0;
+        // // 遍历出数组中的所有元素
+        // for(var i=0; i<arr.length; i++){
+        //     // 获取数组的某一个元素, 数组名[索引值]
+        //     // 然后将所有元素进行累加
+        //     sum += arr[i];
+        // }
+
+        // document.write('所有元素之和是:' + sum + '<br />');
+        // document.write('所有元素的平均数是:' + sum/arr.length);
+
+        // 案例二
+        // 数组初始化
+        // var arr = [9, 72, 118, 81, 2, 25];
+
+        // // 声明一个储存最大值的变量max
+        // var max = arr[0];
+
+
+        // // 遍历数组
+        // for(var i=1; i<arr.length; i++){
+        //     // 每一个元素跟max变量里面的值进行比较
+        //     if(arr[i] > max){
+        //         /* 
+        //             如果该元素大于max变量里面的值,
+        //              那么说明max里面存的值不是最大的,
+        //              我们就将max的值更新为该元素
+        //          */
+        //         max = arr[i];  //如果i等于1那么 max 72, i为2, max72
+        //     }
+        // }
+
+        // document.write('该数组中的最大值是:' + max);
+
+        //案例三
+        // 初始化数组
+        // var arr = ['I', 'love', 'JavaScript', 'very', 'much'];
+        // // 声明一个变量用于存储数组元素拼接而成的字符串
+        // var str = '';
+
+        // // 遍历数组
+        // for(var i=0; i<arr.length; i++){
+        //     // 使用加号拼接字符串
+        //     if(i != arr.length-1){  // 如果遍历到不是最后一个元素时
+        //         str += arr[i] + '!';
+        //     } else{
+        //         str += arr[i];
+        //     }
+        // }
+
+        // document.write(str);
+
+        // length是可以被读写的
+        // var arr = [1, 2, 6];
+
+        // 可以读
+        // console.log(arr.length);  // 3
+        // // 向length进行赋值,更改length
+        // arr.length = 4;
+        // console.log(arr[3]); // 访问最后个元素,通过length进行扩容之后,新增的元素的值为undefined
+        // console.log(arr.length); 
+
+        // 想通过索引值,增加数组的长度
+        // console.log(arr[3]);
+        // arr[3] = 96;
+        // console.log(arr)
+        // console.log(arr[3]);
+
+        // arr[6] = 6; 
+        // console.log(arr.length); // 7
+        // console.log(arr);
+        // console.log(arr[4]); // 第五个
+        // console.log(arr[5]); // 第六个
+
+        // 数组常用的方法
+        var arr = [12, 65, 33, 2];
+
+        // push() 向数组的末尾添加一个或者多个元素,并且将新的长度返回
+        // console.log(arr.push(8)); // 将8放到arr数组的末尾
+        // console.log(arr);
+        // // push多个元素,元素之间使用逗号隔开
+        // console.log(arr.push('我是字符串1', 6, true)); // 8
+
+        // pop() 删除最后一个元素,又把被删除的元素返回回来了
+        // console.log(arr.pop());  // 2
+        // console.log(arr); 
+
+        // unshift() 向开头添加一个或多个元素, 并返回新的数组的长度
+        // console.log(arr.unshift(66)); // 5
+        // console.log(arr);
+        // // 向开头添加多个元素,元素之间用逗号隔开
+        // console.log(arr.unshift(88, 99, 100)); //8
+        // console.log(arr);
+
+        // shift() 删除第一个元素,并返回被删除的元素
+        // console.log(arr.shift()); // 12
+        // console.log(arr);
+
+        // slice(start, end) 
+        /* 
+            start, 是截取的开始位置的索引值
+            end, 是截取的结束位置的索引值
+
+            不会操作原数组,
+            第二个参数不写,那么默认是截取到最后一个元素
+         */
+        //  console.log(arr.slice(0, 2)); // [12, 65]
+        //  console.log(arr); // 使用slice方法截取数组以后,原数组不做任何改变
+        // console.log(arr.slice(1)); // [65, 33, 2]
+
+        // splice(index, howmany, ..) 用于删除元素的,也可以先删除再添加
+        /* 
+            index  开始的索引值
+            howmany 你要删除的元素的数量
+
+            返回被删除的元素,会影响原数组
+         */
+        // console.log(arr.splice(1)); // 如果只写第一个参数,它会默认将你开始索引的位置往后全部删除,并返回
+        // console.log(arr.splice(1, 1)); // 删除了第二个元素
+        // console.log(arr);
+
+        // splice可以替换元素
+        console.log(arr.splice(0, 1, 9999));
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

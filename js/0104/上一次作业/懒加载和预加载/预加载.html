@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>预加载</title>
+  <style>
+    .container {
+      /* display: none; */
+    }
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+  <script>
+    // 提前加载好,在需要的时候直接用, 提高用户体验
+    // var newImage = new Image();
+    // newImage.onerror = function() {}  // 图片加载失败
+    // newImage.onload = function() {}  // 图片加载完成
+    // newImage.src = 'https://img.500px.me/500px1017472104.jpg!p5';
+    // setTimeout(function(){
+    //   var container = document.querySelector('.container');
+    //   container.appendChild(newImage);
+    // }, 8000)
+
+    // 没有使用预加载
+  
+    setTimeout(function(){
+      var newImage = new Image();
+      newImage.src = 'https://img.500px.me/500px1017472104.jpg!p5';
+      var container = document.querySelector('.container');
+      container.appendChild(newImage);
+    }, 8000)
+  </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Q1
+        // 初始化
+        // var arr = ['香蕉', '苹果', '橘子', '梨', '草莓'];
+        // // 创建一个新数组,用于存放反转之后的元素
+        // var arr1 = [];
+
+        // // 遍历数组
+        // for(var i=arr.length-1; i>=0; i--){
+        //     arr1.push(arr[i]);
+        // }
+
+        // console.log(arr1)
+
+        // Q2
+        // 新建数组
+        // var myArr = ['A','B','C'];
+        // var myArr2 = ['J','K','L'];
+        // // 创建一个新的数组
+        // var myArr3 = [];
+
+        // // 封装函数
+        // function createArr(arr, newArr){
+        //     for(var i=0; i<arr.length; i++){
+        //         newArr.push(arr[i]);
+        //     }
+        // }
+        // // 遍历数组myArr
+        // // for(var i=0; i<myArr.length; i++){
+        // //     myArr3.push(myArr[i]);
+        // // }
+        // createArr(myArr, myArr3);
+        // // 遍历数组myArr2
+        // // for(var i=0; i<myArr2.length; i++){
+        // //     myArr3.push(myArr2[i]);
+        // // }
+        // createArr(myArr2, myArr3);
+
+        // document.write(myArr3 + '<br />');
+
+        // // 删除第一个元素
+        // myArr3.shift(); 
+        // // 删除最后一个元素
+        // myArr3.pop();
+
+        // document.write(myArr3);
+
+        // Q3
+        //创建数组用于存放学生
+        var stuList = [];
+
+        for (var i = 1; i <= 3; i++) {
+            var stu = prompt('请输入第' + i + '位学生的姓名:', '李雷');
+            // 将小于60的成绩拼接成一个字符串
+            var lowerScoreStr = '';
+            // 定义一个变量存储总成绩
+            var sumScore = 0;
+
+            for (var j = 1; j <= 4; j++) {
+                var score = prompt('请输入' + stu + '第' + j + '门成绩:', '80') * 1;
+                // 每位同学的总成绩
+                sumScore += score;
+
+                // 判断小于60的成绩
+                if (score < 60) {
+                    lowerScoreStr += '成绩' + j + "是" + score;
+                }
+            }
+
+            document.write(stu + '的总成绩为:' + sumScore + '分,平均成绩是:' + sumScore / 4 + '分, 小于60的成绩有:' + lowerScoreStr + '<br />')
+        }
+
+        // Q4
+        // 数组去重
+        // 数组初始化
+        var arr = [1, 2, 6, 8, 1, 2, 2, 2, 66, 2, 12];
+
+        // 遍历数组
+        // 1 与 1后面所有元素进行比较
+        for (var i = 0; i < arr.length; i++) {
+            // i 与 i后面所有元素进行比较 i+1~arr.length-1
+            for (var j = i + 1; j < arr.length; j++) {
+                // 判断是否是重复的元素
+                if (arr[i] == arr[j]) {
+                    // 删除2以后,后面元素补位上来,
+                    // 这个位置上的元素,被认为已经比较过了,
+                    // 所以你补位上来的元素没有做判断
+                    arr.splice(j, 1);
+                    // 就是将被删除的位置,再重新判断一遍
+                    j--;
+                }
+            }
+        }
+
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 作用域就是, 变量的作用范围,js代码可以生效的范围
+        // 作用在全局, 全局中有一个对象叫做window
+        // 在全局作用域内的所有的变量就是window的属性,所有函数就是window的方法
+        // 在script标签内直接使用var声明的变量就作为window的一个属性存在
+        // var a = 10000;
+
+        // 所有window的方法和属性,都可以省略window.,直接使用
+        // prompt()
+        // console.log(window.a);
+        // console.log(a);
+        // // console.log( prompt('qingshuru'));
+        // console.log( window.prompt('qingshuru'));
+
+        // 全局作用域,是在你打开浏览器的时候开始创建
+        // 当你关闭浏览器的时候,就会被销毁
+
+        // 创建的也是全局变量
+        // bb = 55;
+
+        // // 也给window创建了一个属性
+        // console.log(bb);
+        // console.log(c);  // 会报错
+
+        // 局部作用域(函数作用域) ES5
+        // 只是在一定的范围内才生效
+
+        // 全局变量
+        // var c = 1;
+
+        // function aa(){
+        //     // 如果在函数作用域内,使用var声明的变量是局部变量
+        //     var c = 10;
+
+        //     // 在局部作用域内,可以访问到全局变量
+        //     // 变量取值,就近原则\
+        //     // 作用域链, 先找局部范围内有没有该变量,如果没有向外寻找,直到找到该变量
+        //     console.log(c, "hanshuneibu");
+
+        //     // aa1是aa函数内的局部变量
+        //     function aa1(){
+        //         // var c = 100;
+
+        //         console.log(c, "我是在aa1函数内部的");
+        //     }
+
+        //     aa1();
+        // }
+
+        // // 在函数调用时,自动创建一个局部作用域
+        // // 在调用结束以后,将自动销毁该局部作用域
+        // aa();
+
+
+        // // 在局部作用域外,不能访问到局部变量
+        // console.log(c, "函数外部");
+
+
+        // 在执行js代码之前,浏览器的js引擎,预解析var声明的变量和function声明的函数
+        // 变量提升 
+        // var a; 
+        //                 // var b;  
+        // var a = 10;  // 你写的声明并赋值的代码 a = 10;
+
+        // console.log(b);
+        // var b = 11;  // b =1+1
+        // console.log(a);
+
+        // function aa(){
+        // //    var a = 11;
+        //     var a;  // a是undefined
+
+        //    console.log(a, "函数aa内部的变量");
+        //    var a = 12;  // a = 12
+        // }
+
+        // aa()
+
+        // // 变量声明提升, 只是提升变量的声明,不提升变量的赋值
+        // // var a = 10;
+        // // console.log(b);
+        // // var b = 2;
+        // var a; 
+        // var b;
+
+        // a = 10;
+        // console.log(b);  // undefined
+        // b = 2;
+
+        // 函数声明的提升
+        // function会提前声明
+        // 调用函数
+        // var bb;
+        // aa();
+
+        // function aa(){
+        //     console.log(11);
+        // }
+
+        // bb(); // bb is not function
+
+        // // 将变量bb提前声明
+        // var bb = function(){
+        //     console.log(12);
+        // }
+
+        // var a = b = 10; 
+        // b = 10; 
+        // var a = b;
+
+        // function cc(){
+        //     // var c = d = 100;
+        //     d = 100;  // d 全局变量
+        //     var c = d; // c是局部变量
+        // }
+
+        // cc();
+        // // console.log(c); // 报错
+        // console.log(d); 
+
+        // var a =1;
+        // function test(){
+        //     alert(window.a);
+        //     var a=2;
+        //     alert(a); 
+        // }
+        // test();
+        // alert(a); 
+
+        // 变量声明提前
+        // var a;
+        // // 函数声明提前
+        // function test(){
+        //     var a;
+        //     alert(window.a);
+        //     a=2;
+        //     alert(a); 
+        // }
+        // a = 1;
+        // test();
+        // alert(a);
+
+        // function test2() {
+        //     // 这三个变量都是局部变量
+        //     var i;
+        //     var j;
+        //     var k;
+
+        //     alert("before for scope:" + i); // undefined
+
+        //     // 没有局部作用域
+        //     for (i = 0; i < 3; i++) {
+        //         alert("in for scope:" + i); // 0, 1, 2
+        //     }
+
+        //     // 上面循环的结果,跳出循环时i的值
+        //     alert("after for scope:" + i); // 3
+
+        //     while (true) {
+        //         j = 1;
+        //         break;
+        //     }
+        //     alert(j);  // 1
+
+        //     if (true) {
+        //         k = 1;
+        //     }
+        //     alert(k); // 1
+        // }
+
+        // test2();
+
+        // alert(i); // error, 一旦报错,执行就停止了
+        // alert("这行打印还会输出吗？"); 
+        // alert(j); //  error
+        // alert(k);  //  error
+
+        // var a;
+        // a = 1;
+        // function test() {
+        //     var a;
+
+        //     alert(a); // undefined
+        //     a = 4;
+        //     alert(a);   // 4
+
+        //     alert(a);   // 4
+        // }
+        // test();
+        // alert(a);  // 1
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

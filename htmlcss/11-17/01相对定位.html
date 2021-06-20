@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        position定位属性
+        在设置值不是默认值(静态) 的情况下 可以给这个标签设置 left top right bottom 属性移动这个标签
+         */
+        div > a:nth-child(2){
+            /* 
+                relative:相对定位 根据谁进行移动 移动时是否影响其他元素 
+                根据自身位置进行偏移
+                移动时不影响其他元素
+                在文档流中占据原本位置
+
+                1.微调的时候
+                2.根绝对定位结合使用
+             */
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="">这是a01</a><span>|</span>
+        <a href="">这是a02</a>
+        <a href="">这是a03</a>
+        <a href="">这是a04</a>
+        <a href="">这是a05</a>
+    </div>
+</body>
+</html>

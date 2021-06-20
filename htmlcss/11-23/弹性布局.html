@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 弹性布局:设置子标签根据父标签进行排列 */
+        section{
+            border: 2px solid #000;
+            height: 800px;
+            /* 弹性布局是设置给父标签,操作子标签排布方式 */
+
+            /* 开启弹性布局 不脱离文档流 
+                子标签从左往右排列
+                子标签宽度默认由内容撑开
+                子标签高度默认跟父标签一样
+                子标签在父标签的上边(从上往下)
+                不会换行
+             */
+            display: flex;
+
+            /* 设置子标签总宽度大于父标签时换行 */
+            flex-wrap: wrap;
+
+            /* 
+            默认将x轴从左往右作为主轴,将y轴从上往下作为交叉轴(子标签默认是根据轴向进行排列的)
+            flex-direction:设置主轴方向
+                row:默认值 x轴从左往右
+                row-reverse: x轴从右往左
+                column: y轴 从上往下
+                column-reverse: y轴 从下往上
+             */
+            /* flex-direction: column-reverse; */
+
+            /* 
+            设置主轴子标签的排列方式
+            flex-start:默认值 在主轴的开始位置对齐(靠左对齐)
+            flex-end: 在主轴结束位置对齐(靠右对齐)
+            center: 在主轴方向全局居中对齐
+            space-around:设置每个标签左右边距相等(两边有边距中间标签距离平均)
+            space-between:两边无边距,每个子标签距离平均
+             */
+            /* justify-content: space-evenly; */
+
+            /* 设置交叉轴只有一排时的排列方式 
+             flex-start:默认值 在交叉轴的开始位置对齐(靠上对齐)
+            flex-end: 在交叉轴结束位置对齐(靠下对齐)
+            center: 在交叉轴方向全局居中对齐*/
+            /* align-items: center */
+
+
+            /*  设置交叉轴多行的排列方式 属性值与justify-content的值是一样的 */
+            align-content: space-around;
+        }
+        div{
+            border: 1px solid #f00;
+            /* width: 200px; */
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>这是div01</div>
+        <div>这是div02</div>
+        <div>这是div03</div>
+        <div>这是div04</div>
+        <div>这是div05</div>
+        <div>这是div06</div>
+        <div>这是div07</div>
+        <div>这是div08</div>
+        <div>这是div09</div>
+        <div>这是div10</div>
+        <div>这是div11</div>
+        <div>这是div12</div>
+        <div>这是div13</div>
+        <div>这是div14</div>
+        <div>这是div15</div>
+        <div>这是div16</div>
+        <div>这是div17</div>
+        <div>这是div18</div>
+        <div>这是div19</div>
+        <div>这是div20</div>
+        <div>这是div21</div>
+        <div>这是div22</div>
+        <div>这是div23</div>
+        <div>这是div24</div>
+        <div>这是div25</div>
+        <div>这是div26</div>
+        <div>这是div27</div>
+        <div>这是div28</div>
+        <div>这是div29</div>
+        <div>这是div30</div>
+        <div>这是div31</div>
+        <div>这是div32</div>
+        <div>这是div33</div>
+        <div>这是div34</div>
+        <div>这是div35</div>
+    </section>
+</body>
+</html>

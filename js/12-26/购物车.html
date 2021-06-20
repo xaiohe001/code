@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.confirm {
+			width: 300px;
+			height: 300px;
+			background-color: grey;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			margin-left: -150px;
+			margin-top: -150px;
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<table border="1" cellpadding="20" id="goods">
+		<tr>
+			<th>选择</th>
+			<th>商品</th>
+			<th>单价</th>
+			<th>数量</th>
+			<th>操作</th>
+
+		</tr>
+		<tr>
+			<td><input type="checkbox" class="checkItem"></td>
+			<td>苹果</td>
+			<td class="price">0.8元</td>
+			<td>
+				<button class="add">+</button>
+				<span class="count">1</span>
+				<button class="reduce">-</button>
+			</td>
+			<td><button class="delete">删除</button></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" class="checkItem"></td>
+			<td>香蕉</td>
+			<td class="price">1.6元</td>
+			<td>
+				<button class="add">+</button>
+				<span class="count">1</span>
+				<button class="reduce">-</button>
+			</td>
+			<td><button class="delete">删除</button></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" class="checkItem"></td>
+			<td>橘子</td>
+			<td class="price">0.9元</td>
+			<td>
+				<button class="add">+</button>
+				<span class="count">1</span>
+				<button class="reduce">-</button>
+			</td>
+			<td><button class="delete">删除</button></td>
+
+		</tr>
+		<tr>
+			<td><input type="checkbox" class="checkItem"></td>
+			<td>西瓜</td>
+			<td class="price">0.5元</td>
+			<td>
+				<button class="add">+</button>
+				<span class="count">1</span>
+				<button class="reduce">-</button>
+			</td>
+			<td><button class="delete">删除</button></td>
+		</tr>
+
+	</table>
+	<div>
+		全选:<input type="checkbox" class="checkAll">
+		<!-- 全不选：<input type="checkbox" class="noCheck"> -->
+	</div>
+	<div>
+		合计：<span class="total">0.00元</span>
+	</div>
+	<div class="confirm">
+		<button id="yes">确定</button>
+		<button id="no">取消</button>
+
+	</div>
+	<script>
+		var goods = document.getElementById("goods");
+		var checkItem = document.getElementsByClassName("checkItem");
+		var checkAll = document.getElementsByClassName("checkAll")[0];
+		var add = document.getElementsByClassName("add");
+		var reduce = document.getElementsByClassName("reduce");
+		var num = document.getElementsByClassName("count");
+		var noCheck = document.getElementsByClassName("noCheck")[0];
+		var total = document.getElementsByClassName("total")[0];
+		var priceItem = document.getElementsByClassName("price");
+		var deletebtn = document.getElementsByClassName("delete");
+		var confirmDIV = document.getElementsByClassName("confirm");
+		var yes = document.getElementById("yes");
+		var no = document.getElementById("no");
+		var price = 0;
+		var count = 0;
+		// 当 所有的商品被选选中的时候，全选按钮被选中，需要记录选中的按钮数量
+		for (var i = 0; i < checkItem.length; i++) {
+			checkItem[i].onchange = function () {
+				if (this.checked) {
+					price += parseFloat(this.parentNode.parentNode.children[2].innerHTML) * parseInt(this.parentNode.parentNode.children[3].children[1].innerHTML);
+					count++;
+
+
+				} else {
+					price -= parseFloat(this.parentNode.parentNode.children[2].innerHTML) * parseInt(this.parentNode.parentNode.children[3].children[1].innerHTML);
+					count--;
+				}
+				// 保留小数
+				total.innerHTML = price.toFixed(2) + "元";
+				if (count == checkItem.length) {
+					checkAll.checked = true;
+				} else {
+					checkAll.checked = false;
+				}
+			}
+
+		}
+		// 点击全选按钮，如果有没有选中的那么则把该元素选中
+		checkAll.onchange = function () {
+			price = 0;
+			for (var i = 0; i < checkItem.length; i++) {
+				checkItem[i].checked = this.checked;
+			}
+			if (this.checked) {
+				for (var i = 0; i < priceItem.length; i++) {
+					price += parseFloat(priceItem[i].innerHTML) * parseInt(num[i].innerHTML);
+				}
+
+				count = checkItem.length;
+
+
+			} else {
+				price = 0;
+				count = 0;
+
+			}
+			total.innerHTML = price.toFixed(2) + "元";
+
+		}
+		for (var i = 0; i < add.length; i++) {
+			add[i].index = i;
+			add[i].onclick = function () {
+				var num1 = parseInt(this.parentNode.children[1].innerHTML)
+				var num = num1 + 1;
+				this.parentNode.children[1].innerHTML = num;
+
+
+				var check = this.parentNode.parentNode.children[0].children[0];
+				if (check.checked) {
+					price += parseFloat(priceItem[this.index].innerHTML) * (num - num1);
+				} else {
+					// price+=parseFloat(priceItem[this.index].innerHTML)*num;
+					// check.checked=true;
+				}
+
+				total.innerHTML = price.toFixed(2) + "元";
+			}
+		}
+		for (var i = 0; i < reduce.length; i++) {
+			reduce[i].index = i;
+			reduce[i].onclick = function () {
+				var num1 = parseInt(this.parentNode.children[1].innerHTML)
+				if (num1 == 1) {
+					num = num1;
+				} else {
+					num = num1 - 1;
+
+					// this.parentNode.parentNode.children[0].children[0].checked=true;
+					this.parentNode.children[1].innerHTML = num;
+					if (checkItem[this.index].checked) {
+						// 需要修改总价格
+
+						price -= parseFloat(priceItem[this.index].innerHTML) * num;
+
+					}
+				}
+
+				total.innerHTML = price.toFixed(2) + "元";
+			}
+		}
+		// deletebtn删除按钮的点击事件
+		var deleteObj;
+		var deleteMoney;
+		var ch;
+		for (var i = 0; i < deletebtn.length; i++) {
+
+			deletebtn[i].onclick = function () {
+				//看是否选中
+
+				deleteObj = this.parentNode.parentNode;
+				ch = deleteObj.children[0].children[0].checked;
+				deleteMoney = parseFloat(deleteObj.children[2].innerHTML) * parseInt(deleteObj.children[3].children[1].innerHTML)
+				confirmDIV[0].style.display = "block";
+
+			}
+		}
+		yes.onclick = function () {
+			goods.children[0].removeChild(deleteObj);
+			confirmDIV[0].style.display = "none";
+			//修改总价格
+			if (ch) {
+				price -= deleteMoney;
+				total.innerHTML = price.toFixed(2) + "元";
+			}
+
+		}
+
+		no.onclick = function () {
+			confirmDIV[0].style.display = "none";
+		}
+
+		console.log(goods)
+	</script>
+
+</body>
+
+</html>

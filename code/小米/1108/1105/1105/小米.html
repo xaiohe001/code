@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>小米商城</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.o{
+				height: 120px;
+				background: url(img/mis.jpg) 50% ;
+				background-size: auto 120px;
+				/* background-color: #ff6700; */
+			 	/* background-size: auto 120px; */
+				
+			}
+			img{
+				
+				
+				position: relative;
+				
+			}
+			.head{
+				width: 100%px;height: 40px;
+				background-color: #333;
+				font-size: 10px;
+				text-align: center;
+				margin: 0;
+				line-height: 40px;
+				
+			}
+			a{
+				text-decoration: none;
+				color: #b0b0b0;
+				
+			}
+			a:hover{
+				color: aliceblue;
+				}
+			.headlogo{
+				height: 100px;
+				/* background-color: palegoldenrod; */
+			}
+			.left{
+				
+				width: 60px;
+				padding: 23px 0;
+				float: left;
+				
+			}
+			#headlo{
+				width: 1220px;height: 100px;
+				/* background-color: #4E71F2; */
+				margin:0 auto;
+				position: relative;
+			}
+			.zho{
+				width: 165px;height: 100px;
+				
+				float: left;
+				margin: 20px 20px;
+				
+			}
+			.biao{
+				
+				font-size: 16px;
+				float: left;
+				line-height: 100px;
+				
+			}
+			.biao>a{
+				margin: 0 8px;
+				color: #333333;
+			}
+			.biao>a:hover{
+				color: #ff6700;
+			}
+			.sou{
+				float: right;
+				/* width: 245px;height: 50px; */
+			}
+			[name="wd"]{
+				width: 245px;height: 50px;
+				margin: 23px 0;
+				outline: none;
+				
+			}
+			
+			[type="submit"]{
+				width: 52px;height: 50px;
+				cursor: pointer;
+				/* vertical-align: middle; */
+				outline: none;	
+				
+			}
+			[type="submit"]:hover{
+				background-color: #FF6700
+			}
+			.zhong{
+				width: 1226px;
+				height: 460px;
+				background-color: #4E71F2;
+				position: relative;
+				margin: 0 auto;
+			}
+			.zhong img{
+				position: absolute;
+				left: 0;
+			}
+			.zuoce{
+				width: 234px;height: 460px;
+				background-color: red;
+				background:rgba(105,101,101,0.6);
+				float: left;
+				position: relative;
+				/* left:0; */
+				margin: 0 -268px;
+				
+			}
+			ul>li:hover{
+				background-color: #FF6700;
+			}
+			ul{
+				list-style: none;
+				color: #fff;
+				text-align: left;
+				text-indent: 2em;
+				cursor: pointer;
+			}
+			#kuai{
+				width: 1226px;height: 170px;
+				/* background-color: palegoldenrod; */
+				margin: 15px auto;
+				
+			}
+			.zhongjian{
+				width: 232px;height: 170px;
+				background-color: #333;
+				color: #757575;
+				font-size: 12px;
+				cursor:pointer;
+				
+			}
+			
+			.se:hover{
+				color: #fff;
+			}
+			.zuof{
+				position: relative;
+				left: 250px; top: -170px;
+				cursor:pointer;
+				
+			}
+			.youf{
+				position: relative;
+				left: 580px; top: -344px;
+				cursor:pointer;
+			}
+			.youfu{
+				position: relative;
+				left: 910px; top: -518px;
+				cursor:pointer;
+			}
+			
+		.biaoti{
+			width: 1226px;
+			background-color: #f5f5f5;
+			margin: 0 auto;
+			
+		}
+		.shangou{
+			height: 58px;width: 1226px;
+			/* background-color: plum; */
+			position: relative;
+			
+			
+			
+			
+		}	
+		.shan{
+			width: 1226px;height: 58px;
+			float: left;
+			font-size: 22px;
+			line-height: 58px;
+			color: #333;
+			
+			position: absolute;
+			
+		}	
+			
+			
+		
+		.dayu{
+			height: 58px;width: 30px;
+			/* background-color: #222222; */
+			float: right;
+			line-height: 58px;
+			counter:pointer;
+		}
+		#beijing{
+			width: 1226px;
+			height: 340px;
+			margin: 0 auto;
+			
+			/* background-color: #4E71F2; */
+			
+		}
+		.beijingzhong{
+			width: 234px;height: 340px;
+			/* background-color: #F5F5F5; */
+			float: left;
+		}
+		.beijingzuo{
+			width: 234px;height: 340px;
+			border: 1px solid #222222
+		}
+		.zhongxin{
+			font-size: 20px;
+			text-align: center;
+			margin-top: 80px;
+			
+		}
+		.xiahei{
+			width: 234px;height: 46px;
+			/* background-color: magenta; */
+			line-height: 46px;
+		}
+		.zuohei{
+			width: 46px;height: 46px;
+			background-color: #605751;
+			float: left;
+		
+			margin-left: 35px;
+		}
+		.zhonghei{
+			width: 46px;height: 46px;
+			background-color: #605751;
+			float: left;
+			margin-left: 14px;
+		}
+		.youhei{
+			width: 46px;height: 46px;
+			background-color: #605751;
+			float: right;
+			margin-right: 35px;
+		}
+		.juli{
+			color: #e53935;
+		}
+		.beijingbao{
+			width: 980px;height: 340px;
+			/* background-color: #9195A3; */
+			float: right;
+			position: relative;
+			
+		}
+		#beijing2{
+			width: 234px;
+			height: 340px;
+			/* background-color: #9370DB; */
+			float: left;
+			margin-left: 20px;
+			/* border: 1px solid #222222 */
+			margin-left:0;
+			
+			
+		}
+		.one{
+			position: absolute;
+			margin: 0 242px;
+			
+			
+		}
+		.two{
+			position: absolute;
+			margin: 0 505px;
+			
+			
+		}
+		.three{
+			position: absolute;
+			margin: 0 745px;
+			
+			
+		}
+		.redmibook{
+			text-align: center;
+			color: #333333;
+		}
+		.xianliangban{
+			width: 1226px;height: 120px;
+			position: absolute;
+			margin: 16px auto;
+		}
+		.shouji{
+			width: 1226px;height: 58px;
+			/* background-color: #4E71F2; */
+			margin: 152px auto;
+			
+		}
+		.shoujizuo{
+			font-size: 22px;
+			float: left;
+			color: #333;
+			line-height: 58px;
+		}
+		.shoujiyou{
+			float: right;
+			line-height: 58px;
+			color: #333;
+		}
+		.shoujiyou>a:hover{
+			color: #ff4c09;
+		}
+		.gainianshouji{
+			width: 1240px;height: 615px;
+			/* background-color: #4E71F2; */
+			position: relative;
+			margin: -136px auto;
+		}
+		.xiaomihuanrao{
+			float: left;
+		}
+		.xiaomizhizun{
+			width: 978px;height: 615px;
+			/* background-color: #4E71F2; */
+			float: right;
+		}
+		.zhizun{
+			width: 978px;height: 300px;
+			/* background-color: magenta; */
+			
+		}
+		.zhizuna{
+			text-align: center;
+			float: left;
+			margin: 16px 22px;
+		}
+		.qi{
+			color: #FF4C09;
+		}
+		.bian{
+			font-size: 12px;
+			color: #B0B0B0;
+		}
+		.zhizuno{
+			width: 978px;height: 300px;
+			/* background-color: #FF0000; */
+			margin: 14.5px 0;
+		}
+		.zhizunb{
+			text-align: center;
+			float: left;
+			margin: 16px 22px;
+		}
+		.dianshi{
+			width: 1226px;height: 120px;
+			/* background-color: #4E71F2; */
+			margin: 155px auto;
+		}
+		.jiadian{
+			width: 1226px;height: 58px;
+			/* background-color: #4E71F2; */
+			margin: -135px auto;
+		}
+		.jiadianzuo{
+			font-size: 22PX;
+			line-height: 58PX;
+			float: left;
+			color: #333;
+		}
+		.jiadianyou{
+			float: right;
+			font-size: 20PX;
+			line-height: 58px;
+			
+			
+		}
+		.jiadianyou>a:hover{
+			color: #FF4C09;
+			
+		}
+		.dajiadian{
+			width: 1226px;height: 628px;
+			/* background-color: #4E71F2; */
+			margin: 156px auto;
+		}
+		.xiaojiadian{
+			width: 234px;height: 628px;
+			float: left;
+			/* background-color: magenta; */
+		}
+		.jiadianxia{
+			margin-top: 16px;
+		}
+		.xiaodianshishang{
+			width: 978px;height: 299px;
+			/* background-color: #222222; */
+			float: right;
+			position: relative;
+		}
+		
+		.xiaomia{
+			text-align: center;
+			float: left;
+			margin: 0 22px;
+		}
+		.xiaomic{
+			color: #b0b0b0;
+			
+		}
+		.xiaomid{
+			color: #FF0000;
+		}
+		.xiaomixia{
+			width: 978px;height: 305px;
+			/* background-color: pink; */
+			float: right;
+			margin: 30px 0;
+			
+		}
+		.xiaomishangaf{
+			float: right;
+			margin-top: 30px;
+			position: relative;
+		}
+		.xiaomishangal{
+			float: left;
+			margin: 30px 11px;
+		}
+		.yuan{
+			color: #FF0000;
+		}
+		.xiaomixiaab{
+			float: left;
+			margin: 80px 11px;
+		}
+		.hengtu{
+			width: 1226px;height: 120px;
+			/* background-color: #4662D9; */
+			margin: -130px auto;
+		}
+		.zhineng{
+			width: 1226px;height: 58px;
+			/* background-color: #4662D9; */
+			margin: 150px auto;
+		}
+		.zhinengzuo{
+			font-size: 22px;
+			line-height: 58px;
+			float: left;
+		}
+		.zhinengyou{
+			float:right;
+			line-height: 58px;
+			
+		}
+		.zhinengyou>a:hover{
+			color: #FF6700;
+			
+		}
+		.dajiadiana{
+			width: 1226px;height: 628px;
+			/* background-color: #4E71F2; */
+			margin: -130px auto;
+		}
+		.jingyinji{
+			width: 1226px;height: 120px;
+			/* background-color: magenta; */
+			margin: 330px -250px;
+		}
+		.dapei{
+			width: 1226px;height: 58px;
+			/* background-color: magenta; */
+			margin: -310px -250px;
+		}
+		.dapeizuo{
+			font-size: 22px;
+			line-height: 58px;
+			float: left;
+		}
+		.dapeiyou{
+			line-height: 58px;
+			float: right;
+		}
+		.dapeiyou>a:hover{
+			color: #FF6700;
+		}
+		.pinghengche{
+			margin: 330px -250px;
+		}
+		.xiaodianshia{
+			margin: 330px 250px;
+		}
+		.shipina{
+			width: 1226px;height: 299px;
+			/* background-color: #4E71F2; */
+			margin: 330px -250px;
+			
+		}
+		.leijuna{
+			float: left;
+			
+		}
+		.leijunb{
+			float: left;
+			margin: 0 14px;
+		}
+		.leijunc{
+			float: left;
+		}
+		.leijund{
+			float: right;
+		}
+		.leijune{
+			text-align: center;
+		}
+		.leijunf{
+			text-align: center;
+			font-size: 13px;
+			color: #b0b0b0;
+		}
+		.lan{
+			width: 1226px;height: 80px;
+			/* background-color: magenta; */
+			margin:-330px -250px;
+			
+			
+		}
+		.lana{
+			line-height: 58px;
+			float: left;
+			/* margin: 0 25px; */
+			color: #222222;
+			
+		}
+		.lanb{
+			margin: 0 60px;
+		}
+		.bangzhu{
+			width: 1226px;height: 252px;
+			/* background-color: #4E6EF2; */
+			margin: 330px -250px;
+			list-style: none;
+			
+			
+		}
+		.bangzhua{
+			float: left;
+			margin: 20px 45px;
+			
+		}
+		.bangzhub{
+			font-size: 10px;
+			margin: 10px 0;
+			cursor: pointer;
+			color: #757575;
+		}
+		.bangzhub:hover{
+			color: #FF6700;
+		}
+		.bangzhuc{
+			font-size: 22px;
+			color: #FF6700;
+		}
+		.bangzhud>a:hover{
+			color: #ff6700;
+		}
+		.bangzhue{
+			color: #ff6700;
+			
+		}
+		.dibu{
+			width: 1226px;height: 138px;
+			/* background-color: plum; */
+			margin: -330px -250px;
+			
+		}
+		.dibua{
+			float: left;
+		}
+		.dibub{
+			float: left;
+			font-size: 14px;
+			margin: 0 10px;
+			color: #B0B0B0;
+			
+		}
+		.dibuc>a{
+			color: #222222;
+		}
+		.dibuc>a:hover{
+			color: #ff6700;
+		}
+		.dibud>a:hover{
+			color: #ff6700;
+		}
+		.yinsi{
+			margin-top: 20px;
+		}
+		.didi{
+			width: 1226px;height: 20px;
+			/* background-color: mediumpurple; */
+			text-align: center;
+			margin: 400px -250px;
+			
+		}
+	
+		</style>
+	</head>
+	<body>
+		<div class="o">
+			
+			</div>
+			<div class="head">
+				<a href="">小米商城</a>
+				<sapn>|</sapn>
+				<a href="">MIUI</a>
+				<span>|</span>
+				<a href="">loT</a>
+				<span>|</span>
+				<a href="">云服务</a>
+				<span>|</span>
+				<a href="">天星数科</a>
+				<span>|</span>
+				<a href="">有品</a>
+				<span>|</span>
+				<a href="">小艾开放平台</a>
+				<span>|</span>
+				<a href="">企业团购</a>
+				<span>|</span>
+				<a href="">资质证照</a>
+				<span>|</span>
+				<a href="">协议规则</a>
+				<span>|</span>
+				<a href="">下载app</a>
+				<span>|</span>
+				<a href="">智能生活</a>
+				<span>|</span>
+				<a href="">Select Location</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="">登录</a>
+				<span>|</span>
+				<a href="">注册</a>
+				<span>|</span>
+				<a href="">消息通知</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="" class="l">购物车（0）</a>
+			</div>
+			
+			<div class="headlogo">
+				<div id="headlo">
+					
+				
+				<div class="left">
+					<img src="img/MI.png" >
+				</div>
+				<div class="zho">
+					<img src="img/dong.gif" >
+				</div>
+				<div class="biao">
+					<a href="#">小米手机</a>
+					<a href="#">Read 红米</a>
+					<a href="#">电视</a>
+					<a href="#">笔记本</a>
+					<a href="#">家电</a>
+					<a href="#">路由器</a>
+					<a href="#">智能硬件</a>
+					<a href="#">服务</a>
+					<a href="#">社区</a>
+				</div>	
+					
+				<div class="sou">
+					<form>
+						<input type="text" name="wd" id="wd" value="" /><input type="submit" name="" id="" value="搜索" />
+					</form>
+				</div>	
+				</div>
+			</div>	
+			<div class="zhong">
+				
+				
+				<img src="img/dian.webp" width="1226px" height="460px">
+				
+				<div class="zuoce">
+					<ul>
+						<br><li>手机 电话卡</li><br>
+						
+						<li>电视 盒子</li><br>
+						<li>笔记本 显示器</li><br>
+						<li>家电 插线板</li><br>
+						<li>出行 穿戴</li><br>
+						<li>智能 路由器</li><br>
+						<li>电源 配件</li><br>
+						<li>健康 儿童</li><br>
+						<li>耳机 音箱</li><br>
+						<li>生活 箱包</li><br>
+					</ul>
+					</div>
+				</div>	
+			<div id="kuai">
+				<div class="zhongjian">
+					<table border="1" width="232" height="170" cellspacing="0" cellpadding="0">
+						<tr class="se">
+							<th><img src="img/biao.png"><br>小米秒杀</th>
+							<th><img src="img/lou.png"><br>企业团购</th>
+							<th><img src="img/fma.png"><br>F码通道</th>
+
+							</tr>
+						<tr class="se">
+							<td align="center"><img src="img/ka.png"><br>米粉卡</td>
+							<td align="center"><img src="img/qian.png"><br>以旧换新</td>
+							<td align="center"><img src="img/chong.png"><br>话费充值</td>
+							
+							</tr>
+						
+						</table>
+				</div>		
+					
+					
+				
+					
+					<div class="zuof"><img src="img/redmi.jpg" width="316" height="170"></div>
+					<div class="youf"><img src="img/redmix.jpg" width="316" height="170"></div>
+					<div class="youfu"><img src="img/xiaomibiao.jpg" width="316" height="170"></div>
+					
+				
+				
+				
+			</div>
+		
+		<div class="biaoti">
+			<div class="shangou">
+			<div class="shan">小米闪购</div>
+			<div class="dayu">
+				<span class="fei"> &lt; </span>
+				<span class="fei"> &gt; </span>
+			</div>
+			</div>
+			
+		<div id="beijing">
+			<div class="beijingzhong">
+				<div class="beijingzuo">
+					<div class="zhongxin">
+					<div class="juli"><p>14:00 场</p></div><br>
+					<div><img src="img/mm.jpg" ></div><br>
+					<div><p>距离结束还有</p></div><br>
+					<div class="xiahei">
+					<div class="zuohei">11</div> :
+					<div class="zhonghei">11</div>
+					<div class="youhei">11</div>
+					</div>
+					</div>
+				</div>	
+			</div>
+			<div class="beijingbao">
+			<div id="beijing2">
+					<ul>
+						<li class="one">
+							<img src="img/diannao.webp">
+							<p class="redmibook">RedmiBook 16 i7 16G 512G...</p><br>
+							<p class="redmibook">便携大屏,全"芯"超越</p><br>
+							<p class="redmibook">4999元<s>5699</s></p><br>
+						</li>
+						<li class="two">
+							<img src="img/diannao.webp">
+							<p class="redmibook">RedmiBook 16 i7 16G 512G...</p>
+							<p class="redmibook">便携大屏,全"芯"超越</p><br>
+							<p class="redmibook">4999元<s>5699</s></p><br>
+						</li>
+						<li class="three">
+							<img src="img/diannao.webp">
+							<p class="redmibook">RedmiBook 16 i7 16G 512G...</p>
+							<p class="redmibook">便携大屏,全"芯"超越</p><br>
+							<p class="redmibook">4999元<s>5699</s></p><br>
+						</li><li class="four">
+							<img src="img/diannao.webp">
+							<p class="redmibook">RedmiBook 16 i7 16G 512G...</p>
+							<p class="redmibook">便携大屏,全"芯"超越</p><br>
+							<p class="redmibook">4999元<s>5699</s></p><br>
+						</li>
+						</ul>
+			</div>				
+		</div>
+	</div>
+	<div class="xianliangban">
+		<img src="img/xianliangban.webp" >
+	</div>
+	</div><!--背景-->
+	<div class="shouji">
+		<div class="shoujizuo">手机</div>
+		<div class="shoujiyou">
+			<a href="#">查看全部 <img src ="img/(1).png" ></a></div>
+		</div>
+		
+	<div class="gainianshouji">
+		<div class="xiaomihuanrao">
+			<img src="img/gainian.jpg" >
+		</div>
+		<div class="xiaomizhizun">
+			<div class="zhizun">
+			<div class="zhizuna">
+				<img src="img/mi10.webp" >
+				<p>小米10至尊版</p>
+				<p class="bian">120X变焦/120W秒充/120Hz屏幕</p>
+				<p class="qi">5299元起</p>
+				</div>
+			<div class="zhizuna">
+				<img src="img/mi10.webp" >
+				<p>小米10至尊版</p>
+				<p class="bian">120X变焦/120W秒充/120Hz屏幕</p>
+				<p class="qi">5299元起</p>
+				
+			</div>
+			<div class="zhizuna">
+				<img src="img/mi10.webp" >
+				<p>小米10至尊版</p>
+				<p class="bian">120X变焦/120W秒充/120Hz屏幕</p>
+				<p class="qi">5299元起</p>
+			</div>
+			<div class="zhizuna">
+				<img src="img/mi10.webp" >
+				<p>小米10至尊版</p>
+				<p class="bian">120X变焦/120W秒充/120Hz屏幕</p>
+				<p class="qi">5299元起</p>
+			</div>
+			</div>
+			
+			<div class="zhizuno">
+			<div class="zhizunb">
+				<img src="img/mi10.webp" >
+				<p>小米10至尊版</p>
+				<p class="bian">120X变焦/120W秒充/120Hz屏幕</p>
+				<p class="qi">5299元起</p>
+			</div>
+			<div class="zhizunb">
+				<img src="img/mi10.webp" >
+				<p>小米10至尊版</p>
+				<p class="bian">120X变焦/120W秒充/120Hz屏幕</p>
+				<p class="qi">5299元起</p>
+			</div>
+			<div class="zhizunb">
+				<img src="img/mi10.webp" >
+				<p>小米10至尊版</p>
+				<p class="bian">120X变焦/120W秒充/120Hz屏幕</p>
+				<p class="qi">5299元起</p>
+			</div>
+			<div class="zhizunb">
+				<img src="img/mi10.webp" >
+				<p>小米10至尊版</p>
+				<p class="bian">120X变焦/120W秒充/120Hz屏幕</p>
+				<p class="qi">5299元起</p>
+			</div>
+			</div>
+			</div>
+		</div>	
+		<div class="dianshi">
+		<div class="shi">
+			<img src="img/shi.webp" >
+		</div>
+		</div>
+	<div class="jiadian">
+		<div class="jiadianzuo">
+			<span>家电</span>
+		</div>
+		<div class="jiadianyou">
+			<a href="#">热门</a>&nbsp;&nbsp;
+			<a href="#">电视影音</a>
+		</div>
+		</div>
+	<div class="dajiadian">
+		<div class="xiaojiadian">
+			<div class="jiadianshang">
+				<img src="img/xiaomidianshi.webp.jpg" >
+			</div>
+			<div class="jiadianxia">
+				<img src="img/hongmidianshi.webp.jpg" >
+			</div>
+			</div>
+		<div class="xiaodianshi">
+			<div class="xiaodianshishang">
+				<div class="xiaomia">
+					<img src="img/quanmianping.webp.jpg">
+					<p>小米全面屏电视E55A</p>
+					<p class="xiaomic">全面屏设计，人工智能语音</p>
+					<p class="xiaomid">2199元</p><span><s>2299</s></span>
+				</div>
+				<div class="xiaomia">
+					<img src="img/quanmianping.webp.jpg">
+					<p>小米全面屏电视E55A</p>
+					<p class="xiaomic">全面屏设计，人工智能语音</p>
+					<p class="xiaomid">2199元</p><span><s>2299</s></span>
+					</div>
+				<div class="xiaomia">
+					<img src="img/quanmianping.webp.jpg">
+					<p>小米全面屏电视E55A</p>
+					<p class="xiaomic">全面屏设计，人工智能语音</p>
+					<p class="xiaomid">2199元</p><span><s>2299</s></span>
+					</div>
+				<div class="xiaomia">
+					<img src="img/quanmianping.webp.jpg">
+					<p>小米全面屏电视E55A</p>
+					<p class="xiaomic">全面屏设计，人工智能语音</p>
+					<p class="xiaomid">2199元</p><span><s>2299</s></span>
+					</div>
+				<div class="xiaomixia">
+					<div class="xiaomia">
+						<img src="img/quanmianping.webp.jpg">
+						<p>小米全面屏电视E55A</p>
+						<p class="xiaomic">全面屏设计，人工智能语音</p>
+						<p class="xiaomid">2199元</p><span><s>2299</s></span>
+					</div>
+					<div class="xiaomia"><img src="img/quanmianping.webp.jpg">
+					<p>小米全面屏电视E55A</p>
+					<p class="xiaomic">全面屏设计，人工智能语音</p>
+					<p class="xiaomid">2199元</p><span><s>2299</s></span></div>
+					<div class="xiaomia"><img src="img/quanmianping.webp.jpg">
+					<p>小米全面屏电视E55A</p>
+					<p class="xiaomic">全面屏设计，人工智能语音</p>
+					<p class="xiaomid">2199元</p><span><s>2299</s></span></div>
+					<div xiaomishanga>
+						<div class="xiaomishangaf">
+							<img src="img/xiaomishanga.webp.jpg" >
+							<div class="xiaomishangal">
+								<p>Air 13.3" 2019款</p>
+								<p class="yuan">5699元起</p>
+							</div>
+						</div>
+						</div>
+						<div class="xiaomixiaa">
+							<div class="xiaomixiaab">
+								<h3>浏览更多</h3>
+								<p>热门</p>
+							</div>
+								</div>
+					</div>
+			</div>
+			</div>
+		</div>
+	<div class="hengtu">
+		<div class="hengtua">
+			<img src="img/biaotimi.webp.jpg" >
+	</div>
+	</div>
+	<div class="zhineng">
+		<div class="zhinengzuo">
+			智能
+		</div>
+		<div class="zhinengyou">
+			<a href="#">热门</a>&nbsp;&nbsp;&nbsp;
+			<a href="#">安防</a>&nbsp;&nbsp;&nbsp;
+			<a href="#">出行</a>
+		</div>
+		</div>
+	
+	
+	<!-- 图片开始 -->
+	<div class="dajiadiana">
+		<div class="xiaojiadian">
+			<div class="jiadianshang">
+				<img src="img/shexiangtou.webp.jpg" >
+			</div>
+			<div class="jiadianxia">
+				<img src="img/diandonghuabanche.webp.jpg" >
+			</div>
+			</div>
+		<div class="xiaodianshi">
+			<div class="xiaodianshishang">
+				<div class="xiaomia">
+					<img src="img/huabanche.png">
+					<p>九号平衡车</p>
+					<p class="xiaomic">一个形影不离的新伙伴</p>
+					<p class="xiaomid">3199元</p><span><s>2299</s></span>
+				</div>
+				<div class="xiaomia">
+					<img src="img/huabanche.png">
+					<p>九号平衡车</p>
+					<p class="xiaomic">一个形影不离的新伙伴</p>
+					<p class="xiaomid">3199元</p><span><s>2299</s></span>
+					</div>
+				<div class="xiaomia">
+					<img src="img/huabanche.png"">
+					<p>九号平衡车</p>
+					<p class="xiaomic">一个形影不离的新伙伴</p>
+					<p class="xiaomid">3199元</p><span><s>2299</s></span>
+					</div>
+				<div class="xiaomia">
+					<img src="img/huabanche.png">
+					<p>九号平衡车</p>
+					<p class="xiaomic">一个形影不离的新伙伴</p>
+					<p class="xiaomid">3199元</p><span><s>2299</s></span>
+					</div>
+				<div class="xiaomixia">
+					<div class="xiaomia">
+						<img src="img/huabanche.png">
+						<p>九号平衡车</p>
+						<p class="xiaomic">一个形影不离的新伙伴</p>
+						<p class="xiaomid">3199元</p><span><s>2299</s></span>
+					</div>
+					<div class="xiaomia"><img src="img/huabanche.png">
+					<p>九号平衡车</p>
+					<p class="xiaomic">一个形影不离的新伙伴</p>
+					<p class="xiaomid">3199元</p><span><s>2299</s></span></div>
+					<div class="xiaomia"><img src="img/huabanche.png">
+					<p>九号平衡车</p>
+					<p class="xiaomic">一个形影不离的新伙伴</p>
+					<p class="xiaomid">3199元</p><span><s>2299</s></span></div>
+					<div xiaomishanga>
+						<div class="xiaomishangaf">
+							<img src="img/xiaomishanga.webp.jpg" >
+							<div class="xiaomishangal">
+								<p>Air 13.3" 2019款</p>
+								<p class="yuan">5699元起</p>
+							</div>
+						</div>
+						</div>
+	<!-- 图片结束 -->
+	
+	<div class="jingyinji">
+		<!-- <div class="jingyinjia"> -->
+			<img src="img/jingyinji.webp.jpg" >
+		<!-- </div> -->
+	</div>
+	<div class="dapei">
+		<div class="dapeizuo">
+			搭配
+		</div>
+		<div class="dapeiyou">
+			<a href="#">热门</a>&nbsp;&nbsp;&nbsp;
+			<a href="#">耳机音箱</a>
+		</div>
+	</div>
+	
+	<!-- 开始 -->
+	<div class="pinghengche">
+		<div class="xiaojiadian">
+			<div class="jiadianshang">
+				<img src="img/jiu.webp.jpg" >
+			</div>
+			<div class="jiadianxia">
+				<img src="img/ti.webp.jpg" >
+			</div>
+			</div>
+		<div class="xiaodianshia">
+			<div class="xiaodianshishang">
+				<div class="xiaomia">
+					<img src="img/wuxian.webp.jpg">
+					<p>高速无线充套装</p>
+					<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+					<p class="xiaomid">149元</p><span><s>2299</s></span>
+				</div>
+				<div class="xiaomia">
+					<img src="img/wuxian.webp.jpg">
+					<p>高速无线充套装</p>
+					<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+					<p class="xiaomid">149元</p><span><s>2299</s></span>
+					</div>
+				<div class="xiaomia">
+					<img src="img/wuxian.webp.jpg">
+					<p>高速无线充套装</p>
+					<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+					<p class="xiaomid">149元</p><span><s>2299</s></span>
+					</div>
+				<div class="xiaomia">
+					<img src="img/wuxian.webp.jpg">
+					<p>高速无线充套装</p>
+					<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+					<p class="xiaomid">149元</p><span><s>2299</s></span>
+					</div>
+				<div class="xiaomixia">
+					<div class="xiaomia">
+						<img src="img/wuxian.webp.jpg">
+						<p>高速无线充套装</p>
+						<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+						<p class="xiaomid">149元</p><span><s>2299</s></span>
+					</div>
+					<div class="xiaomia"><img src="img/wuxian.webp.jpg">
+					<p>高速无线充套装</p>
+					<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+					<p class="xiaomid">149元</p><span><s>2299</s></span></div>
+					<div class="xiaomia"><img src="img/wuxian.webp.jpg">
+					<p>高速无线充套装</p>
+					<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+					<p class="xiaomid">149元</p><span><s>2299</s></span></div>
+					<div xiaomishanga>
+						<div class="xiaomishangaf">
+							<img src="img/xiaomishanga.webp.jpg" >
+							<div class="xiaomishangal">
+								<p>Air 13.3" 2019款</p>
+								<p class="yuan">5699元起</p>
+							</div>
+						</div>
+						</div>
+						<!-- 结束 -->
+						<div class="jingyinji">
+							<!-- <div class="jingyinjia"> -->
+								<img src="img/zhinengshengh.webp.jpg" >
+							<!-- </div> -->
+						</div>
+						<div class="dapei">
+							<div class="dapeizuo">
+								搭配
+							</div>
+							<div class="dapeiyou">
+								<a href="#">热门</a>&nbsp;&nbsp;&nbsp;
+								<a href="#">充电器</a>
+							</div>
+						</div>
+						<!-- 开始 -->
+						<div class="pinghengche">
+							<div class="xiaojiadian">
+								<div class="jiadianshang">
+									<img src="img/shoubiao.webp.jpg" >
+								</div>
+								<div class="jiadianxia">
+									<img src="img/xishou.webp.jpg" >
+								</div>
+								</div>
+							<div class="xiaodianshia">
+								<div class="xiaodianshishang">
+									<div class="xiaomia">
+										<img src="img/wuxian.webp.jpg">
+										<p>高速无线充套装</p>
+										<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+										<p class="xiaomid">149元</p><span><s>2299</s></span>
+									</div>
+									<div class="xiaomia">
+										<img src="img/wuxian.webp.jpg">
+										<p>高速无线充套装</p>
+										<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+										<p class="xiaomid">149元</p><span><s>2299</s></span>
+										</div>
+									<div class="xiaomia">
+										<img src="img/wuxian.webp.jpg">
+										<p>高速无线充套装</p>
+										<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+										<p class="xiaomid">149元</p><span><s>2299</s></span>
+										</div>
+									<div class="xiaomia">
+										<img src="img/wuxian.webp.jpg">
+										<p>高速无线充套装</p>
+										<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+										<p class="xiaomid">149元</p><span><s>2299</s></span>
+										</div>
+									<div class="xiaomixia">
+										<div class="xiaomia">
+											<img src="img/wuxian.webp.jpg">
+											<p>高速无线充套装</p>
+											<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+											<p class="xiaomid">149元</p><span><s>2299</s></span>
+										</div>
+										<div class="xiaomia"><img src="img/wuxian.webp.jpg">
+										<p>高速无线充套装</p>
+										<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+										<p class="xiaomid">149元</p><span><s>2299</s></span></div>
+										<div class="xiaomia"><img src="img/wuxian.webp.jpg">
+										<p>高速无线充套装</p>
+										<p class="xiaomic">快速无限闪充，Qi充电标准</p>
+										<p class="xiaomid">149元</p><span><s>2299</s></span></div>
+										<div xiaomishanga>
+											<div class="xiaomishangaf">
+												<img src="img/xiaomishanga.webp.jpg" >
+												<div class="xiaomishangal">
+													<p>Air 13.3" 2019款</p>
+													<p class="yuan">5699元起</p>
+												</div>
+											</div>
+											</div>
+										<!-- 结束 -->	
+										<div class="jingyinji">
+											<!-- <div class="jingyinjia"> -->
+												<img src="img/xiangwang.webp.jpg" >
+											<!-- </div> -->
+										</div>
+										<div class="dapei">
+											<div class="dapeizuo">
+												周边
+											</div>
+											<div class="dapeiyou">
+												<a href="#">热门</a>&nbsp;&nbsp;&nbsp;
+												<a href="#">出行</a>
+											</div>
+										</div>
+										<!-- 开始 -->
+										<div class="pinghengche">
+											<div class="xiaojiadian">
+												<div class="jiadianshang">
+													<img src="img/beizi.webp.jpg" >
+												</div>
+												<div class="jiadianxia">
+													<img src="img/beibao.webp.jpg" >
+												</div>
+												</div>
+											<div class="xiaodianshia">
+												<div class="xiaodianshishang">
+													<div class="xiaomia">
+														<img src="img/baowenbei.webp.jpg">
+														<p>米家迷你保温杯</p>
+														<p class="xiaomic">可以随身携带的温度</p>
+														<p class="xiaomid">49元</p><span><s>2299</s></span>
+													</div>
+													<div class="xiaomia">
+														<img src="img/baowenbei.webp.jpg">
+														<p>米家迷你保温杯</p>
+														<p class="xiaomic">可以随身携带的温度</p>
+														<p class="xiaomid">49元</p><span><s>2299</s></span>
+														</div>
+													<div class="xiaomia">
+														<img src="img/baowenbei.webp.jpg">
+														<p>米家迷你保温杯</p>
+														<p class="xiaomic">可以随身携带的温度</p>
+														<p class="xiaomid">49元</p><span><s>2299</s></span>
+														</div>
+													<div class="xiaomia">
+														<img src="img/baowenbei.webp.jpg">
+														<p>米家迷你保温杯</p>
+														<p class="xiaomic">可以随身携带的温度</p>
+														<p class="xiaomid">49元</p><span><s>2299</s></span>
+														</div>
+													<div class="xiaomixia">
+														<div class="xiaomia">
+															<img src="img/baowenbei.webp.jpg">
+															<p>米家迷你保温杯</p>
+															<p class="xiaomic">可以随身携带的温度</p>
+															<p class="xiaomid">49元</p><span><s>2299</s></span>
+														</div>
+														<div class="xiaomia"><img src="img/baowenbei.webp.jpg">
+														<p>米家迷你保温杯</p>
+														<p class="xiaomic">可以随身携带的温度</p>
+														<p class="xiaomid">49元</p><span><s>2299</s></span></div>
+														<div class="xiaomia"><img src="img/baowenbei.webp.jpg">
+														<p>米家迷你保温杯</p>
+														<p class="xiaomic">可以随身携带的温度</p>
+														<p class="xiaomid">49元</p><span><s>2299</s></span></div>
+														<div xiaomishanga>
+															<div class="xiaomishangaf">
+																<img src="img/xiangxun.webp.jpg" >
+																<div class="xiaomishangal">
+																	<p>MIJOY唱片机</p>
+																	<p class="yuan">49元</p>
+																</div>
+																
+															</div>
+															</div>
+															
+															<div class="jingyinji">
+																<!-- <div class="jingyinjia"> -->
+																	<img src="img/junengxie.webp.jpg" >
+																<!-- </div> -->
+															</div>
+															<div class="dapei">
+																<div class="dapeizuo">
+																	视频
+																</div>
+																<div class="dapeiyou">
+																	<a href="#">查看全部</a>
+																</div>
+															</div>
+		<!-- 结束 -->
+						
+						<div class="shipina">
+							<div class="leijuna">
+								<img src="img/leijun.webp.jpg" >
+								<p class="leijune">Redmi 10X系列发布会</p><br>
+								<p class="leijunf">Redmi 10X系列发布会</p>
+							</div>
+							<div class="leijunb">
+								<img src="img/leijuna.webp.jpg" >
+								<p class="leijune">小米10 青春版 发布会</p>
+							</div>
+							<div class="leijunc">
+								<img src="img/leijunb.webp.jpg" >
+								<p class="leijune">小米10 8K手机拍大片</p>
+							</div>
+							<div class="leijund">
+								<img src="img/leijunc.webp.jpg" >
+								<p class="leijune">小米10发布会</p>
+							</div>
+						</div>	
+							
+						<div class="lan">
+							<ul class="lana">
+								<li>预约维修服务<span class="lanb"> | </span></li>
+							
+							</ul>
+							<ul class="lana">
+								<li>七天无理由退货<span class="lanb"> | </span></li>
+								
+							</ul>
+								<ul class="lana">
+									<li>15天免费退货<span class="lanb"> | </span></li>
+									
+								</ul>
+							<ul class="lana">
+								<li>满99元包邮<span class="lanb"> | </span></li>
+								
+							</ul>
+							<ul class="lana">
+								<li>520余家售后网点</li>
+							</ul>	
+						</div>	
+							
+							<div class="bangzhu">
+								<div class="bangzhua">
+									<dl>
+										<dt>帮助中心</dt><br>
+										<dd class="bangzhub">账户管理</dd>
+										<dd class="bangzhub">购物指南</dd>
+										<dd class="bangzhub">订单操作</dd>
+										</dl>	
+										</div>	
+									
+								<div class="bangzhua">
+									<dl>
+										<dt>服务支持</dt><br>
+										<dd class="bangzhub">售后政策</dd>
+										<dd class="bangzhub">自助服务</dd>
+										<dd class="bangzhub">相关下载</dd>
+										</dl>	
+										</div>		
+								<div class="bangzhua">
+									<dl>
+										<dt>线下门店</dt><br>
+										<dd class="bangzhub">小米之家</dd>
+										<dd class="bangzhub">服务网点</dd>
+										<dd class="bangzhub">授权体验店</dd>
+										</dl>	
+										</div>
+								
+								
+								<div class="bangzhua">
+									<dl>
+										<dt>关于小米</dt><br>
+										<dd class="bangzhub">了解小米</dd>
+										<dd class="bangzhub">加入小米</dd>
+										<dd class="bangzhub">投资者关系</dd>
+										<dd class="bangzhub">企业社会责任</dd>
+										<dd class="bangzhub">廉洁举报</dd>
+										
+										</dl>	
+										</div>
+								
+								
+								<div class="bangzhua">
+									<dl>
+										<dt>关注我们</dt><br>
+										<dd class="bangzhub">新浪微博</dd>
+										<dd class="bangzhub">官方微信</dd>
+										<dd class="bangzhub">联系我们</dd>
+										<dd class="bangzhub">公益基金会</dd>
+										</dl>	
+										</div>
+								
+								<div class="bangzhua">
+									<dl>
+										<dt>特色服务</dt><br>
+										<dd class="bangzhub">F码通道</dd>
+										<dd class="bangzhub">礼物码</dd>
+										<dd class="bangzhub">防伪查询</dd>
+										</dl>	
+										</div>
+								
+								<div class="bangzhua">
+									<p class="bangzhuc">400-100-5678</p>
+									<p>8:00-18:00(仅收市话费)</p>
+									<table border="1px" cellspacing="0" cellpadding="0px">
+										<tr><th><a href="#" class="bangzhue">人工客服</a></th></tr>
+										</table>
+
+									<p class="bangzhud">关注小米：<a href="#">微博</a>&nbsp;&nbsp;<a href="#">微信</a></p>
+									
+								</div>
+								</div>
+						<div class="dibu">
+							<div class="dibua">
+								<img src="img/MI.png" >
+							</div>
+							<div class="dibub">
+								<p class="dibuc">
+									<a href="#">小米商城</a>
+									<span>|</span>
+									<a href="#">MIUI</a>
+									<span>|</span>
+									<a href="#">米家</a>
+									<span>|</span>
+									<a href="#">米聊</a>
+									<span>|</span>
+									<a href="#">多看</a>
+									<span>|</span>
+									<a href="#">游戏</a>
+									<span>|</span>
+									<a href="#">政企服务</a>
+									<span>|</span>
+									<a href="#">小米天猫店</a>
+									<span>|</span>
+									<a href="#">小米集团隐私政策</a>
+									<span>|</span>
+									<a href="#">小米公司儿童信息保护规则</a>
+									<span>|</span>
+									<a href="#">小米商城隐私规则</a>
+									<span>|</span>
+									<a href="#">小米商城用户协议</a>
+									<span>|</span>
+									<a href="#">问题反馈</a>
+									<span>|</span>
+									<a href="#">Select Locatio</a>
+									</p>
+								<p class="dibud">
+									&copy;<a href="#">mi.com</a>
+									京ICP证110507号
+									<a href="#">京ICP备10046444号</a>
+									<a href="#">京公网安备11010802020134</a>
+									<a href="#">京网文【2020】0267-042号</a>
+								</p>	
+									<p class="dibud">
+										<a href="#">(京)网械平台备字（2018）第00005号</a>
+										<a href="#">互联网药品信息服务资格证（京）-非经营性-2014-0090</a>
+										<a href="#">营业执照</a>
+										<a href="#">医疗器械质量公告</a>
+									</p>
+									<p class="dibud">
+										<a href="#">增值电信业务许可证</a>
+										网络食品经营备案&nbsp;京食药网食备202010048&nbsp;
+										<a href="#">食品经营许可证</a>
+									</p>
+								<p class="dibud">
+									违法和不良信息举报电话：171-5104-4404
+									<a href="#">知识产权侵权投诉</a>
+									本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+								</p>
+								<div class="yinsi">
+									<img src="img/yinsirenzheng.png" >
+									<img src="img/chengxin.png" >
+									<img src="img/kexin.png" >
+									<img src="img/xiaofei.png" >
+									<img src="img/yifuwu.png" >
+								</div>
+								
+							</div>
+						</div>
+							<div class="didi">
+								<p class="dididi">让全球每个人都能享受科技带来的美好生活</p>
+							</div>
+										
+	</body>
+</html>

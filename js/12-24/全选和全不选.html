@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="goods">
+		商品:<input type="checkbox" value="1">巴旦木
+			<input type="checkbox" value="2">新鲜栗子
+			<input type="checkbox" value="3">花生
+			<input type="checkbox" value="4">板栗
+	</div>
+	全选<input type="checkbox"  id="choiceAll">
+	<script>
+		var goods = document.getElementById('goods');
+		var checkboxs = goods.querySelectorAll('input');
+		var choiceAll = document.getElementById('choiceAll');
+		var checkboxsLength = checkboxs.length;
+
+		var count = 0;
+		for(var i=0; i<checkboxsLength; i++) {
+			checkboxs[i].onchange = function() {
+				if(this.checked === true) {
+					count++;
+				} else {
+					count--;
+				}
+				if(count === checkboxsLength) {
+					choiceAll.checked = true;
+				} else {
+					choiceAll.checked = false;
+				}
+			}
+		}
+
+		choiceAll.onchange = function() {
+			count = checkboxsLength;
+			if(this.checked === true) {
+				for(var j=0; j<checkboxsLength; j++) {
+					checkboxs[j].checked = true;
+				}
+			} else {
+				count = 0;
+				for(var k=0; k<checkboxsLength; k++) {
+					checkboxs[k].checked = false;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

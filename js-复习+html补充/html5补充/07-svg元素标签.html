@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        svg元素标签
+            g 是group(群组)缩写
+                g元素标签可以对当前的元素进行分组
+                比如我们要实现的旋转 缩放 或者是添加样式属性
+                我们可以引用g标签 在g标签上边添加id属性 通过id就可以去引用它
+                注意 在使用的时候id前边需要添加一个#
+
+            use 
+                该元素进行重用
+                实现svg现有元素的重用 可以重用多个svg的图形元素  也可以重用g标签定义的元素
+                use元素可以使用xlink:href属性进行多次的重用
+
+            defs
+                重用已存储的元素
+                用于预定义一个元素使其能够在svg图形中重复使用  在该元素中定的图形不会直接显示在svg元素上边
+                要显示他们 我们需要使用use元素来调用他们
+     -->
+     <svg width="800" height="800" style="border: 1px solid #ccc">
+         <!-- <g id="rect">
+            <rect width="100" height="50" fill="red" x="10" y="10"></rect>
+            <rect width="80" height="40" fill="blue" x="30" y="30"></rect>
+         </g>
+         <use xlink:href="#rect" x="100" y="100"></use>
+         <use xlink:href="#rect" x="200" y="200" transform="rotate(50)"></use> -->
+
+         <!-- <rect width="100" height="50" fill="red" x="50" y="50"></rect>
+         <rect width="80" height="40" fill="blue" x="70" y="70"></rect> -->
+
+         <defs>
+             <circle r="50" cx="100" cy="100" id="circle"></circle>
+         </defs>
+         <use xlink:href="#circle" x="150" y="150" fill="red"></use>
+         <use xlink:href="#circle" x="200" y="200" fill="blue"></use>
+     </svg>
+</body>
+</html>

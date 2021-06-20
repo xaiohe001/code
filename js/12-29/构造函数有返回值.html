@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">content</div>
+    <script>
+        function Fn(c) {
+            this.b = c;
+            this.d = function () {
+                console.log(this.b)
+            }
+        }
+
+        var obj1 = new Fn('hhh');
+        // console.log(obj1);
+        // console.log(obj1.b);
+        // obj1.d();
+
+        // 情况一: return返回值是引用类型
+        function Fn1(c) {
+            // 隐式地创建了一个新对象
+            this.b = c;
+            console.log(this, 'this'); 
+            this.d = function () {
+                console.log(this.b);
+            }
+            return {a: '123', e: 'xyz'};// return返回值是引用类型, 会让this不再指向 **构造函数被调用时生成的新对象(隐式生成的)**  this指向丢失了 不知道指向谁
+        }
+        var obj2 = new Fn1(678);  // 当构造函数return 返回来的是 引用类型时,this不再指向 内部隐式生成的对象, 这时 this 指向的是 window
+        console.log(obj2 , 'obj2');
+        // console.log(Fn1(6789));     // 当成普通函数处理, 得到的结果就是return 返回的内容
+
+        // 情况二: return返回值是值类型(基本类型 或 原始类型 或 简单类型)
+        function Fn2(c) {
+            this.b = c;
+            this.d = function () {
+                console.log(this.b)
+            }
+            console.log(this, 'this');
+            return 'yyyy'; // 值类型 通过new操作符 实例化一个对象时, 这里return的语句有和没有没啥区别.
+        }
+
+        var obj3 = new Fn2(999); // 当构造函数return 返回值是值类型, 不影响this的指向.
+        console.log(obj3, 'obj3');
+        console.log(obj3.b, 'obj3.b');
+        console.log(Fn2());     // 当成普通函数来调用
+
+
+
+
+    </script>
+</body>
+</html>

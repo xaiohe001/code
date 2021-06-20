@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Q1
+        // 使用字面量创建
+        // var obj = {
+        //     p: "华为",
+        //     c: "蓝色",
+        //     w: "1.2kg",
+        //     x: "xxxx",
+        //     movie: function() {
+        //         console.log("可以看电影");
+        //     },
+        //     game: function() {
+        //         console.log("可以看打游戏");
+        //     },
+        //     code: function() {
+        //         console.log("可以敲代码");
+        //     },
+        // }
+
+        // console.log(obj);
+
+        // Q2
+        // var method = {
+        //     // 最大公约数
+        //     max: function(a, b){  // a, b形参
+        //         // 最大公约数,如果是2, 6; 1~4
+        //         var min = Math.min(a, b);
+        //         // 求出循环的最大值min, 1~min
+        //         for(var i=min; i>0; i--){
+        //             // 判断这个数是否可以同时被a和b整除
+        //             if(a%i == 0 && b%i == 0){
+        //                 return i;
+        //             }
+        //         }
+        //     },
+        //     // 最小公倍数
+        //     min: function(a, b){  
+        //         // 2, 3 是6,  2, 6是6
+        //         var max = Math.max(a,b);
+        //         for(var i=max; i<=a*b; i++){
+        //             if(i%a == 0 && i%b == 0){
+        //                 return i;
+        //             }
+        //         }
+        //     }
+        // }
+
+        // console.log(method.max(12, 18));
+        // console.log(method.min(12, 18));
+
+        // Q3
+        // var tools = {
+        //     m: "电脑",
+        //     stuList: ["李雷", "Lucy", "lily", "韩梅梅"],
+        //     rollCall: function(){
+        //         // arr[suoyin]
+        //         var random = Math.floor(Math.random() * tools.stuList.length);
+
+        //         // 取数组的元素arr[索引值]
+        //         console.log(tools.stuList[random]);
+
+        //         // 在对象内部使用该对象的属性或方法,
+        //         // 你可以使用this.属性名,比如,this.stuList
+        //     }
+        // }
+
+        // tools.rollCall()
+
+        // Q4
+        // var myClass = [];
+        // for (var i = 0; i < 3; i++) {
+        //     var stuName = prompt('请输入姓名', '李雷');
+        //     var stuC = prompt('请输入语文成绩', '90');
+        //     var stuM = prompt('请输入数学成绩', '98');
+        //     var stuE = prompt('请输入英语成绩', '89');
+        //     var stuH = prompt('请输入历史成绩', '99');
+
+        //     myClass.push({
+        //         stuName: stuName,
+        //         stuC: stuC,
+        //         stuM: stuM,
+        //         stuE: stuE,
+        //         stuH: stuH
+        //     })
+        // }
+
+        // 创建函数
+        // function searchStu(sName) {
+        //     // 判断是否有这个人的flag
+        //     var flag = false;
+        //     // 遍历出所有的学生
+        //     for (var i = 0; i < myClass.length; i++) {
+        //         // 判断stuName是否等于当前这个学生的姓名
+        //         if (myClass[i].stuName == sName) {
+        //             // 返回这个学生的信息
+        //             flag = true;
+        //             return myClass[i];
+        //         }
+        //     }
+
+        //     // 判断此人是否不存在
+        //     if (!flag) {
+        //         return {
+        //             stuName: '查无此人'
+        //         };
+        //     }
+        // }
+
+        // var obj = searchStu('lily');
+        // for (key in obj) {
+        //     document.write(key + ":" + obj[key] + '<br />');
+        // }
+
+        // console.log(searchStu('lily'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

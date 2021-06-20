@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css创建标签 伪标签 伪元素 */
+
+        /* 在选中标签内的开始位置插入一个标签 行标签 */
+        li::before{
+            /* 设置创建这个标签的内容  设置属性必须写 */
+            content: "before";
+        }
+
+        /* 在选中标签内的结束位置插入一个标签 行标签 */
+        li::after{
+            content: "after";
+        }
+    </style>
+</head>
+<body>
+    <!-- ul>li{内容$}*5 -->
+    <ul>
+        <li>内容1</li>
+        <li>内容2</li>
+        <li>内容3</li>
+        <li>内容4</li>
+        <li>内容5</li>
+    </ul>
+</body>
+</html>

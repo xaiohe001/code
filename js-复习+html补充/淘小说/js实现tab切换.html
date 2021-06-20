@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .title {
+        overflow: hidden;
+        margin: 20px 0;
+    }
+    .title li {
+        float: left;
+        margin-right: 20px;
+    }
+    /* p {
+        display: none;
+    } */
+    span {
+        padding-left: 10px;
+        display: block;
+        text-align: left;
+    }
+    .active {
+        color: red;
+    }
+    .input:before {
+        display: inline-block;
+        content: '';
+        width: 16px;
+        height: 16px;
+        background: url(./images/default.png) no-repeat;
+        cursor: pointer;
+        background-size: 100%;
+    }
+    .input:checked:before {
+        display: inline-block;
+        content: '';
+        width: 16px;
+        height: 16px;
+        background: url(./images/checked.png) no-repeat;
+        cursor: pointer;
+        background-size: 100%;
+    }
+</style>
+<body>
+
+    <input type="checkbox" checked class="input">男
+    <input type="checkbox" class="input">女
+
+
+    <div class="tabs">
+        <ul class="title" id="ul">
+            <!-- <li data-index="0" class="active">区域</li>
+            <li data-index="1">价格</li>
+            <li data-index="2">房型</li>
+            <li data-index="3">更多</li> -->
+        </ul>
+        <div class="lists">
+            <p id="demo">
+
+            </p>
+            <!-- <p style="display: block;" onclick="getTxt(0)">
+                <span>郑州</span>
+                <span>开封</span>
+                <span>洛阳</span>
+                <span>新乡</span>
+            </p>
+            <p onclick="getTxt(1)">
+                <span>10万</span>
+                <span>20万</span>
+                <span>30万</span>
+                <span>40万</span>
+            </p>
+            <p onclick="getTxt(2)">
+                <span>一室</span>
+                <span>二室</span>
+                <span>三室</span>
+                <span>四室</span>
+            </p>
+            <p onclick="getTxt(3)">
+                <span>东</span>
+                <span>西</span>
+                <span>南</span>
+                <span>北</span>
+            </p> -->
+        </div>
+        <input type="checkbox">男
+    </div>
+    <script>
+
+        var lists= [
+            {
+                tab: '区域',
+                lists: ['郑州','开封','洛阳','新乡']
+            },
+            {
+                tab: '房型',
+                lists: ['一室','二室','三室','四室']
+            },
+            {
+                tab: '价格',
+                lists: ['10万','20万','30万','40万']
+            },
+            {
+                tab: '更多',
+                lists: ['东','西','南','北']
+            }
+        ]
+        var ul=document.getElementById('ul')
+        var list=document.getElementsByClassName('lists')[0]
+        var tabs=''
+        for(var i=0; i<lists.length; i++) {
+            tabs+=`
+                <li onclick="getNum(${i})">${lists[i].tab}</li>
+            `
+        }
+        ul.innerHTML=tabs
+
+        var demo=document.getElementById('demo')
+        function getNum(i) {
+            console.log(i)
+            var item=``
+            for(var a=0; a<lists[i].lists.length; a++) {
+                item+=`
+                    <span onclick="getTxt('${lists[i].lists[a]}',${i})">${lists[i].lists[a]}</span>
+                `
+            }
+            
+            demo.innerHTML=item
+
+        }
+
+        function getTxt(txt,i) {
+            var li=document.querySelectorAll('li')
+            // console.log(txt,i)
+            li[i].innerHTML=txt
+
+        }
+
+        
+
+        // var li=document.querySelectorAll('li')
+        // var p=document.querySelectorAll('p')
+        // var ul=document.getElementById("ul")
+        // for(var i=0; i<li.length; i++) {
+        //     li[i].onclick=function() {
+        //         for(var j=0; j<li.length; j++) {
+        //             p[j].style.display="none"
+        //         }
+        //         if(this.innerText=='区域') {
+        //             p[0].style.display='block'  
+        //         }else if(this.innerText=='价格') {  
+        //             p[1].style.display='block'  
+        //         }else if(this.innerText=='房型') {
+        //             p[2].style.display='block'
+        //         }else if(this.innerText=='更多') {
+        //             p[3].style.display='block'
+        //         }
+
+        //     }
+        // }
+        // 事件委托实现
+            // ul.onclick=function() {
+            //     console.log(event.target.innerHTML)
+            //     for(var j=0; j<p.length; j++) {
+            //         p[j].style.display="none"
+            //     }
+            //     if(event.target.innerHTML=='区域') {
+            //         p[0].style.display='block'  
+            //     }else if(event.target.innerHTML=='价格') {  
+            //         p[1].style.display='block'  
+            //     }else if(event.target.innerHTML=='房型') {
+            //         p[2].style.display='block'
+            //     }else if(event.target.innerHTML=='更多') {
+            //         p[3].style.display='block'
+            //     }
+            // }
+
+        // 下标索引实现
+            // ul.onclick=function() {
+            //     var num=event.target.dataset.index
+            //     for(let i=0; i<p.length; i++) {
+            //         p[i].style.display='none'
+            //         p[event.target.dataset.index].style.display='block'
+            //         li[i].removeAttribute('class')
+            //         li[num].setAttribute('class','active')
+            //         // p[i].onclick=function() {
+            //         //     li[i].innerHTML=event.target.innerHTML
+            //         // }
+            //     }
+            // }
+            // function getTxt(i) {
+            //     li[i].innerHTML=event.target.innerHTML
+            //     // console.log(event.target.parentNode.children)
+            //     for(var i=0; i<event.target.parentNode.children.length; i++) {
+            //         event.target.parentNode.children[i].removeAttribute('class')
+            //     }
+            //     event.target.setAttribute('class','active')
+            // }
+    </script>
+</body>
+</html>

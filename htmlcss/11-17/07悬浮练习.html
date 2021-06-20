@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 400px;
+            height: 450px;
+            border: 1px solid #000;
+            overflow: hidden;
+            margin: 50px auto;
+            position: relative;
+            top: 0;
+            /* box-shadow: 0 0 30px 0 #333; */
+            transition: all .2s linear;
+        }
+        .box > div{
+            background-image: url(http://www.zzkjg.com/images/foot01.jpg);
+            width: 400px;
+            height: 400px;
+            background-size: 100% 100%;
+            background-position: center;
+            position: relative;
+            transition: all .2s linear;
+        }
+        .box span{
+            position: absolute;
+            /* calc()计算 */
+            left: calc(50% - 30px);
+            top: 170px;
+            width: 60px;
+            height: 60px;
+            background-image: url(http://www.zzkjg.com/images/videoicon.png);
+            background-size: 60px 60px;
+        }
+        .box > section{
+            background-color: coral;
+            color: #fff;
+            text-align: center;
+            height: 150px;
+            position: relative;
+            top: 0;
+            transition: all .2s linear;
+        }
+        .box > section > div{
+            font-size: 20px;
+            line-height: 50px;
+        }
+        .box a{
+            display: inline-block;
+            width: 150px;
+            line-height: 30px;
+            margin: 20px 0;
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid #fff;
+            border-radius: 50px;
+        }
+
+        .box:hover{
+            top: -2px;
+            box-shadow: 0 20px 30px 0 #333;
+        }
+        .box:hover > div{
+            background-size: 120% 120%;
+        }
+        .box:hover > section{
+            top: -100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>
+            <span></span>
+        </div>
+        <section>
+            <div>视频中心</div>
+            <a href="">查看更多</a>
+        </section>
+    </div>
+</body>
+</html>

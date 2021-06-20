@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: #f60;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        iiii
+        <span id="txt">我是span</span>
+    </div>
+
+    <script>
+        // 怎么向该元素的末尾插入节点
+        // 获取该元素
+        var box = document.getElementById('box');
+
+        // 创建元素 createElement("标签名")
+        var p = document.createElement('p');
+
+        p.innerHTML = "我是新增的p元素";
+
+        // 向box尾部插入内容 append()
+        box.append("126<span></span>");
+        // box.append(p);
+
+        // 向box的尾部插入节点 appendChild(节点)
+        box.appendChild(p);
+
+        // 向box前面插入内容
+        box.prepend("666");
+
+        // 删除节点 删除自身节点remove()
+        // p.remove();
+
+        // 删除box的子节点 removeChild(节点)
+        // box.removeChild(p);
+
+        var txt = document.getElementById('txt');
+        var p1 = document.createElement('a');
+
+        box.insertBefore(p1, txt);
+    </script>
+</body>
+</html>

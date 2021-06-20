@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://baidu.com" id="baidu-a">go baidu</a>
+<script>
+    // 阻止事件的默认行为
+    // 如 点击a标签,会自动跳转到href里面的链接
+    // 如 点击form submit按钮,会自动把form表单数据提交到 form的action属性里的地址;
+    // event.preventDefault()
+
+    var a = document.getElementById('baidu-a');
+    a.onclick = function(evt) {
+        var event = evt || window.event;
+        console.log(event);
+        event.preventDefault(); // 固定写法
+        // ie低版本 处理 阻止事件默认行为
+        // event.returnValue = false; // ie8及以下
+    }
+</script>
+</body>
+</html>

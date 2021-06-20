@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        body {
+            margin-left: 200px;
+        }
+        
+        #text {
+            width: 500px;
+            height: 100px;
+            font-size: 20px;
+            resize: none;
+        }
+        
+        .talk-look {
+            width: 500px;
+            height: 800px;
+            background-color: blanchedalmond;
+        }
+        
+        .talk-look>ul {
+            /* width: 500px; */
+            height: auto;
+            display: none;
+        }
+        
+        .talk-look li {
+            height: 100px;
+            border-bottom: 1px solid #999;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+        }
+        
+        .talk-look li>img {
+            width: 72px;
+            height: 72px;
+            align-items: center;
+        }
+        
+        .names {
+            width: 300px;
+            height: 100px;
+            padding: 0 10px;
+            margin-top: 10px;
+        }
+        
+        .names>p {
+            color: #666;
+            font-size: 16px;
+            cursor: pointer;
+            line-height: 30px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+        
+        #good {
+            cursor: pointer;
+            margin-top: 60px;
+            display: flex;
+        }
+        
+        #del {
+            cursor: pointer;
+            margin-left: 10px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <textarea id="text" placeholder="请输入内容"></textarea>
+        <button id="btn">提交评论</button>
+        <div class="talk-look">
+        </div>
+
+    </div>
+    <script>
+        var btn = document.getElementById('btn')
+        var shows = document.getElementById('shows')
+        var namesCont = document.getElementById('names-cont')
+        var talkLook = document.querySelector('.talk-look')
+        var arr = []
+
+        function myFun() {
+            let str = ''
+            arr.forEach((item) => {
+
+                    item.item =
+                        `
+               <li id="alone">
+                    <img src="./img/0.jpg" alt="" width="72px" height="72px">
+                    <div class="names">
+                        <h3>昵称</h3>
+                        <p id="names-cont">${item.content}</p>
+                    </div>
+                    <div id="good">
+                        <div>赞</div>
+                        <div id="num">${item.num}</div>
+
+                    </div>
+                    <div id="del">删除</div>
+                </li>
+               `
+                    str += item.item
+                })
+                // console.log(talkLook);
+            talkLook.innerHTML = str
+        }
+
+        btn.onclick = function() {
+                var texts = document.getElementById('text').value
+                let data = {
+                    content: texts,
+                    num: 0
+                }
+                arr.push(data)
+
+                myFun()
+            }
+            // var good = document.getElementById('good')
+            // var num = document.getElementById('num')
+            // good.onclick = function() {
+            //         num++
+            //     }
+            // var del = document.getElementById('del')
+            // del.onclick = function() {
+            //     shows.remove()
+            // }
+    </script>
+</body>
+
+</html>

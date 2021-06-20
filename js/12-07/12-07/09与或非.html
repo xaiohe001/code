@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // &&和(即多个条件都满足才为真)  ||或(即满足一个条件就为真)
+        
+        if(true || 0){
+            console.log("真");
+        }else{
+            console.log("假");
+        }
+
+        console.log(10 && "aaa"); //aaa
+        console.log(0 && "aaa"); //0
+        console.log(10 && 0); // 0
+        console.log(false && undefined); //false
+
+
+
+        console.log(10 || "aaa"); //10
+        console.log(0 || "aaa"); //aaa
+        console.log(10 || 0); // 10
+        console.log(false || undefined); //undefined
+    </script>
+</body>
+</html>

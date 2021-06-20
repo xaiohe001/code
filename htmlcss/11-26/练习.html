@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            height: 490px;
+            border: 1px solid #000;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            background-image: url(https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.32/dist/img/bs-docs-masthead-pattern.png);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        header::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: linear-gradient(45deg,#020031,#6d3353);
+        }
+        header > h1{
+            font-size: 100px;
+        }
+        header > h2{
+            font-size: 30px;
+            /* margin: 20px 0; */
+            font-weight: 400;
+        }
+        header button{
+            width: 290px;
+            height: 54px;
+            background-color:#337ab7;
+            box-shadow: inset 0 -4px 0 #23527c;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        header > a{
+            text-decoration: none;
+            color: #ccc;
+            font-size: 14px;
+        }
+        header > a:hover{
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        nav{
+            background-color: #333;
+        }
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav a:hover{
+            color: #fff
+        }
+        nav > div{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            line-height: 45px;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            height: 45px;
+            /* align-items: center; */
+        }
+        nav li{
+            margin-right: 20px;
+            font-size: 14px;
+        }
+        nav li:nth-child(1){
+            font-size: 18px;
+        }
+        nav div:last-child{
+            display: none;
+        }
+        nav div:last-child > a{
+            font-size: 18px;
+        }
+        nav section{
+            width: 44px;
+            height: 34px;
+            border: 1px solid #555;
+            border-radius: 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        nav section:hover{
+            background-color: #444;
+        }
+        nav section p{
+            width: 22px;
+            height: 2px;
+            background-color: #fff;
+            border-radius: 2px;
+            margin: 2px 0;
+        }
+
+        @media screen and (max-width: 1200px){
+            nav > div{
+                width: 940px;
+            }
+        }
+        @media screen and (max-width: 990px){
+            nav > div{
+                width: 720px;
+            }
+            nav > div:first-child > a{
+                display: none;
+            }
+            nav li:first-child{
+                display: none;
+            }
+            header{
+                height: 480px;
+            }
+            header h1{
+                font-size: 90px;
+            }
+            header h2{
+                font-size: 24px;
+                
+            }
+        }
+        /* @media screen and (max-width: 770px){
+            nav > div:first-child{
+                display: none;
+            }
+            nav > div:last-child{
+                display: flex;
+                align-items: center;
+            }
+            nav > div{
+                width: 98%;
+            }
+            header{
+                height: 380px;
+            }
+            header h1{
+                font-size: 60px;
+            }
+            header h2{
+                font-size: 18px;
+                
+            }
+        } */
+    </style>
+    <!-- 使用媒体查询引入外部css文件 -->
+    <link rel="stylesheet" href="./app.css" media="screen and (max-width:770px)">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="">Bootstrap01</a></li>
+                <li><a href="">Bootstrap02</a></li>
+                <li><a href="">Bootstrap03</a></li>
+                <li><a href="">Bootstrap04</a></li>
+                <li><a href="">Bootstrap05</a></li>
+                <li><a href="">Bootstrap06</a></li>
+                <li><a href="">Bootstrap07</a></li>
+            </ul>
+            <a href="">关于</a>
+        </div>
+        <div>
+            <a href="">Bootstrap01</a>
+            <section>
+                <p></p>
+                <p></p>
+                <p></p>
+            </section>
+        </div>
+    </nav>
+    <header>
+        <h1>Bootstrap</h1>
+        <h2>简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</h2>
+        <div>
+            <button>Bootstrap3中文文档(v3.3.7)</button>
+        </div>
+        <a href="">Bootstrap2中文文档(v2.3.2)</a>
+    </header>
+</body>
+
+</html>

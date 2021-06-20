@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 获取当前时间
+        var today = new Date();
+        // 获取年份
+        var YY = today.getFullYear();
+        // 获取月份, 加1
+        var MM = today.getMonth() + 1;
+        // 获取日期
+        var DD = today.getDate();
+        // 获取星期几,0-6
+        var dd = today.getDay();
+        // 获取当前时间的时间戳
+        var startTime = today.getTime();
+
+        // 格式化星期几
+        switch (dd) {
+            case 0:
+                dd = '星期日';
+                break;
+            case 1:
+                dd = '星期一'
+                break;
+            case 2:
+                dd = '星期二'
+                break;
+            case 3:
+                dd = '星期三'
+                break;
+            case 4:
+                dd = '星期四'
+                break;
+            case 5:
+                dd = '星期五'
+                break;
+            case 6:
+                dd = '星期六'
+        }
+
+        // 距离2021年5月1日还有多少天, 获取两边的时间戳
+        // 你可以直接在new Date(参数)中加参数
+        var endDate = new Date();
+        // 设置年份为2021
+        endDate.setFullYear(2021);
+        // 设置月份为5月,传4进去
+        endDate.setMonth(4);
+        // 设置日期为1日
+        endDate.setDate(1);
+        // 获取2021年5月1日的时间戳
+        var endTime = endDate.getTime();
+
+        // 获取剩余时间,单位毫秒
+        var leftTime = endTime - startTime;
+        var leftDays = leftTime / 1000 / 60 / 60 / 24;
+
+        document.write("今天是：" + YY + "年" + MM + "月" + DD + "日 "+ dd +" 距离2021年五一还有"+ leftDays +"天。")
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

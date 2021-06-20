@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try-catch-finally</title>
+</head>
+<body>
+    <script>
+        // console.log(boxs);  // 这里报错了,后面的代码也就不执行了
+        // console.log(999);
+
+        try{
+            console.log(boxs);  // 正常运行的语句
+        } catch(error) {    // try中若有错误,会被捕捉到这里
+            console.log(error);
+        } finally {
+            console.log(999);   // 无论如何都会执行
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全选和反选</title>
+    <script src="./jquery/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="checkAll">
+        <button class="button">反选</button>
+        <hr />
+        <input type="checkbox" class="check">
+        <input type="checkbox" class="check">
+        <input type="checkbox" class="check">
+        <input type="checkbox" class="check">
+        <input type="checkbox" class="check">
+    </div>
+    <script>
+        $(document).ready(function(){
+            // ...
+        })
+        // 缩写形式
+        $(function(){
+            var $checkAll = $('#checkAll');
+            var $checkbox = $('.check');
+            var $btn = $('.button');
+            var checkedNum = 0;  //当前被选择的checkbox数量
+            var sum = $checkbox.length; // checkbox的总数(除了全选)
+            // 全选 全不选
+            $checkAll.on('change', function(){
+                console.log($(this))
+                var checkAllState = this.checked;
+                // var checkAllState = $(this)[0].checked;
+                console.log(checkAllState)
+                $checkbox.prop('checked', checkAllState);
+            })
+
+            // 反选
+            $btn.on('click', function(){
+                checkedNum = 0;     // 计算checkbox被勾选个数 置空, 下面重新去遍历
+               $checkbox.prop('checked', function(index, value){
+                   if(value === false) {
+                       checkedNum++;
+                   }
+                   console.log(index, value)
+                   return !value;
+               }) 
+               // 计算全选是否能被勾选
+               if(checkedNum === sum) {
+                   $checkAll.prop('checked', true);
+               } else {
+                    $checkAll.prop('checked', false);
+               }
+            })
+
+            // 单独点击checkbox时  全选checkbox的状态
+            $checkbox.on('change', function(){
+                var checkboxState = this.checked;
+                if(checkboxState) {
+                    checkedNum++;
+                } else {
+                    checkedNum--;
+                }
+                if(checkedNum === sum) {
+                    $checkAll.prop('checked', true);
+                } else {
+                    $checkAll.prop('checked', false);
+                }
+            })
+        })
+    </script>
+</body>
+</html>

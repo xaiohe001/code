@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    circle {
+        stroke-dasharray: 628;
+        stroke-dashoffset: 628;
+        transition: all 1s;
+    }
+</style>
+<body>
+    <!-- 
+        svg描边动画
+            描边特殊属性
+                stroke-dasharray
+                    奇数项是虚线的长度
+                    偶数项代表间隙的宽度
+
+                stroke-dashoffset
+                    表示虚线样式内虚线开始的距离
+     -->
+    <svg width="500" height="500" style="border: 1px solid #ccc">
+        <circle r="100" cx="200" cy="200" stroke="#e9e9e9" stroke-width="15" fill="none"></circle>
+        <circle r="100" cx="200" cy="200" stroke="red" stroke-width="15" fill="none" id="circle"></circle>
+    </svg>
+    <script>
+        var circle=document.getElementById("circle")
+        setTimeout(function() {
+            circle.style.strokeDasharray="471"
+            circle.style.strokeDashoffset="0"
+        },1000)
+    </script>
+</body>
+</html>

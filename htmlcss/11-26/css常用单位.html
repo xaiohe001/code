@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 
+        px 像素
+        % 百分比 宽高是根据父标签大小进行计算
+        vw 视图窗口的宽 1vw == 1%视图窗口宽
+        vh 视图窗口的高 1vh == 1%视图窗口高
+        vmin 视图窗口宽高小的那个
+        vmax 视图窗口宽高大的那个
+
+        em 根据父标签字体大小进行计算的值 1em == 父标签字体大小,
+            如果标签本身设置有字体大小,则根据本身字体大小进行计算 1em == 标签本身字体大小
+        rem 根据跟标签html字体大小进行计算的值 1rem == html字体大小
+        */
+
+        html{
+            font-size: 200px;
+        }
+        div{
+            width: 100vmax;
+            height: 100vmax;
+            background-color: red;
+            font-size: 55px;
+        }
+        p{
+            color: #fff;
+            /* font-size: 20px; */
+            font-size: .5em; 
+            width: 5em;
+
+            height: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>这是p的内容</p>
+    </div>
+</body>
+</html>

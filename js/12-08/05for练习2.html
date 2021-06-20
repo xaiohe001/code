@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 大马驮2石粮食，中马驮1石粮食，两头小马驮一石粮食，要用100匹马，驮100石粮食，该如何调配？
+
+        var n = 0;
+
+        for(var x = 0;x <= 100;x++){
+            for(var y = 0;y <= 100;y++){
+                for(var z = 0;z <= 100;z++){
+                    if(x + y + z == 100 && x * 2 + y + z / 2 == 100){
+                        // console.log(`大马${x}匹; 中马${y}匹; 小马${z}匹`);
+                        n++;
+                    }
+                }
+            }
+        }
+
+        console.log(n);
+
+
+        // 公园里有一只猴子和一堆桃子，猴子每天吃掉桃子总数的一半，把剩下一半中扔掉一个坏的。到第七天的时候，猴子睁开眼发现只剩下一个桃子。问公园里刚开始有多少个桃子？
+
+        var a = 1;
+        for(var i = 1;i < 7;i++){
+            a = (a + 1) * 2;
+        }
+        console.log(a);
+
+    </script>
+</body>
+</html>

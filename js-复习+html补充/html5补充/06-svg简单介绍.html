@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #svg_1 {
+        transform: translateX(50px);
+    }
+</style>
+<body>
+    <!-- 
+        svg简单介绍
+            1 svg使用的基于xml 描述的矢量图形形式
+            2 xml是可扩展的标记语言
+            3 xml用于数据的传输和存储
+
+        svg优势
+            1 可以使用很多的工具进行直接读取或者是修改
+            2 与jpg png gif相比较 体积更小 可压缩性更强
+            3 svg是一个矢量图形  放大不失真
+            4 svg可以与一些后台语言直接一起运行
+            5 svg颜色可以使用css直接进行任意修改
+
+        svg里边绘制简单的图形  svg是使用元素标签来进行绘制的
+            矩形
+                rect
+                    属性
+                        x y 对应当前矩形的x y坐标
+                        rx ry 对应矩形边角半径弧度
+                        width
+                        height
+                        表示当前矩形的宽度和高度
+
+                circle 圆形
+                    属性
+                         r 表示半径
+                         cx cy 表示圆心坐标
+
+                ellipse 椭圆形
+                    属性
+                        cx cy  表示圆心坐标
+                        rx  x轴半径
+                        ry  y轴半径
+
+                line 线
+                    属性
+                        x1 y1   第一个点坐标
+                        x2 y2   第二个点坐标
+
+                polyline 折线
+                    属性
+                        points="x1 y1 x2 y2 x3 y3 ... xn yn"
+
+                polygon 多边形
+                    属性
+                        points="x1 y1 x2 y2 x3 y3 ... xn yn"
+
+                path
+                    是svg当中功能最为强大一个标签
+                    可以绘制所需要的任意的图形或者是曲线
+
+                    <path> 元素用于定义一个路径。
+
+                    下面的命令可用于路径数据：
+
+                    M = moveto
+                    L = lineto
+                    H = horizontal lineto
+                    V = vertical lineto
+                    C = curveto
+                    S = smooth curveto
+                    Q = quadratic Bézier curve
+                    T = smooth quadratic Bézier curveto
+                    A = elliptical Arc
+                    Z = closepath
+                    注意：以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。
+
+                d属性  里边所写的就是当前的路径数据
+
+            
+            基本属性
+                fill 填充
+                    颜色可以是 #fff  rgb() rgba()
+
+                stroke  描边
+                
+                stroke-width 描边宽度
+
+                transform 变换
+
+
+
+     -->
+     <svg width="500" height="500" style="border: 1px solid #ccc;">
+         <!-- <rect x="10" y="10" width="300" height="300" fill="red" rx="15" ry="200"></rect> -->
+        <!-- <circle cx="100" cy="100" r="50" fill="blue"></circle> -->
+        <!-- <ellipse cx="100" cy="100" rx="60" ry="30" fill="green"></ellipse> -->
+        <!-- <line x1="0" y1="0" x2="100" y2="100" stroke="red"></line> -->
+        <!-- <polyline points="10 10 20 5 25 20 35 30 37 45 60 50 65 32" fill="none" stroke="red"></polyline> -->
+        <!-- <polygon points="100 0 200 100 0 100" fill="red"></polygon> -->
+        <!-- <path id="svg_1" d="m136.5, 134.45313c0, 0 62,109 170,2" opacity="0.5" stroke-width="1.5" stroke="#000" fill="#fff"/> -->
+        <path id="svg_1" d="m196.51749,158.13226l63.02484,0l19.47516,-56.14915l19.47517,56.14915l63.02483,0l-50.98808,34.70169l19.47617,56.14915l-50.9881,-34.70263l-50.98809,34.70263l19.47617,-56.14915l-50.98809,-34.70169z" stroke-width="1.5" stroke="#000" fill="red"/>
+        <!-- 
+            注意:
+                如果使用rotate里边的deg需要去掉
+         -->
+    </svg>
+    
+</body>
+</html>

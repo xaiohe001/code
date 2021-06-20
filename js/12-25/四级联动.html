@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./area.js"></script>
+</head>
+<body>
+    <div class="container">
+        <select name="" id="select1"></select>
+        <select name="" id="select2"></select>
+        <select name="" id="select3"></select>
+        <select name="" id="select4"></select>
+    </div>
+    <script>
+        var select1 = document.getElementById('select1');
+        var select2 = document.getElementById('select2');
+        var select3 = document.getElementById('select3');
+        var select4 = document.getElementById('select4');
+        function init() {
+            changeProvince()
+        }
+        // 获取所有省份
+        function changeProvince() {
+            var options = '';
+            for(var key in data) {
+                options += '<option value='+ key +'>'+ key +'</option>';
+            }
+            select1.innerHTML = options;
+
+            changeCity();
+        }
+
+        // 获取所有城市
+        function changeCity() {
+            var selectedProvince = select1.value; // 被选中的城市
+            var options = '';
+            for(var key in data[selectedProvince][0]) {
+                options += '<option value='+ key +'>'+ key +'</option>';
+            }
+            select2.innerHTML = options;
+
+            changeCounty();
+        }
+        // 获取对应的所有区县
+        function changeCounty() {
+            var selectProvince = select1.value; // 被选中的国家
+            var selectedCity = select2.value;   // 被选中的城市
+            var counties = data[selectProvince][0][selectedCity];
+            var options = '';
+            for(var i=0; i<counties.length; i++) {
+                for(var key in counties[i]) {
+                    options += '<option value='+ key +'>'+ key +'</option>';
+                }
+            }
+
+            select3.innerHTML = options;
+            changeStreet();
+            
+        }
+
+        function changeStreet() {
+            var selectProvince = select1.value; // 被选中的国家
+            var selectedCity = select2.value;   // 被选中的城市
+            var select3Index = select3.selectedIndex;
+            var select3Value = select3.value;
+            var streetdata = data[selectProvince][0][selectedCity][select3Index][select3Value];
+
+            var options = '';
+            var streetArr = streetdata.split('、');
+            for(var i=0; i<streetArr.length;i++) {
+                options += '<option value='+ streetArr[i] +'>'+ streetArr[i] +'</option>';
+            }
+            
+
+            select4.innerHTML = options;
+        }
+
+        // 当国家发生变化时, 二级和三级对应的值也跟着变化
+        select1.onchange = function () {
+            changeCity();
+        }
+        // 当城市发生变化时, 三级对应的值也跟着变化
+        select2.onchange = function() {
+            changeCounty();
+        }
+
+        select3.onchange = function() {
+            changeStreet();
+        }
+
+
+        // 初始化
+        init();
+    </script>
+</body>
+</html>

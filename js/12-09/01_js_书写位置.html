@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        // 嵌入式
+        alert('我是嵌入式的方式写的JavaScript代码');
+    </script> -->
+
+    <!-- 外部引用,如果你进行外部引用,那么开始标签与结束标签之间,不能再写js代码,写了也不执行 script一个双标签 -->
+    <!-- <script src="index.js">
+        alert('你猜我会不会出现');
+    </script> -->
+
+    <script>
+        // 警示框
+        alert('我是警示框');
+        
+        // 向控制台打印日志
+        console.log('我在哪里出来?');
+
+        // 输入的方式,返回你的输入值
+        prompt('请输入您的姓名');
+
+        // 输出到页面上的内容
+        document.write('我是乘坐document.write而来');
+    </script>
+</head>
+<body>
+    <!-- 行内方式 (强烈不建议使用的) -->
+    <button onclick="alert('你点到我了')">点我试试</button>
+    <a href="javascript:alert('我是a标签');">我是可点的a标签</a>
+</body>
+</html>

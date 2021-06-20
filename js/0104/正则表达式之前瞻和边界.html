@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前瞻和边界</title>
+</head>
+<body>
+    <script>
+        // 边界字符
+        // ^
+        // $
+        // \b   \w和\W
+        // \B   \w和\w 或者 \W和\W
+
+        var reg = /a\b/g;
+        var str = 'dfa bee';
+        console.log(reg.test(str)); // true
+        var reg1 = /a\B/;
+        console.log(reg.test(str));  // false
+
+        // 前瞻
+        // 正向前瞻
+        // exp1(?=exp2)     // 匹配exp1,后面要跟着exp2
+        // 负向前瞻
+        // exp1(?!exp2)     // 匹配exp1,后面不能是exp2
+
+        var reg2 = /hello(?=world)/;
+        var reg3 = /hello(?!world)/;
+        var str2 = 'helloworld';
+        console.log(reg2.test(str2));
+        console.log(reg3.test(str2));
+
+        // 100 000 000 000  =>  1.000.000.000
+        var str4 = '100000000000000';
+        var reg4 = /(?=\B((\d{3})+$))/g; 
+        console.log(str4.replace(reg4, '.'));
+        // var str5 = str4.replace(reg4, '.');
+        // console.log(str5.replace('.', ''));
+
+    </script>
+</body>
+</html>

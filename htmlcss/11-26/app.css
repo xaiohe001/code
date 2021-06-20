@@ -1,0 +1,22 @@
+nav > div:first-child{
+    display: none;
+}
+nav > div:last-child{
+    display: flex;
+    align-items: center;
+}
+nav > div{
+    width: 98%;
+}
+header{
+    height: 380px;
+}
+header h1{
+    font-size: 60px;
+}
+header h2{
+    font-size: 18px;
+
+    /* width: 1rem; */
+    
+}

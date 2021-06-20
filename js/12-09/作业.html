@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Q1
+        // 声明一个变量,用于存储所有满足条件的数之和
+        // var sum = 0;
+        // // 1~100 循环  不能被3整除的数 判断条件 之和 运算符
+        // // 找出1~100之间所有的数字
+        // for(var i = 1; i <= 100; i++){
+        //     // 判断不能被3整除的数 取模 %  i对3取模 为0
+        //     if(i % 3 != 0){
+        //         // 累加 +=
+        //         sum += i;  // 当i为1时,sum = 0+1; 当i为2时,sum = 1+2,...
+        //     }
+        // }
+
+        // alert('1~100之间不能被3整除的数之和是' + sum);
+
+        // Q2
+        // 输入显示次数 prompt() 需要存储起来你输入的值 循环
+        // 输入显示次数
+        // var num = prompt('请输入显示次数:') * 1;
+
+        // // 循环范围 0-num
+        // for(var i = 0; i < num; i ++){
+        //     document.write('班训：快乐学习，认真生活！<br />');
+        // }
+
+        // Q3
+        // 循环 prompt 大于等于 80分 条件 学生比例 
+        // 满足条件的总人数和班级总人数
+        // 输入班级总人数
+        // var sumNum = prompt('请输入班级总人数:');
+        // // 满足条件的总人数初始化
+        // var num = 0;
+
+        // // 循环所有学生
+        // for(var i = 0; i < sumNum; i++){
+        //     // 大于等于 80分
+        //     var score = prompt('请输入第' + (i + 1) +'位同学的成绩:');
+
+        //     if(score >= 80){
+        //         num++;
+        //     }
+        // }
+
+        // //输出满足条件的学生的比例
+        // document.write('分数大于等于80分的学生比例是:' + num/sumNum)
+
+        // Q4
+        // banana 0~100 香蕉的个数, 
+        // orange 0~100 橘子的个数, 
+        // stawberry 0~100 草莓的个数
+        // banana * 3 + orange * 2 + strawberry * 1 = 200
+        // banana + orange + strawberry = 100
+        // for(var banana = 0; banana <= 100; banana++){
+        //     for(var orange = 0; orange <= 100; orange++){
+        //         for(var strawberry = 0; strawberry <= 100; strawberry++){
+        //             if(banana * 3 + orange * 2 + strawberry * 1 == 200 && banana + orange + strawberry == 100){
+        //                 document.write('你可以买' + banana + '个香蕉; ' + orange + '个橘子; ' + strawberry + '个草莓; <br />')
+        //             }
+        //         }
+        //     }
+        // }
+
+        /*
+            banana * 3 + orange * 2 + strawberry * 1 = 200
+            banana + orange + strawberry = 100
+
+            banana * 2 + orange = 100
+            orange = 100 - banana * 2
+
+            banana +  100 - banana * 2 + strawberry = 100
+            strawberry = banana
+
+            banana + strawberry <= 100
+            banana <= 50  // 循环条件
+        */
+        //     var orange, strawberry;
+
+        //     // 所有香蕉个数的可能性
+        //    for(var banana = 0; banana <= 50; banana++){
+        //         orange = 100 - banana * 2;
+        //         strawberry = banana;
+
+        //         document.write('你可以买' + banana + '个香蕉; ' + orange + '个橘子; ' + strawberry + '个草莓; <br />')
+        //    }
+
+        // Q5
+        // 先输入会员卡prompt, 会员卡四位数求和 大于20 
+        // 先输入会员卡号
+        // 取一个四位数中的个,十,百,千位上面的数字
+        // var num = 2356;
+        // var q =  parseInt(num / 1000); // 千位
+        // var b =  parseInt((num - q * 1000)/100); // 百位
+        // var s =  parseInt((num - q * 1000 - b * 100) / 10); // 十位
+        // var g =  num - q * 1000 - b * 100 - s * 10; // 各位
+        // 2356/1000  2.356  parseInt(2.356)
+        // 2356-q*1000 356
+        // console.log(g); 
+        // console.log(parseInt((num - q * 1000)/100));  // 期望值是3
+
+        // var cardNum = prompt('请输入您的会员卡号:');  
+
+        // // 拿到四位数
+        // var q =  parseInt(cardNum / 1000); // 千位
+        // var b =  parseInt((cardNum - q * 1000)/100); // 百位
+        // var s =  parseInt((cardNum - q * 1000 - b * 100) / 10); // 十位
+        // var g =  cardNum - q * 1000 - b * 100 - s * 10; // 各位
+
+        // if(q + b + s + g > 20){
+        //     alert('恭喜您,您可以获得50元的返利!');
+        // } else{
+        //     alert('很遗憾,您没有满足返利的条件!')
+        // }
+
+        // Q6
+        // 输入您的工资
+        // var pay = prompt('输入您的工资');
+
+        // // 判断是否满足交税的条件
+        // if(pay > 3000){
+        //     // 计算你拿到的实际工资
+        //     // pay - (pay-3000) * 0.05
+        //     alert('你拿到的实际工资是:' + (pay - (pay-3000) * 0.05))
+        // }
+
+        // Q7
+        // 三个商品prompt  一个超过50元，或者总价超过100元 条件
+        // 输入商品
+        // var goods1 = prompt('请输入第一个商品的价格:') * 1;
+        // var goods2 = prompt('请输入第二个商品的价格:') * 1;
+        // var goods3 = prompt('请输入第三个商品的价格:') * 1;
+
+        // if(goods1 > 50 || goods2 > 50 || goods3 > 50 || goods1 + goods2 + goods3 > 100){
+        //     alert('您需要支付:' + (goods1 + goods2 + goods3) * 0.85);
+        // } else{
+        //     alert('您需要支付:' + (goods1 + goods2 + goods3));
+        // }
+
+        // Q8
+        // 1! 1 2! 2*1 
+        // 计算阶乘 计算10的阶乘  10! 10 * 9 *8 ..*1 累乘
+        // var sum = 1;
+        // for(var i = 1; i <= 4; i++){
+        //     sum *= i; // 1*1 1*1*2*3
+        // }
+
+
+        // 这是所有阶乘之和
+        // var sumNum = 0;
+        // // 循环阶乘累加
+        // for(var i = 1; i <= 10; i++){
+        //    // 这是每一个阶乘的值
+        //     var sum = 1;
+        //     // 各个阶乘相加 当i为1时,1!,当i为2是,2!...
+        //     for(var j = 1; j <= i; j++){
+        //         sum *= j; // 1*1 1*1*2*3
+        //     }
+
+        //     // 累加每个阶乘
+        //     sumNum += sum;
+        // }
+
+        // alert('1!+2!+3!+…+10!的结果是:' + sumNum);
+
+        // Q9
+        // 1000 ~ 9999 循环 个位数字加百位数字等于千位数字加上十位数字，且该四位数为奇数 条件
+        // var q =  parseInt(cardNum / 1000); // 千位
+        // var b =  parseInt((cardNum - q * 1000)/100); // 百位
+        // var s =  parseInt((cardNum - q * 1000 - b * 100) / 10); // 十位
+        // var g =  cardNum - q * 1000 - b * 100 - s * 10; // 各位
+        // var q, b, s, g;
+        // document.write('所有满足下列条件的四位整数 <br>')
+        // // 找到所有四位数 1000 ~ 9999 
+        // for(var i = 1000; i <= 9999; i++){
+        //     q =  parseInt(i / 1000); // 千位
+        //     b =  parseInt((i - q * 1000)/100); // 百位
+        //     s =  parseInt((i - q * 1000 - b * 100) / 10); // 十位
+        //     g =  i - q * 1000 - b * 100 - s * 10; // 各位
+
+        //     // 判断个位数字加百位数字等于千位数字加上十位数字
+        //     // 该四位数为奇数 
+        //     if(g + b == q + s && i % 2 != 0){
+        //         document.write(i + '<br />')
+        //     }
+        // }
+
+        // Q10
+        //1~10 循环 偶数 条件
+
+        // 存储满足条件的和的变量
+        var sumNum = 0;
+
+        // 循环1~10
+        for (var i = 1; i <= 10; i++) {
+            //是否是偶数
+            if (i % 2 == 0) {
+                sumNum += i;
+            }
+        }
+
+        alert('1~10之间的所有偶数和是:' + sumNum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

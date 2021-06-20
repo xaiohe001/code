@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="clock"></div>
+
+    <!-- 加载完成以后在加载js,减少页面的空白时间 -->
+    <script>
+        // 获取dom节点
+        var clock1 = document.getElementById('clock');
+
+        // 封装函数
+        function clockFunc() {
+            // 获取当前时间
+            var date = new Date();
+            // 年份 YY 月份 MM 日期 DD 星期 dd 小时 hh 分钟 mm 秒 ss
+            // 获取年份
+            var YY = date.getFullYear();
+            // 获取月份 注意加1
+            var MM = date.getMonth() + 1;
+            // 获取日期
+            var DD = date.getDate();
+            // 获取星期几
+            var dd = date.getDay();
+            // 获取小时
+            var hh = date.getHours();
+            // 获取分钟
+            var mm = date.getMinutes();
+            // 获取秒
+            var ss = date.getSeconds();
+
+            // 格式化星期几
+            switch (dd) {
+                case 0:
+                    dd = '星期日';
+                    break;
+                case 1:
+                    dd = '星期一'
+                    break;
+                case 2:
+                    dd = '星期二'
+                    break;
+                case 3:
+                    dd = '星期三'
+                    break;
+                case 4:
+                    dd = '星期四'
+                    break;
+                case 5:
+                    dd = '星期五'
+                    break;
+                case 6:
+                    dd = '星期六'
+            }
+
+            // 十二进制
+            if (hh > 12) {
+                hh = ' PM ' + strFunc(hh - 12);
+            } else {
+                hh = ' AM ' + strFunc(hh);
+            }
+
+            // 想要向id为clock的标签内部添加内容innerHTML
+            // clock1.innerHTML = "56565";
+            clock1.innerHTML = '当前时间为:' + YY + ' 年 ' + MM + ' 月 ' + DD + ' 日 ' + dd + hh + ' : ' + strFunc(mm) + ' : ' + strFunc(ss);
+        }
+
+        // 添加0的函数
+        function strFunc(num) {
+            if (num < 10) {
+                num = '0' + num;
+            }
+
+            return num;
+        }
+
+        // 定时器
+        var timer = setInterval('clockFunc()', 1000);
+    </script>
+</body>
+
+</html>

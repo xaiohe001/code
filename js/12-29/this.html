@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body>
+    <div class="box">box</div>
+    <script>
+        // this
+        // 应用场景一: dom 上的this
+        // addEventListener
+        var box = document.querySelector('.box');
+        // box.addEventListener('click', function(){
+        //     console.log(this);  // this 指向 当前的dom节点
+        // }, false);
+        function fn() {
+            console.log(this);
+        }
+        // box.attachEvent('onclick', function(){
+        //     fn.apply(box);  // 通过apply方式 改变fn函数里面的this指向, 指向box
+        //     // fn.call(box);
+        //     // fn.bind(box)();
+        // }, false);
+
+        // 应用场景二: 普通函数调用
+        // var x = 1; // 对于当前的执行环境 变量x就是全局变量 所以它相当于  window.x = 1;
+        // function fn1() {
+        //     var x = 2;  // 这个变量是局部变量
+        //     console.log(this);   // 默认指向window
+        //     console.log(this.x);
+        // }
+        // fn1();
+
+        // 应用场景三: 对象调用
+        // function fn2() {
+        //     console.log(this.x);    // 当前this指向是 对象 o
+        // }
+        // var o = {};
+        // o.x = 10;
+        // o.calc = fn2;  // 把函数fn2 赋值给 o.calc
+        // console.log(o.calc());  // this 指向的是 o
+
+        // 应用场景四: 构造函数调用
+        function Fn3(num) {
+            // 构造函数被实例化,这里会隐式地创建一个新对象 this 就指向它
+            this.x = num;
+            console.log(this);  // this 指向的是我们实例化后的新对象
+            console.log(this.x);
+            // 默认 返回 this
+        }
+        var obj3 = new Fn3(9);
+
+        // 应用场景五: apply call
+        // apply call 使用改变当前函数被调用执行时它的this 指向的是第一个参数(对象)
+        // 两者的区别: 前者 第二个参数是个数组  后者参数是一个一个地传进来的,然后传递给函数
+        function fn4(a, b, c) {
+            console.log(a);
+            console.log(b);
+            console.log(c);
+            console.log(this);  // this 指向 o
+        }
+        var o = {};
+        // fn4.apply(o, [1, 2]);
+        fn4.call(o, 5, 2, 3, 4, 6);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 函数的使用
+        // 怎么声明的
+        /* 
+            语法:
+            function 函数名(形参1, 形参2...){  // 形式上的参数,多个形参,用逗号隔开,可选
+
+            ​		// 函数体
+
+            }
+        */
+        // 声明一个名字为aaa的函数
+        // function aaa(){
+        //     alert('我是aaa函数内部的代码!');
+        // }
+
+        // 函数声明以后,必须要调用,如果不调用,是不能执行函数体的代码
+        // 调用函数
+        /* 
+            语法:
+            函数名(实参1,实参2....); //实际上的参数
+        */
+        // 调用函数aaa
+        //    aaa();
+
+        //  声明一个有参数的函数
+        //    function bb(num){  // 形参是num
+        //         // 怎么使用num
+        //         alert(num);
+        //    }
+
+        // 调用有参数的函数
+        //    bb(2);  
+
+        // 加法运算
+        // function add(a, b){ // a,b是两个形参
+        //     console.log(a + b);
+        // }
+
+        // //调用加法函数
+        // add(10, 2);  // 给你两个实参,10给到a,2给到了b
+        // add(11, 12);  
+        // add(16, 20); 
+
+        // 三角形的面积
+        // 底边 和 高
+        // function area(wide, high){
+        //     alert('三角形的面积为:' + wide * high * 1/2);
+        // } 
+
+        // // 调用area
+        // area(12, 6); // 36
+        // area(56, 6); // 168
+
+        // 函数返回值的方式 return
+        /* 
+            function 函数名(){
+
+            ​	return 需要返回的结果;
+
+            }
+        */
+
+        // 获取到三角形的面积
+        // function area(wide, high){
+        //     var b = wide * high * 1/2;
+
+        //     alert('我写在return语句的前面,我能执行吗?');
+
+        //     // return只能返回一个值,如果有多个值,
+        //     // 你用逗号隔开,不会报错,但是只输出最后一个值
+        //     // 强烈建议return后面只写一个值
+        //     return b;
+
+        //     // return后面的代码是不再执行了
+        //     alert('我能执行吗?');
+        // }
+
+        // // 怎么拿到你返回给我的值
+        // // prompt()
+        // var area1 = area(16, 16);
+        // console.log(area1);
+
+        // 不给返回值
+        // function area(wide, high){
+        //     var b = wide * high * 1/2;
+
+        //     // 如果return后面什么都不写,函数返回的依然是undefined
+        //     if(!b){  // 如果b是0, !0 true
+        //         return;
+        //     }
+
+        //     alert('你是有面积的');
+        // }
+
+        // area(1, 12);
+        // // 所有的函数都有返回值,如果不写return,那么它的返回值是undefined
+        // // console.log(area(12, 10));
+
+        // 形参与实参不匹配
+        // 形参多于实参
+        // function add(a, b, c, d){
+        //     // a拿到了1,b拿到了2,c什么都没拿到,它的值就是默认的undefined
+        //     console.log(a, "a");
+        //     console.log(b, "b");
+        //     console.log(c, "c");
+        //     console.log(d, "d");
+        //     return a + b + c;
+        // }
+
+        // // 调用
+        // console.log(add(1, 2));
+
+        // 实参多于形参
+        // function add(a, b){
+        //     console.log(a, 'a');
+        //     console.log(b, 'b');
+        //     // a拿到了16,b拿到了2
+        //     return a + b;
+        // }
+
+        // //调用
+        // console.log(add(16, 2, 16));
+
+
+        //函数的第二种声明方式
+        // var add = function(a, b){
+        //     return a + b;
+        // }
+
+        // console.log(add(12, 6));
+
+        // 闰年:它可以被400整除,或者被4整除,同时不能被100整除
+        var year = prompt('请输入年份');
+
+        function isPrimeYear(year) { // year 2019
+            if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+                alert(year + '就是闰年');
+                return true;
+            } else {
+                alert(year + '就是平年')
+                return false;
+            }
+        }
+
+        // 调用函数
+        // console.log(isPrimeYear(year));
+
+        // 给你一个年份,请你告诉我今年2月份有多少天
+        // 如果是闰年,2月份就是29天,如果是平年,2月份就是28天
+        function getDays(year) { // year 2019
+            if (isPrimeYear(year)) { // year 2019
+                alert('今年的2月份有29天');
+            } else {
+                alert('今年的2月份有28天');
+            }
+        }
+
+        // 调用函数getDays,获取这一年2月份的天数
+        getDays(year);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

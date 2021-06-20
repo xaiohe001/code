@@ -1,0 +1,13 @@
+nav{
+    // 样式属性的嵌套
+    border:{
+        top:2px solid red;
+        left:1px solid blue;
+    };
+
+    font: {
+        size:20px;
+        weight:700;
+    };
+
+}

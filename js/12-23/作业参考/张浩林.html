@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#tab input{
+			width: 60px;
+			height: 30px;
+			background-color: grey;
+			line-height: 30px;
+			text-align: center;
+			color: white;
+			border:0 none;
+		}
+		#content{
+			width: 300px;
+			height: 300px;
+			border:2px solid black;
+		}
+		#content .item{
+			height: 300px;
+			line-height: 300px;
+			font-size: 50px;
+			text-align:center;
+			color: white;
+			background-color: orange;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="tab">
+		<input type="button" value="1" style="background-color:orange">
+		<input type="button" value="2">
+		<input type="button" value="3">
+	</div>
+	<div id="content">
+		<div class="item" style="display: block">
+			内容1
+		</div>
+		<div class="item" style="background-color: pink" >
+			内容2
+		</div>
+		<div class="item" style="background-color: green;">
+			内容3
+		</div>
+	</div>
+	
+	<script>
+		var item1 = document.getElementsByClassName('item')[0];
+		var item2 = document.getElementsByClassName('item')[1];
+		var item3 = document.getElementsByClassName('item')[2];
+
+		var btn1 = document.getElementsByTagName('input')[0];
+		var btn2 = document.getElementsByTagName('input')[1];
+		var btn3 = document.getElementsByTagName('input')[2];
+
+		btn2.onclick = function(){
+			item1.style.display = 'none';
+			item2.style.display = 'block';
+			item1.style.display = 'none';
+			btn1.style.backgroundColor = 'grey';
+			btn2.style.backgroundColor = 'orange';
+			btn3.style.backgroundColor = 'grey';
+		}
+		btn3.onclick = function(){
+			item1.style.display = 'none';
+			item2.style.display = 'none';
+			item1.style.display = 'block';
+			btn1.style.backgroundColor = 'grey';
+			btn2.style.backgroundColor = 'grey';
+			btn3.style.backgroundColor = 'orange';
+		}
+		btn1.onclick = function(){
+			item1.style.display = 'block';
+			item2.style.display = 'none';
+			item3.style.display = 'none';
+			btn1.style.backgroundColor = 'orange';
+			btn2.style.backgroundColor = 'grey';
+			btn3.style.backgroundColor = 'grey';
+		}
+	</script>
+</body>
+</html>

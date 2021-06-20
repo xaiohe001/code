@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .hide {
+            display: none;
+        }
+        
+        ul li {}
+    </style> -->
+
+</head>
+
+<body>
+    <div id="wrapper">我是wrapper的原始内容</div>
+    <p class="aa"></p>
+    <ul id="list">
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+        <li class="item">5</li>
+    </ul>
+
+    <ol>
+        <li></li>
+    </ol>
+
+    <p class="item">我是p元素,类名为item</p>
+
+    <input type="text" name="inputName" value="12" />
+    <input type="text" name="inputName" value="10" />
+</body>
+<script>
+    // 文档加载完成之后自动执行window的方法onload
+    window.onload = init;
+
+    // 初始化函数
+    function init() {
+        // 通过id获取元素
+        var wrapper = document.getElementById('wrapper');
+        var list = document.getElementById('list');
+        // 直接使用id名
+        wrapper.innerHTML = "我想覆盖掉所有元素";
+
+        // 通过class类名获取元素, 获取到的是一个类数组
+        // var item = document.getElementsByClassName('item')
+        // 想要获取到某一个标签的类名相同的子元素
+        // var item = list.getElementsByClassName('item');
+        // 可以通过标签名进行获取元素
+        // var item = document.getElementsByTagName('li');
+        // var aa = document.getElementsByClassName('aa');
+        // 可以通过name名获取元素
+        var inputName = document.getElementsByName('inputName');
+
+        console.log(inputName);
+
+        // querySelector('CSS选择器'), 取到该选择器的第一个元素
+        var aa = document.querySelector('.aa');
+        // querySelectorAll('CSS选择器')
+        var item = document.querySelectorAll('.item');
+
+        var liItem = document.querySelector('#list .item');
+
+        // console.log(liItem);
+        // console.log(item);
+        // aa.innerHTML = "hhh";
+        // console.log(item[0]);
+        // item[0].innerHTML = '我是item1';
+        // item[1].innerHTML = '我是item2';
+        // item[5].innerHTML = '我覆盖了p标签的内容';
+        // 直接插入HTML
+        // wrapper.innerHTML = '我是wrapper里面的内容,我还可以添加标签<span>我是span标签</span>';
+        // 直接插入文本
+        // wrapper.innerText = '我是wrapper里面的内容,我还可以添加标签<span>我是span标签</span>';
+
+        // 获取属性, 内置属性
+        // 如果你的属性存在,那么就会修改该属性的值,如果该属性不存在,那么就会添加一个新的属性
+        // console.log(wrapper.getAttribute('id'));
+        wrapper.setAttribute('class', 'wrapper12');
+
+        // 添加行内样式
+        wrapper.style.color = "#f00";
+        wrapper.style.backgroundColor = "blue";
+        // 直接更改class类名
+        wrapper.className = "hide";
+    }
+</script>
+
+</html>

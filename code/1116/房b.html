@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>房</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .tou {
+            height: 30px;
+            background-color: #EFEFEF;
+        }
+        
+        .toua {
+            width: 1200px;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .toub {
+            width: 1200px;
+            height: 100px;
+            /* background-color: aqua; */
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .touc {
+            width: 600px;
+            height: 100px;
+            display: flex;
+            justify-content: left;
+        }
+        
+        .touc>span>img {
+            margin-top: 20px;
+        }
+        
+        .touc>h1 {
+            color: green;
+            margin-left: 50px;
+            margin-top: 25px;
+        }
+        
+        .lan {
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+        
+        .toud {
+            width: 500px;
+            height: 100px;
+        }
+        
+        .toud>[type="text"] {
+            width: 300px;
+            height: 40px;
+            margin-top: 20px;
+        }
+        
+        .toud>[type="submit"] {
+            width: 100px;
+            height: 42px;
+            margin-left: -6px;
+            background-color: #F15246;
+            color: #fff;
+        }
+        
+        .toud>p {
+            font-size: 10px;
+        }
+        
+        .head {
+            height: 50px;
+            background-color: #008000;
+        }
+        
+        .heada {
+            width: 1200px;
+            height: 50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            line-height: 50px;
+        }
+        
+        .heada>a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        .heada>a:hover {
+            color: #F15246;
+        }
+        
+        .lun {
+            height: 600px;
+            background-image: url(./img/timg.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .lun>h1 {
+            text-align: center;
+            color: #fff;
+        }
+        
+        .sou {
+            height: 100px;
+            background-color: #999;
+        }
+        
+        .soua {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            line-height: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .soua [type="text"] {
+            width: 500px;
+            height: 40px;
+        }
+        
+        .soua [type="submit"] {
+            width: 100px;
+            height: 42px;
+            position: relative;
+            left: -6px;
+            background-color: #F15246;
+            color: #fff;
+            border: none;
+            vertical-align: middle;
+        }
+        
+        .soua>span>a {
+            text-decoration: none;
+            padding-left: 30px;
+            color: #666;
+        }
+        
+        .soua>span>a:hover {
+            color: #008000;
+        }
+        
+        .tuan {
+            height: 2200px;
+            background-color: #EFEFEF;
+        }
+        
+        .tuana {
+            width: 1200px;
+            height: 40px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 20px;
+        }
+        
+        .tuana>p {
+            font-size: 8px;
+            color: #666;
+        }
+        
+        .tuanb {
+            width: 1200px;
+            height: 2100px;
+            margin: 0 auto;
+        }
+        
+        .tuanb>ul {
+            width: 1200px;
+            height: 2100px;
+            list-style: none;
+            /* border: 1px solid black; */
+            /* background-color: #008000; */
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .tuanb>ul>li {
+            width: 380px;
+            height: 480px;
+            /* border: 1px solid red; */
+            background-color: #fff;
+        }
+        
+        .tuanb>ul>li div {
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        
+        .tuanb>ul>li>div:nth-child(2)>p {
+            padding-top: 20px;
+        }
+        
+        .tuanb>ul>li>div:nth-child(2) span {
+            color: #666;
+        }
+        
+        .ju {
+            height: 60px;
+            line-height: 60px;
+            /* border: 1px solid #000; */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .ju>p b {
+            color: green;
+        }
+        
+        .ju button {
+            width: 100px;
+            height: 40px;
+            position: relative;
+            top: 10px;
+            background-color: #F15145;
+            color: #fff;
+            border: none;
+            margin-right: 10px;
+        }
+        
+        .kan {
+            width: 1200px;
+            height: 300px;
+            /* background-color: pink; */
+            margin: 0 auto;
+        }
+        
+        .kana {
+            text-align: center;
+            position: relative;
+            top: 20px;
+            /* height: 50px; */
+            /* border: 1px solid #000; */
+        }
+        
+        .kana>p {
+            color: #6C6C6C;
+            font-size: 6px;
+            padding-top: 8px;
+        }
+        
+        .kanc {
+            width: 800px;
+            height: 210px;
+            margin: 35px auto;
+            /* background-color: #F15145; */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .kand {
+            width: 130px;
+            height: 130px;
+            text-align: center;
+            /* border: 1px solid #000; */
+            background-color: #53B5F4;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .kand>img {
+            width: 100px;
+            height: 100px;
+            margin-top: 8px;
+            padding-top: 8px;
+            /* margin-left: 5px; */
+        }
+        
+        .kand>p {
+            font-size: 8px;
+            padding-top: 8px;
+            color: #6C6C6C;
+        }
+        
+        .kane {
+            width: 130px;
+            height: 130px;
+            text-align: center;
+            /* border: 1px solid #000; */
+            background-color: #64CB60;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .kane>img {
+            width: 100px;
+            height: 100px;
+            margin-top: 8px;
+            padding-top: 8px;
+            /* margin-left: 5px; */
+        }
+        
+        .kane>p {
+            font-size: 8px;
+            padding-top: 8px;
+            color: #6C6C6C;
+        }
+        
+        .kanf {
+            width: 130px;
+            height: 130px;
+            text-align: center;
+            /* border: 1px solid #000; */
+            background-color: #FD9301;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .kanf>img {
+            width: 100px;
+            height: 100px;
+            margin-top: 8px;
+            padding-top: 8px;
+            /* margin-left: 5px; */
+        }
+        
+        .kanf>p {
+            font-size: 8px;
+            padding-top: 8px;
+            color: #6C6C6C;
+        }
+        
+        .kang {
+            width: 130px;
+            height: 130px;
+            text-align: center;
+            /* border: 1px solid #000; */
+            background-color: #FF6D3E;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .kang>img {
+            width: 100px;
+            height: 100px;
+            margin-top: 8px;
+            padding-top: 8px;
+            /* margin-left: 5px; */
+        }
+        
+        .kang>p {
+            font-size: 8px;
+            padding-top: 8px;
+            color: #6C6C6C;
+        }
+        
+        .footer {
+            height: 300px;
+            margin-top: 120px;
+            background-color: #313133;
+        }
+        
+        .footera {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            /* background-color: rgb(192, 255, 195); */
+        }
+        
+        .fen {
+            width: 400px;
+            height: 300px;
+            float: left;
+            overflow: hidden;
+            /* background-color: purple; */
+        }
+        
+        .quan>i {
+            position: relative;
+            top: 25px;
+        }
+        
+        .quan>h2 {
+            margin-left: 30px;
+            color: #fff;
+        }
+        
+        .fena {
+            margin-left: 20px;
+        }
+        
+        .fena>a {
+            text-decoration: none;
+            color: #9b9b9b;
+        }
+        
+        .fena>a:hover {
+            color: #fff;
+        }
+        
+        .lv {
+            width: 360px;
+            height: 300px;
+            float: left;
+            overflow: hidden;
+            margin-left: 40px;
+            /* background-color: rgba(65, 17, 65, 0.39); */
+        }
+        
+        .lva {
+            margin-left: 20px;
+        }
+        
+        .lva>span {
+            color: #9b9b9b;
+        }
+        
+        .lva>a {
+            text-decoration: none;
+            color: #9b9b9b;
+        }
+        
+        .lva>a:nth-of-type(2):hover {
+            color: #fff;
+        }
+        
+        .huang {
+            width: 400px;
+            height: 300px;
+            float: left;
+            overflow: hidden;
+            /* background-color: yellowgreen; */
+        }
+        
+        .erweima {
+            width: 400px;
+            height: 250px;
+            overflow: hidden;
+            /* background-color: violet; */
+        }
+        
+        .erweima>div:nth-of-type(1) {
+            width: 150px;
+            height: 250px;
+            color: #fff;
+            float: left;
+            margin-left: 30px;
+        }
+        
+        .erweima p {
+            text-align: center;
+        }
+        
+        .erweima img {
+            width: 150px;
+            height: 150px;
+        }
+        
+        .erweima>div:nth-of-type(2) {
+            width: 150px;
+            height: 250px;
+            color: #fff;
+            float: left;
+            margin-left: 50px;
+        }
+        
+        .zuihou {
+            height: 35px;
+            background-color: #202020;
+        }
+        
+        .zuihoua {
+            width: 600px;
+            height: 35px;
+            /* background-color: pink; */
+            margin: 0 auto;
+            line-height: 35px;
+            text-align: center;
+        }
+        
+        .zuihoua>a {
+            text-decoration: none;
+            font-size: 13px;
+            color: #824418;
+        }
+        
+        .zuihoua>a:nth-of-type(2) {
+            color: #1980B6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tou">
+        <div class="toua">
+            <div>欢迎访问海外房产网</div>
+            <span><button>登录</button>
+			<button type="button">注册</button></span>
+        </div>
+    </div>
+    <div class="toub">
+        <div class="touc">
+
+
+            <span><img src="./img/好房拓%204.0.0%20iconfont_海外.png" width="60"height="60"></span>
+            <h1>海外房产网</h1>
+            <span class="lan"><img src="img/1.png" ></span>
+        </div>
+
+        <div class="toud">
+            <input type="text" name="" id="" value="" />
+            <input type="submit" name="" id="" value="搜索" />
+            <p>热门搜索:新房|二手房|公寓|loft公寓|大套别墅</p>
+        </div>
+    </div>
+    <div class="head">
+        <div class="heada">
+            <a href="./房.html">首页</a>
+            <a href="./房a.html">海外房产</a>
+            <a href="./房b.html">房产咨询</a>
+            <a href="">首页</a>
+            <a href="">首页</a>
+            <a href="">首页</a>
+            <a href="">首页</a>
+            <a href="">首页</a>
+            <a href="">首页</a>
+            <a href="">首页</a>
+            <a href="">首页</a>
+        </div>
+    </div>
+    <div class="lun">
+        <h1>海外房产网</h1>
+    </div>
+    <div class="sou">
+        <div class="soua">
+            <form action="" method="">
+                <input type="text" name="" id="" value="" placeholder="搜索关键字,国家/地区/城市" />
+                <input type="submit" name="" id="" value="搜索" />
+            </form>
+            <span>
+							<a href="">最新快讯</a>
+							<a href="">最新快讯</a>
+							<a href="">最新快讯</a>
+							<a href="">最新快讯</a>
+						</span>
+        </div>
+    </div>
+    <!-- kaishi -->
+
+    <div class="kan">
+        <div class="kana">
+            <h2>看房优势</h2>
+            <p>KANFANGYOUSHI</p>
+        </div>
+        <div class="kanc">
+            <div class="kand">
+                <img src="./img/全程免费服务-01 (1).png" alt=""><br><br>
+                <span> <h4>全程免费</h4> </span>
+                <p>专业接送,免费餐饮</p>
+            </div>
+            <div class="kane">
+                <img src="./img/代看货.png" alt=""><br><br>
+                <span> <h4>专业代看</h4> </span>
+                <p>随时为你解答疑惑</p>
+            </div>
+            <div class="kanf">
+                <img src="./img/优惠 (2).png" alt=""><br><br>
+                <span> <h4>独家优惠</h4> </span>
+                <p>参加看房团得实惠</p>
+            </div>
+            <div class="kang">
+                <img src="./img/线路.png" alt=""><br><br>
+                <span> <h4>线路广布</h4> </span>
+                <p>总有一条你钟意</p>
+            </div>
+        </div>
+    </div>
+    <!-- jieshu -->
+    <div class="tuan">
+        <div class="tuana">
+            <h3>看房优势</h3>
+            <p>KANFANGYOUSHI</p>
+        </div>
+        <div class="tuanb">
+            <ul>
+                <li>
+                    <div><img src="./img/niao.jpg" alt=""></div>
+                    <div>
+                        <h3>[2020-03-23] 远洋新天地</h3>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                        <p><span>楼盘优惠: </span> 全程免费 专业代看</p>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                    </div>
+                    <div class="ju">
+                        <p><span>距离结束还有 : </span> <b>5天</b></p>
+                        <button>查看详情</button>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="./img/niao.jpg" alt=""></div>
+                    <div>
+                        <h3>[2020-03-23] 远洋新天地</h3>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                        <p><span>楼盘优惠: </span> 全程免费 专业代看</p>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                    </div>
+                    <div class="ju">
+                        <p><span>距离结束还有 : </span> <b>5天</b></p>
+                        <button>查看详情</button>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="./img/niao.jpg" alt=""></div>
+                    <div>
+                        <h3>[2020-03-23] 远洋新天地</h3>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                        <p><span>楼盘优惠: </span> 全程免费 专业代看</p>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                    </div>
+                    <div class="ju">
+                        <p><span>距离结束还有 : </span> <b>5天</b></p>
+                        <button>查看详情</button>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="./img/niao.jpg" alt=""></div>
+                    <div>
+                        <h3>[2020-03-23] 远洋新天地</h3>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                        <p><span>楼盘优惠: </span> 全程免费 专业代看</p>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                    </div>
+                    <div class="ju">
+                        <p><span>距离结束还有 : </span> <b>5天</b></p>
+                        <button>查看详情</button>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="./img/niao.jpg" alt=""></div>
+                    <div>
+                        <h3>[2020-03-23] 远洋新天地</h3>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                        <p><span>楼盘优惠: </span> 全程免费 专业代看</p>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                    </div>
+                    <div class="ju">
+                        <p><span>距离结束还有 : </span> <b>5天</b></p>
+                        <button>查看详情</button>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="./img/niao.jpg" alt=""></div>
+                    <div>
+                        <h3>[2020-03-23] 远洋新天地</h3>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                        <p><span>楼盘优惠: </span> 全程免费 专业代看</p>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                    </div>
+                    <div class="ju">
+                        <p><span>距离结束还有 : </span> <b>5天</b></p>
+                        <button>查看详情</button>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="./img/niao.jpg" alt=""></div>
+                    <div>
+                        <h3>[2020-03-23] 远洋新天地</h3>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                        <p><span>楼盘优惠: </span> 全程免费 专业代看</p>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                    </div>
+                    <div class="ju">
+                        <p><span>距离结束还有 : </span> <b>5天</b></p>
+                        <button>查看详情</button>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="./img/niao.jpg" alt=""></div>
+                    <div>
+                        <h3>[2020-03-23] 远洋新天地</h3>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                        <p><span>楼盘优惠: </span> 全程免费 专业代看</p>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                    </div>
+                    <div class="ju">
+                        <p><span>距离结束还有 : </span> <b>5天</b></p>
+                        <button>查看详情</button>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="./img/niao.jpg" alt=""></div>
+                    <div>
+                        <h3>[2020-03-23] 远洋新天地</h3>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                        <p><span>楼盘优惠: </span> 全程免费 专业代看</p>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                    </div>
+                    <div class="ju">
+                        <p><span>距离结束还有 : </span> <b>5天</b></p>
+                        <button>查看详情</button>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="./img/niao.jpg" alt=""></div>
+                    <div>
+                        <h3>[2020-03-23] 远洋新天地</h3>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                        <p><span>楼盘优惠: </span> 全程免费 专业代看</p>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                    </div>
+                    <div class="ju">
+                        <p><span>距离结束还有 : </span> <b>5天</b></p>
+                        <button>查看详情</button>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="./img/niao.jpg" alt=""></div>
+                    <div>
+                        <h3>[2020-03-23] 远洋新天地</h3>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                        <p><span>楼盘优惠: </span> 全程免费 专业代看</p>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                    </div>
+                    <div class="ju">
+                        <p><span>距离结束还有 : </span> <b>5天</b></p>
+                        <button>查看详情</button>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="./img/niao.jpg" alt=""></div>
+                    <div>
+                        <h3>[2020-03-23] 远洋新天地</h3>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                        <p><span>楼盘优惠: </span> 全程免费 专业代看</p>
+                        <p><span>楼盘优惠: </span> 5万抵97折</p>
+                    </div>
+                    <div class="ju">
+                        <p><span>距离结束还有 : </span> <b>5天</b></p>
+                        <button>查看详情</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+    </div>
+
+    <!-- 底部开始 -->
+    <div class="footer">
+        <div class="footera">
+            <div class="fen">
+                <div class="quan">
+                    <i style="width:15px;height:15px;border-radius:50%;background-color:pink;display: block"></i>
+
+                    <h2>友情链接</h2><br>
+                </div>
+                <div class="fena">
+                    <a href="http://www.bilibili.com">澳洲房地产网</a>&nbsp;&nbsp;&nbsp;
+                    <a href="http://www.bilibili.com">加帮国际</a>&nbsp;&nbsp;&nbsp;
+                    <a href="http://www.bilibili.com">海外房产网</a>&nbsp;&nbsp;&nbsp;
+                    <a href="http://www.bilibili.com">开封新闻</a><br><br>
+                    <a href="http://www.bilibili.com">开放分类目录加拿大房产网</a>&nbsp;&nbsp;&nbsp;
+                    <a href="http://www.bilibili.com">美国房产网</a>&nbsp;&nbsp;&nbsp;
+                    <a href="http://www.bilibili.com">澳洲房产网</a><br><br>
+                    <a href="http://www.bilibili.com">中房购</a>&nbsp;&nbsp;&nbsp;
+                    <a href="http://www.bilibili.com">申请链接</a>
+                </div>
+            </div>
+            <div class="lv">
+                <div class="quan">
+                    <i style="width:15px;height:15px;border-radius:50%;background-color:rgb(18, 119, 86);display: block"></i>
+
+                    <h2>联系我们</h2><br>
+                </div>
+                <div class="lva">
+                    <a href="">咨询热线: 4006-081-781</a><br><br> <span>邮箱:</span>
+                    <a href="http://www.bilibili.com"> www.lovekiomon.com</a>
+                </div>
+            </div>
+            <div class="huang">
+                <div class="quan">
+                    <i style="width:15px;height:15px;border-radius:50%;background-color:rgb(228, 225, 61);display: block"></i>
+
+                    <h2>关注我们</h2><br>
+                </div>
+                <div class="erweima">
+                    <div>
+                        <img src="./img/3.jpg" alt="">
+                        <br>
+                        <p>看一看</p><br>
+                        <p>看我可爱不</p>
+                    </div>
+                    <div>
+                        <img src="./img/4.jpg" alt="">
+                        <br>
+                        <p>瞅一瞅</p><br>
+                        <p>简直太完美了</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 底部结束 -->
+    <div class="zuihou">
+        <div class="zuihoua">
+            <a href="">&copy;</a>
+            <a href="">泸ICP备14054173号</a>&nbsp;&nbsp;&nbsp;
+            <a href="">Copyright</a>&nbsp;&nbsp;&nbsp;
+            <a href="">2020-2021</a>&nbsp;&nbsp;
+            <a href="">黑帮国际</a>&nbsp;&nbsp;
+            <a href="">All Right Reserved</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

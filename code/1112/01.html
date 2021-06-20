@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="chouJiang()">女朋友</button><br><br><br>
+		<script>
+			
+			console.log(Math.floor(Math.random()*10+20));//10`20之间随机数,向下取整
+			document.write(Math.PI);//圆周率
+			document.write("<br>")
+			document.write(Math.random());//0`1随机数
+			document.write("<br>")
+			var p = 5.65;
+			document.write(Math.round(p));//四舍五入
+			document.write("<br>")
+			document.write(Math.ceil(Math.random()*10+20));//10`20之间随机数,向下取整
+			document.write('<br>')
+			console.log('-------------------模拟抽奖------------------')
+			var names = ['苍井空','吉泽明步','水野朝阳','桃谷绘香','白石茉莉奈'];
+			var index= Math.floor(Math.random()*names.length)
+			console.log(index);
+			console.log(names[index]);
+			console.log(names);
+			function chouJiang(){
+				var i = Math.floor(Math.random()*names.length);
+				console.log("最佳女优获得主是:"+names[i]);
+				names.splice(i,1);
+				console.log(names);
+			}
+			console.log(Math.pow(2,10));//2的10次方
+		</script>
+	</body>
+</html>

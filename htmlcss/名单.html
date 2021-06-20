@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 150px;
+            text-align: center;
+            line-height: 800px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <div>开始</div>
+</body>
+<script>
+    var arr = ['王斌', '陈家鑫', '孙世源', '张于亮', '赵元凯', '梅永康', '张涛', '武福涛', '常红雷', '杨通', '王卡', '王苗迪', '郭旭', '刘畅', '刘政', '胡金龙', '从超超', '张靖阳', '罗艳龙', '张欣梦', '王润达', '邢朝令', '梁申涛', '孙天利', '赵修淼', '张家祥', '陈新宇', '朱家臣', '张孟秋', '宋昂', '郭辰露', '尚帅宏', '曾庆贺', '张浩哲', '魏一帆', '王松威', '石博', '王文龙', '胡俊', '张浩林', '刘力源', '肖雪雨']
+    console.log(arr.length);
+
+    var div = document.querySelector("div");
+    var i = 0;
+    var time;
+    div.onclick = function(){
+        i++;
+        if(i % 2 == 0){
+            clearInterval(time)
+        }else{
+            time = setInterval(function(){
+                var k = Math.floor(Math.random() * arr.length);
+                var r = Math.floor(Math.random() * 255);
+                var g = Math.floor(Math.random() * 255);
+                var b = Math.floor(Math.random() * 255);
+                div.innerHTML = arr[k];
+                div.style.color = `rgb(${r},${g},${b})`;
+            },10)
+        }
+    }
+</script>
+
+</html>

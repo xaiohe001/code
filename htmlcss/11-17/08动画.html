@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 帧动画 */
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            /* transition: all 1s; */
+
+            /* 使用帧动画 */
+
+            /* 设置动画名称 */
+            animation-name: dname;
+            /* 设置一次动画时间 */
+            animation-duration: 1s;
+            /* 设置动画曲线 */
+            animation-timing-function: linear;
+            /* 设置第一次动画的延迟时间 */
+            animation-delay: 0s;
+            /* 设置动画次数 n次 infinite无限次 */
+            animation-iteration-count: infinite;
+            /* 设置动画方向 
+            alternate往返执行
+            reverse反向执行
+            alternate-reverse先反向再往返*/
+            animation-direction: alternate-reverse;
+            /* 动画结束时停止的位置 forwards停留在最后一帧*/
+            animation-fill-mode: backwards;
+
+        }
+        /* div:hover{
+            left: 500px;
+        } */
+
+        /* 定义一个帧动画 */
+        @keyframes dname{
+            0%{
+                left: 0;
+                top: 0;
+            }
+            50%{
+                left: 500px;
+                top: 0;
+            }
+            100%{
+                left: 500px;
+                top: 500px;
+            }
+        }
+
+        @keyframes dong{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        section{
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: dong 1s linear infinite;
+        }
+
+        section:hover{
+            /* 暂停动画 */
+            animation-play-state: paused;
+        }
+
+        section:active{
+            animation-direction: reverse;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <section></section>
+</body>
+</html>

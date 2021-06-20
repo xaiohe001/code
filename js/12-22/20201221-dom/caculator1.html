@@ -1,0 +1,145 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>计算器1</title>
+</head>
+<style>
+  div {
+    width: 160px;
+  }
+
+  #show {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 35px;
+    height: 25px;
+  }
+</style>
+
+<body>
+  <div>
+    <form>
+      <input id="show" type="text" value="" readonly />
+      <input id="v7" type="button" value="7" />
+      <input id="v8" type="button" value="8" />
+      <input id="v9" type="button" value="9" />
+      <input id="chu" type="button" value="÷" />
+      <input id="v4" type="button" value="4" />
+      <input id="v5" type="button" value="5" />
+      <input id="v6" type="button" value="6" />
+      <input id="cheng" type="button" value="×" />
+      <input id="v1" type="button" value="1" />
+      <input id="v2" type="button" value="2" />
+      <input id="v3" type="button" value="3" />
+      <input id="jian" type="button" value="﹣" />
+      <input id="v0" type="button" value="0" />
+      <input id="jia" type="button" value="+" />
+      <input id="qing" type="button" value="C" />
+      <input id="deng" type="button" value="=" />
+    </form>
+  </div>
+  <script>
+    function $$(id) {
+      return document.getElementById(id);
+    }
+    var show = $$('show');
+    var v; // 存储 0-9 元素
+
+    var jia = $$('jia');
+    var jian = $$('jian');
+    var cheng = $$('cheng');
+    var chu = $$('chu');
+
+    var deng = $$('deng');
+    var qing = $$('qing');
+
+    var plus = false,
+      minus = false,
+      times = false,
+      divider = false;
+
+    var preValue = 0,
+      nextValue = 0;
+
+    // 把数据的处理 封装到一个函数
+    function handleNumber() {
+      show.value = show.value + this.value; // this 会指向绑定的元素
+      if (plus || minus || times || divider) {
+        nextValue = parseFloat(show.value);
+      } else {
+        preValue = parseFloat(show.value);
+      }
+    }
+
+
+    for (var i = 0; i < 10; i++) {
+      v = $$('v' + i);
+      v.onclick = handleNumber;
+    }
+
+    var actions = ['jia', 'jian', 'cheng', 'chu'];
+    var actionsLen = actions.length; // 获取操作列的长度
+    var action; // 操作元素
+
+
+    for(var j=0; j<actionsLen;j++) {
+      action = $$(actions[j]);
+
+      action.setAttribute('data-id', actions[j]);
+
+      action.onclick = function() {
+        var type = this.getAttribute('data-id');
+        console.log(j);
+
+        plus = false;
+        minus = false;
+        times = false;
+        divider = false;
+        show.value = '';
+
+        switch(type) {
+          case 'jia': 
+            plus = true; 
+            break; 
+          case 'jian': 
+            minus = true; 
+            break; 
+          case 'cheng': 
+            times = true; 
+            break; 
+          case 'chu':
+            divider = true;
+            break;
+        }
+      }
+    }
+
+    deng.onclick = function () {
+      if (plus) {
+        show.value = preValue + nextValue;
+      } else if (minus) {
+        show.value = preValue - nextValue;
+      } else if (times) {
+        show.value = preValue * nextValue;
+      } else if (divider) {
+        show.value = preValue / nextValue
+      }
+    }
+
+    qing.onclick = function () {
+      plus = false;
+      minus = false;
+      times = false;
+      divider = false;
+      show.value = '';
+    }
+  </script>
+</body>
+
+</html>

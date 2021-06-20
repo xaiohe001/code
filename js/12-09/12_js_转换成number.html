@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // parseInt()将字符串转换成整数,如果解析到非数值时,自动放弃解析
+        var str = '56';
+        console.log(parseInt(str));
+
+        var str1 = '888fafafa';
+        console.log(parseInt(str1));
+
+        var str2 = 'liuliuliu666';
+        console.log(parseInt(str2)); // NaN
+
+        // parseFloat()将字符串转换成浮点型,如果解析到非数值时,自动放弃解析
+        var str3 = '12.56';
+        console.log(parseFloat(str3));
+
+        var str4 = '12.25.65';
+
+        console.log(parseFloat(str4));
+
+        var str5 = 'aaa12.8';
+
+        console.log(parseFloat(str5)); // NaN
+
+        // 也可以强制转换成数值,Number(),如果原来的数据中有不能转换成数值的字符,就会返回NaN
+        var str6 = '566';
+
+        console.log(Number(str6));
+
+        var str7 = '888aaa';
+
+        console.log(Number(str7)); // NaN
+
+        // 隐式转换,使用减号,乘号,除号,隐式转换成数值类型
+        var str8 = '66';
+
+        console.log(str8 - 1, '--');
+        console.log(str8 / 1, "str8 / 1");
+        console.log(str8 * 1, "str8 * 1");
+
+        var str9 = 'blue';
+        console.log(str9 - 1); // NaN
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

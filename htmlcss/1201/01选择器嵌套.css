@@ -1,0 +1,32 @@
+.box ul li a img {
+  width: 100px;
+}
+
+.box ul li a span {
+  color: red;
+}
+
+.box li {
+  border: 1px solid #000;
+}
+
+.box a {
+  display: block;
+}
+
+.box li > a {
+  color: blue;
+}
+
+.box li > a:hover {
+  color: red;
+}
+
+.box img {
+  width: 200px;
+}
+
+.box span {
+  color: blue;
+}
+/*# sourceMappingURL=01选择器嵌套.css.map */

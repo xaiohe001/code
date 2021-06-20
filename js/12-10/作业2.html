@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 斐波纳契数列
+        function cci(n) { // 第n项
+            if (isNaN(n) || n < 1) {
+                return n;
+            } else if (n <= 2) {
+                return 1;
+            } else {
+                // 存储第n项的数字
+                var num;
+                // 第n-2项的数字
+                var num1 = 1; // 1,2..
+                // 第n-1项的数字
+                var num2 = 1; // 2,3..
+                for (var i = 3; i <= n; i++) {
+                    // 获取到第n项的数字
+                    num = num1 + num2;
+                    // 更新n-2项,将原来的n-1项的内容,赋值给n-2项
+                    num1 = num2;
+                    // 更新n-1项,,将原来的n项的内容,赋值给n-1项
+                    num2 = num;
+                }
+
+                // 第n项的值
+                return num;
+            }
+        }
+
+        alert(cci(7));
+
+        // 递归
+        // function cci(n) {
+        //     if (isNaN(n) || n < 1) {
+        //         return n;
+        //     } else if (n <= 2) {
+        //         return 1;
+        //     } else {
+        //         return cci(n - 1) + cci(n - 2);
+        //     }
+        // }
+        // alert(cci(7));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

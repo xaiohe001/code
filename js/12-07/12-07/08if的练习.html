@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 获取一个数字 判断 这个数字是奇数还是偶数
+
+        // 设置赋值一个数字
+        // var num = 10;
+        // 获取一个输入的数字
+        // var num1 = prompt("请输入一个整数");
+        // // 获取的数字是字符类型的,将其转换成数字类型
+        // num1 = num1 * 1;
+        // // console.log(num,num1);
+
+        // // if(判断条件){对的时候执行的代码}else{错的时候执行的代码}
+        // if(num1 % 2 == 0){
+        //     console.log(num1 + "是偶数");
+        // }else{
+        //     console.log(num1 + "是奇数");
+        // }
+
+
+
+        // 判断 一个 年份是不是闰年 能被4整除并且不能被100整除的年份 或者能被400整除的年份叫世纪闰年
+        // var y = prompt("请输入一个年份")
+        // if(y % 4 == 0 && y % 100 != 0){
+        //     console.log(y + "年是一个图片闰年");
+        // }else if(y % 400 == 0){
+        //     console.log(y + "年是一个世纪闰年");
+        // }else{
+        //     console.log(y + "年是一个平年");
+        // }
+
+
+        // prompt("请输入一个数字");
+        // 1.获取三个数字判断三个数字的最大数
+        // var a = 10,b = 20,c = 30;
+        // // 判断a和b的值 a得到a与b中大的值
+        // if(a < b){
+        //     a = b;
+        //     if(a < c){
+        //         a = c;
+        //     }
+        // }
+        // console.log(a);
+
+        // 如果两个数字 如果a>b 则不替换 如果 b>a 交换两个数字的数值
+        var a = 10, b = 20;
+        // var n = 0;
+        // if(a < b){
+        //     n = a;
+        //     a = b;
+        //     b = n;
+        // }
+        // console.log(a,b);
+
+
+        // 2.输性别,身高,体重,查看体重是否标准
+        // var sex = prompt("请输入性别");
+        // var h = prompt("请输入身高cm");
+        // var w = prompt("请输入体重kg");
+        // var k = 0;
+        // if(sex == "男"){
+        //     k = (h - 80) * 0.7;
+        // }else{
+        //     k = (h - 70) * 0.6;
+        // }
+        // // 获取的标准体重
+        // console.log(k); //64.2
+        // if(k * 1.1 >= w && w >= k * 0.9){
+        //     console.log("标准体重");
+        // }else if(w <= k * 1.2){
+        //     console.log("微胖")
+        // }else if(w <= k * 1.5){
+        //     console.log("轻度肥胖");
+        // }else{
+        //     console.log("重度肥胖");
+        // }
+
+
+        // 3.输入一个月份,输出该月份的所属季节
+        // 12,1,2是冬 3,4,5是春  6,7,8是夏  9,10,11是秋
+        // var m = prompt("请输入一个月份");
+        // if(m >= 3 && m <= 5){
+        //     console.log("春");
+        // }else if(m >= 6 && m <= 8){
+        //     console.log("夏");
+        // }else if(m >= 9 && m <= 11){
+        //     console.log("秋");
+        // }else{
+        //     console.log("冬");
+        // }
+
+
+        // 4.请输入一个数字,判断这个数字是不是一个水仙花数
+        // 153 == 1*1*1+5*5*5+3*3*3;
+        // var num = 371; 
+        // var g = num % 10; //获取个位数
+        // var s = (num % 100 - g) / 10;
+        // var b = (num - num % 100) / 100;
+        // // console.log(b,s,g);
+        // if (num == b * b * b + s * s * s + g * g * g) {
+        //     console.log(num + "是一个水仙花数");
+        // } else {
+        //     console.log(num + "不是一个水仙花数");
+        // }
+
+
+        // 判断一个年龄是儿童||青少年||青年||壮年||中年||老年||暮年
+
+        // 判断分数 <60==E 60-70==D 70-80==C 80-90==B 90-99==A 100==S
+
+        //输入一个三位数,判断这个数字是不是降序数:例如321
+        var num = prompt("请输入一个三位的整数");
+        var g = num % 10; //获取个位数
+        var s = (num % 100 - g) / 10;
+        var b = (num - num % 100) / 100;
+        if(b > s && s > g){
+            console.log("是一个降叙述");
+        }else{
+            console.log("不是");
+        }
+    </script>
+</body>
+
+</html>

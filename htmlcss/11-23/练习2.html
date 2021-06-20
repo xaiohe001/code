@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        .box{
+            background-color: rgb(245, 245, 245);
+        }
+        .box > div{
+            width: 1200px;
+            margin: 0 auto;
+            /* border: 1px solid #000; */
+        }
+        .box section{
+            display: flex;
+            justify-content: space-between;
+        }
+        .box section:nth-of-type(1){
+            height: 40px;
+            align-items: center;
+        }
+        .box section > h2{
+            font-size: 22px;
+            font-weight: 200;
+            color: rgb(128, 78, 33);
+            font-family: "宋体";
+            padding-left: 30px;
+            position: relative;
+        }
+        .box section > h2::before{
+            content: "";
+            width: 4px;
+            height: 22px;
+            background-color: rgb(128, 78, 33);
+            position: absolute;
+            left: 0;
+            top: 0px;
+        }
+        .box section > a{
+            color: #333333;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .box section >div{
+            font-size: 0;
+            height: 628px;
+            overflow: hidden;
+        }
+        .box section >div > a{
+            display: block;
+            transition: all .2s linear;
+        }
+        .box section >div:hover > a{
+            transform: scale(1.05);
+        }
+        .box section >ul{
+            width: 958px;
+            /* border: 1px solid #000; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        .box li{
+            width: 232px;
+            height: 309px;
+            box-sizing: border-box;
+            padding: 4px;
+            background-color: #fff;
+            list-style: none;
+        }
+        .box li:hover >a{
+            animation: s .5s linear;
+        }
+        .box li >a{
+            display: block;
+        }
+        @keyframes s{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.05);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .box li img{
+            width: 100%;
+        }
+        .box li h4{
+            font-size: 16px;
+            color: #333;
+            font-weight: 400;
+            line-height: 35px;
+        }
+        .box li p{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .box li strong{
+            font-size: 20px;
+            color: rgb(255, 68, 51);
+            /* vertical-align: middle; */
+        }
+        .box li span{
+            font-size: 12px;
+            color: #666;
+            /* vertical-align: middle; */
+        }
+    </style>
+</head>
+<body>
+    <!-- div.box>div>(section>h2{爱情鲜花}+a{查看更多&#x3000;&gt;})+section>div+ul -->
+    <div class="box">
+        <div>
+            <section>
+                <h2>爱情鲜花</h2>
+                <a href="">查看更多&#x3000;&gt;</a>
+            </section>
+            <section>
+                <div>
+                   <a href="">
+                    <img src="https://cs.dinghuale.com/uploads/20200624/202006241117412831.jpg" alt="">
+                   </a>
+                </div>
+                <ul>
+                    <!-- (li>a>img+h4{佳期如梦}+p>strong{¥ 999}+span{销量123笔})*8 -->
+                    <li>
+                        <a href="">
+                            <img src="https://upyun.dinghuale.com/uploads/20200630/202006301433584611.jpg" alt="">
+                            <h4>佳期如梦</h4>
+                            <p><strong>¥ 999</strong><span>销量123笔</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upyun.dinghuale.com/uploads/20200630/202006301433584611.jpg" alt="">
+                            <h4>佳期如梦</h4>
+                            <p><strong>¥ 999</strong><span>销量123笔</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upyun.dinghuale.com/uploads/20200630/202006301433584611.jpg" alt="">
+                            <h4>佳期如梦</h4>
+                            <p><strong>¥ 999</strong><span>销量123笔</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upyun.dinghuale.com/uploads/20200630/202006301433584611.jpg" alt="">
+                            <h4>佳期如梦</h4>
+                            <p><strong>¥ 999</strong><span>销量123笔</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upyun.dinghuale.com/uploads/20200630/202006301433584611.jpg" alt="">
+                            <h4>佳期如梦</h4>
+                            <p><strong>¥ 999</strong><span>销量123笔</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upyun.dinghuale.com/uploads/20200630/202006301433584611.jpg" alt="">
+                            <h4>佳期如梦</h4>
+                            <p><strong>¥ 999</strong><span>销量123笔</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upyun.dinghuale.com/uploads/20200630/202006301433584611.jpg" alt="">
+                            <h4>佳期如梦</h4>
+                            <p><strong>¥ 999</strong><span>销量123笔</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upyun.dinghuale.com/uploads/20200630/202006301433584611.jpg" alt="">
+                            <h4>佳期如梦</h4>
+                            <p><strong>¥ 999</strong><span>销量123笔</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

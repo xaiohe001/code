@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // var i;
+    // for (i=0; i < 6; i++) {
+    //   setTimeout(() => { // 等到 执行定时器的时候 i值已经是6了
+    //     console.log(i)
+    //   }, 5000)
+    // }
+    
+    // 通过函数立即去执行的方式
+    // for (var i = 0; i < 6; i++) {
+    //   (function (i) {   // 每次去执行,其实就是在调用一次外层函数,那就当前的i保存到新对象内,然后把这个新对象放到作用域链中, 这样就能保证每次读到的i是想要的值
+    //     setTimeout(function() {
+    //       console.log(i)
+    //     }, 1500)
+    //   })(i);
+    // }
+
+    // var num = [];
+    // for(var i=0; i<4; i++){
+    //     num[i] = f1(i);
+    // }
+    // // num = [f1(0),f1(1),f1(2),f1(3)]
+    // function f1(n){
+    //     function f2(){
+    //         console.log(n);
+    //     }
+    //     return f2;
+    // }
+    // // 1. f1 是 外层函数
+    // // 2. 只要外层函数被调用,都会生成新的对象,来重新保存局部变量,这时候的局部变量就是n
+    // num[3](); // 第一次调用外层函数(f1) // 3
+    // num[2](); // 外层函数再次被调用 // 2
+    // num[3](); // 外层函数又再次被调用了 // 3
+    // num[1](); // 外层函数又再次被调用了 // 1
+    // num[0](); // 外层函数又再次被调用了 // 0
+
+    // foo(); // a发生了变量提升
+
+    // function foo(){
+    //     console.log(this.a)
+    // }
+    // var a = 3;
+    // var obj = {
+    //     a: 2,
+    //     foo: foo
+    // };
+
+    // // foo(); // 3
+
+    // obj.foo(); // this指向obj  控制台输出是 2
+
+    function foo() { console.log( this.a ) }
+    var obj2 = { a: 42, foo: foo };
+    var obj1 = { a: 2, obj2: obj2 };
+    obj2.foo(); // 42 this指向 obj2
+    obj1.obj2.foo();  // this指向由 obj1 转到 obj2 // 42
+  </script>
+</body>
+</html>

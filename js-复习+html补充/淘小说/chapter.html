@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body,html {
+        font-size: 10px;
+    }
+    #app {
+        width: 100%;
+        height: auto;
+    }
+    h2 {
+        text-align: center;
+        font-size: 3.5rem;
+    }
+    .contents {
+        padding: 0 5%;
+        color: #666;
+        font-size: 1.7rem;
+        line-height: 35px;
+    }
+    .sort{
+        width: 30%;
+        margin: 5% auto;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        color: #666;
+    }
+</style>
+<body>
+    <div id="app">
+        <div class="content">
+            <h2></h2>
+            <div class="contents"></div>
+        </div>
+        <div class="sort">
+            
+        </div>
+    </div>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    function getChapter(id='36425424984891843') {
+        $.ajax({
+            url: 'http://m.taoyuewenhua.com/ajax/chapter_content',
+            data: {
+                sourceName: 'yw',
+                sourceId: '13569508203407304',
+                chapterId: id
+            },
+            methods: 'GET',
+            success: function(res) {
+                $("h2").html(res.data.chapterTitle)
+                var str=''
+                var data1=res.data.content.split("\r\n")
+                for(var i=0; i<data1.length; i++) {
+                    str+=`
+                        <p>${data1[i]}</p>
+                    `
+                }
+                $(".contents").html(str)
+                // console.log(2222222,res.data.nextChapterId)
+                // var num1=2
+                str1=`
+                    <p class="prev" onclick="prev('${res.data.prevChapterId}')">上一章</p>
+                    <p class="next" onclick="next('${res.data.nextChapterId}')">下一章</p>
+                `
+                $(".sort").html(str1)
+            },
+            fail: function(err) {
+                console.log(err)
+            }
+        })
+    }
+    getChapter()
+
+    function prev(i) {
+        console.log(i)
+        getChapter(i)
+    }
+    function next(i) {
+        console.log(i)
+        getChapter(i)
+    }
+</script>
+</html>

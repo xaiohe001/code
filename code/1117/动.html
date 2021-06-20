@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+            text-align: center;
+            /* border: 1px solid #000; */
+            padding: 200px;
+        }
+        
+        img:hover {
+            width: 500px;
+            height: 400px;
+            transform-origin: center;
+            transition-duration: .2s;
+        }
+        
+        img:active {
+            transform: scale(3);
+            transition: transform 2s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="./img/1.jpg" width="300px" height="200px">
+            <p>郑州科技学院</p>
+            <p>应用电子技术</p>
+        </div>
+    </header>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* id选择器 权值=100 */
+        #box{
+            color: blue;
+        }
+
+        /* 伪类选择器 权值=10 */
+        div:first-of-type{
+            color: green;
+        }
+
+        /* 属性选择器 权值=10 */
+        /* 找到所有带有name属性的标签 */
+        /* [name] {
+            color: red;
+        } */
+
+        /* 找到div并且带有name属性 */
+        div[name]{
+            color: brown;
+        }
+
+        /* body > div#box.a{
+
+        } */
+
+
+        /* 找到带有name属性并且值为box的标签 */
+        /* [name='box']{} */
+
+        /* class选择器 权值=10 */
+        .a {
+            color: rgb(80, 226, 43) !important;
+        }
+
+        /* 标签选择器 权值=1 */
+        div {
+            /* 给这个样式添加最大权值 */
+            color: blue !important;
+        }
+
+        /* 通配符找到所有标签 权值=0 */
+        * {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 行内样式 权值=1000 -->
+    <div style="color:chocolate" id="box" class="a" name="box">这是div</div>
+    <div class="a">这是div</div>
+    <div class="a">这是div</div>
+</body>
+
+</html>

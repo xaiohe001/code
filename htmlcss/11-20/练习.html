@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 200px;
+            filter: contrast(20);
+            background: #fff;
+        }
+
+        div::before {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #333;
+            top: 40px;
+            left: 40px;
+            z-index: 2;
+            filter: blur(6px);
+            box-sizing: border-box;
+            animation: a 4s ease-out infinite;
+        }
+
+        div::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #3F51B5;
+            top: 60px;
+            right: 40px;
+            z-index: 2;
+            filter: blur(6px);
+            animation: d 4s ease-out infinite;
+        }
+
+        @keyframes a {
+            50% {
+                left: 140px;
+            }
+        }
+
+        @keyframes d {
+            50% {
+                right: 140px;
+            }
+        }
+        header{
+            position: relative;
+            width: 500px;
+            margin: 200px auto;
+        }
+        section{
+            width: 0;
+            height: 0;
+            border-bottom: 86.6px solid red;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            position: absolute;
+            transform-origin: center top;
+        }
+        section:nth-of-type(2){
+            transform: rotate(60deg);
+        }
+        section:nth-of-type(3){
+            transform: rotate(120deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <header>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </header>
+</body>
+
+</html>

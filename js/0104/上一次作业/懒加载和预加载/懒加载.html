@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container img {
+      width: 100%;
+      min-height: 100px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://img.500px.me/photo/16401f92041febce406daa5c550394902/bdc576b0655f47e19cefb419961df477.jpg!p5" alt="">
+    <img src="https://img.500px.me/photo/16401f92041febce406daa5c550394902/105c700ab3094fbb843089c33e2da777.jpg!p5" alt="">
+    <img src="https://img.500px.me/photo/e27869e6e45408647e7a645b448e89958/fdac037197434fa9a8dbd1e9a974814c.jpg!p5" alt="">
+  </div>
+  <script>
+    var imgsHref = ['https://img.500px.me/photo/16401f92041febce406daa5c550394902/bdc576b0655f47e19cefb419961df477.jpg!p5', 'https://img.500px.me/photo/16401f92041febce406daa5c550394902/105c700ab3094fbb843089c33e2da777.jpg!p5', 'https://img.500px.me/photo/e27869e6e45408647e7a645b448e89958/fdac037197434fa9a8dbd1e9a974814c.jpg!p5', 'https://img.500px.me/500px1024818838.jpg!p5', 'https://img.500px.me/500px1024640475.jpg!p5', 'https://img.500px.me/500px1024640459.jpg!p5', 'https://img.500px.me/500px1024334520.jpg!p5', 'https://img.500px.me/500px1024334519.jpg!p5', 'https://img.500px.me/500px1023112735.jpg!p5', 'https://img.500px.me/500px1019414866.jpg!p5', 'https://img.500px.me/500px1019414678.jpg!p5', 'https://img.500px.me/500px1018189040.jpg!p5', 'https://img.500px.me/500px1018189035.jpg!p5', 'https://img.500px.me/500px1017472104.jpg!p5'];
+
+    var container = document.querySelector('.container'); // 获取存放img的元素
+    var len = imgsHref.length;  // 图片地址列表
+    for(var i=0; i<len; i++) {  // 把图片列表 渲染到页面中
+      var img = document.createElement('img');
+      img.setAttribute('data-src', imgsHref[i]);
+      container.appendChild(img);
+    }
+
+    window.onload = function() {  // 页面加载完成(文档 css 图片 js)
+      var imgs = document.querySelectorAll('img');  // 重新获取所有的图片
+      var len = imgs.length;  // 图片的个数
+      window.onscroll = function() {  // 监听鼠标滚动事件
+        for(var i=3; i<len; i++) {
+          var top = imgs[i].offsetTop; // 当前图片距离body顶部的距离
+          // document.documentElement.clientHeight 屏幕的可视区域高度
+          var scrollTop = document.documentElement.scrollTop || document.body.scrollTop || document.pageYOffset;
+          var pageHeight = document.documentElement.clientHeight + scrollTop; // 屏幕可视区域的高度 + 页面卷起的高度
+          if(top < pageHeight) { // 要加载的图片要出来了
+            imgs[i].src = imgs[i].getAttribute('data-src');
+          }
+        }
+      }
+    }
+
+
+
+  </script>
+</body>
+</html>

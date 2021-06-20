@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // 加了引号的字符是一种值 叫字符串
+        // var str = 'abc';
+        // var str1 = "中文";
+        // var str2 = `!@#`;
+
+        
+        // console.log(str,str1,str2);
+
+        // var str3 = "abc中文!@#";
+        // console.log(str3);
+
+
+        // 关于字符串的拼接
+        var str = "123";
+
+        // +号对于字符串有特殊的拼接意义 只要两个值有一个是字符串,就会进行拼接,生成一个新的字符串
+        console.log(str + 10); //12310
+
+        str = str + 10;
+        console.log(str); //12310
+
+        // 如果字符串的值是纯数字,进行- * / %运算的时候会进行隐式类型转换(会先将字符串转化成数字类型然后进行运算) 得到的是一个数字类型的值
+        str = str / 10;
+        console.log(str); //1231
+
+        str = str + "a";
+        console.log(str); //1231a
+
+        // 当进行数学计算时,两个值有一个不是数字,则会报nan 不是一个数字计算
+        str = str - 10;
+        console.log(str); //NaN
+
+
+        str = "陈晓芳";
+
+        console.log("我的名字是" + str);
+
+        // str = "我的名字是" + str;
+        // console.log(str);
+
+        var age = 16,sex = "男",phone = 15093105620,h = 177;
+
+        // 使用加号进行字符串的拼接
+        var str1 = "我的名字是:" + str + ";年龄是:" + age + ";性别是:" + sex + ";电话是:" + phone + ";身高是:" + h + ";";
+        console.log(str1);
+
+        // 使用反引号包裹的字符串中 使用${变量名} 可以识别这个变量的值
+        var str2 = `我的名字是: ${str} ;年龄是: ${age} ;性别是: ${sex} ;电话是: ${phone} ;身高是: ${h} ;`;
+        console.log(str2);
+
+
+    </script>
+</body>
+</html>

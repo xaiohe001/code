@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        canvas中贝塞尔曲线分为两种
+            绘制二次方贝塞尔曲线
+                quadraticCurveTo(cpx,cpy,x,y)
+                    需要两个点
+                    第一个点用于二次方贝塞尔曲线控制点的坐标
+                    第二个点表示用来控制贝塞尔曲线的结束点
+
+                    曲线的开始是当前路径中最后一个点
+                    如果路径中不存在最后一个点  我们可以使用beginPath和moveTo来定义这个点
+
+                    cpx
+                        贝塞尔曲线控制点x坐标
+                    cpy
+                        贝塞尔曲线控制点y坐标
+                        
+                    x
+                        结束点x坐标
+                    y
+                        结束点y坐标
+                        
+            绘制三次方贝塞尔曲线
+                bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
+                    需要三个点
+                        第一个点/第二个点用于三次方贝塞尔曲线控制点的坐标
+                        第三个点表示用来控制贝塞尔曲线的结束点
+
+                        曲线的开始是当前路径中最后一个点
+                        如果路径不存在可以使用beginPath和moveTo定义这个点(开始点)
+
+                    cp1x
+                    cp1y
+                        第一个贝塞尔曲线控制点x,y坐标
+
+                    cp2x
+                    cp2y
+                        第二个贝塞尔曲线控制点x,y坐标
+
+                    x
+                    y
+                        结束点x,y坐标
+
+
+     -->
+     <canvas id="canvas" width="500" height="500" style="border: 1px solid #ccc"></canvas>
+     <script>
+         var canvas=document.getElementById('canvas')
+         var ctx=canvas.getContext('2d')
+
+         ctx.beginPath()
+         ctx.moveTo(350,150)  // 开始点
+        //  ctx.quadraticCurveTo(100,150,150,0)   // 控制点  后边代表结束点
+         ctx.bezierCurveTo(200,10,100,500,0,300)
+         ctx.stroke()
+     </script>
+</body>
+</html>

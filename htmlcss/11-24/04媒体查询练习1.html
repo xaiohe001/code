@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* 设置一个标签 
+        当视图窗口宽度大于1200时 标签宽度为1200,背景颜色为红色
+        当视图窗口宽度在900-1200之间时 标签宽度为900,背景颜色为蓝色
+        当视图窗口宽度在600-900之间时 标签宽度为600,背景颜色为黄色
+        当视图窗口宽度小于600时 标签宽度为98%,背景颜色为绿色
+
+        设置一个标签宽度为1200,背景颜色为红色
+        当视图窗口宽度小于1200时 标签宽度为900,背景颜色为蓝色
+        当视图窗口宽度小于900时 标签宽度为600,背景颜色为黄色
+        当视图窗口宽度小于600时 标签宽度为98%,背景颜色为绿色
+         */
+         div{
+             height: 40px;
+         }
+         @media screen and (min-width:1200px){
+            div{
+                width: 1200px;
+                background-color: red;
+            }
+         }
+         @media screen and (min-width: 900px) and (max-width:1200px){
+            div{
+                width: 900px;
+                background-color:blue;
+            }
+         }  
+         @media screen and (min-width: 600px) and (max-width:900px){
+            div{
+                width: 600px;
+                background-color:yellow;
+            }
+         }  
+         @media screen and (max-width:600px){
+            div{
+                width: 98%;
+                background-color: green;
+            }
+         }
+
+/* **************************************************************************** */
+         /* @media all and (max-width: 1200px){
+            div{
+                width: 900px;
+                background-color:blue;
+            }
+         }
+         @media all and (max-width: 900px){
+            div{
+                width: 600px;
+                background-color:yellow;
+            }
+         }
+         @media all and (max-width: 600px){
+            div{
+                width:98%;
+                background-color:green;
+            }
+         } */
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:nth-child(2){
+            /*  设置定位之后的标签会在文档流标签之上
+            绝对定位: 可以更改参照标签
+                默认根据html进行定位
+                根据最近的设置有非静态定位属性的祖级(包裹这个标签的标签)标签进行定位
+                在文档流中不占据位置(脱离文档流)
+
+
+            1.需要根据父标签进行移动且不占据位置时
+            2.当一个标签需要覆盖其他标签时
+             */
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        body{
+            padding: 50px;
+            border: 1px solid #000;
+            position: relative;
+        }
+        header{
+            padding: 40px;
+            border: 1px solid #a00;
+            /* position: relative; */
+        }
+        nav{
+            padding: 30px;
+            border: 1px solid rgb(67, 71, 67);
+            /* position: relative; */
+        }
+        div{
+            padding: 20px;
+            border: 1px solid #00a;
+            /* position: relative; */
+        }
+        h1{
+            border: 1px solid #aa0;
+            /* position: relative; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1>
+                    <a href="">这是a1</a>
+                    <a href="">这是a2</a>
+                    <a href="">这是a3</a>
+                </h1>
+            </div>
+        </nav>
+    </header>
+    <section></section>
+</body>
+</html>

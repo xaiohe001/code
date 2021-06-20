@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 产生n位数字组成的验证码
+        // 返回这个验证码
+        function validateCode(n){
+            // 初始化存放验证码的变量
+            var str = '';
+            // n位数
+            for(var i=0; i<n; i++){
+                // 随机数 Math.random() 0~1
+                // 你需要 0~10 不包含10 Math.random()*10
+                // Math.random()*10这个取得值为小数,转换成整数
+                // 向下取整 Math.floor(Math.random()*10)
+                // console.log(Math.floor(Math.random()*10));
+                str += Math.floor(Math.random()*10);
+            }
+
+            return str;
+        }
+
+        document.write(validateCode(5));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

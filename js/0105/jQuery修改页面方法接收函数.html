@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="container">内容888</div>
+    <div class="container">内容1</div>
+    <div class="container">内容2</div>
+    <div class="container">内容3</div>
+    <script>
+        // text 方法 接收参数是 函数时
+        // 如果text方法没有传参, 获取的值是集合里面所有元素的文本的拼接
+        // 参数是函数的意义: 可以让开发者动态地去改变值
+
+        // html 方法 
+        // 如果text方法没有传参, 获取的值是集合里面第一个元素的文本(这个是和text方法的区别)
+
+        $(function(){
+            var $container = $('.container');
+            console.log($container.text());
+            // $container.text(function(index, value){
+            //     console.log(index, value);
+            //     return index % 2 ? value + '这是偶数行' : value + '这是奇数行';
+            // })
+
+            console.log($container.html());
+            $container.html(function(index, value){
+                console.log(index, value);
+                return index % 2 ? value + '这是偶数行!' : value + '这是奇数行!';
+            })
+
+            $container.css({'background': 'red', 'width': '200px'});
+            $container.on('click', function(){  // on用来绑定事件的
+                $(this).css('width', function(index, value){ // 函数里面第一个参数是下标,第二个参数是当前属性的值 $(this)就是当前被点击的jQuery对象
+                    console.log(index, value);
+                    // console.log(typeof value);
+                    return parseFloat(value) * 1.2;
+                });
+            })
+
+        })
+
+    </script>
+</body>
+</html>   

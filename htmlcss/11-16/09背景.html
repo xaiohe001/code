@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 500px;
+            border: 50px dashed #000;
+            padding: 50px;
+            /* 设置背景颜色 */
+            background-color: rgb(255, 0, 0);
+
+            /* 设置背景图片 url是引入图片路径 */
+            background-image: url("https://p1.music.126.net/c4OUUgRBD9tXSbSjkoUebg==/109951165472529426.jpg?imageView&quality=89");
+
+            /* 设置背景图片的大小 宽 高 */
+            background-size: 600px 400px;
+            /* 设置背景图片的重复 */
+            /* background-repeat: no-repeat; */
+
+            /* background-position: 0px 0px; */
+
+            /* 设置背景图片的固定 */
+            /* background-attachment: fixed; */
+
+            /* 设置背景图的初始位置 border-box从标签的左上角开始 padding-box从内边距的左上角开始 content-box从内容的左上角开始*/
+            background-origin: content-box;
+
+
+            font-size: 200px;
+            font-weight: 900;
+            color: transparent;
+        /* 设置背景图的剪切 border-box从标签的左上角开始 padding-box从内边距的左上角开始 content-box从内容的左上角开始*/
+            /* -webkit-background-clip: text; */
+
+            /* background是一个复合属性 */
+            background: red url("https://p1.music.126.net/c4OUUgRBD9tXSbSjkoUebg==/109951165472529426.jpg?imageView&quality=89") no-repeat;
+
+
+        }
+        /* body的高度比较特殊 高度默认是浏览器视图窗口的大小 */
+        /* body{
+            background-image: url("https://p1.music.126.net/c4OUUgRBD9tXSbSjkoUebg==/109951165472529426.jpg?imageView&quality=89");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        } */
+        span{
+            display: block;
+            border: 1px solid #000;
+            width: 50px;
+            height: 50px;
+            background-image: url("https://s2.music.126.net/style/web2/img/frame/topbar.png?17ca48629e5e7bc282828e244cbc0d82");
+            /* 设置背景图片移动 x y */
+            /*当需要显示一张图中的某一小块时 可以先设置标签的大小大一些,在浏览器中移动需要的图到标签的左上角,再缩小标签的大小 */
+
+            /* 一张图由多个图组成的图叫精灵图 */
+            /* background-position: 0 0; */
+        }
+        /* section{
+            height: 1000px;
+            border: 1px solid #000;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 文档流:标签会在父标签内容进行从上往下依次排列 -->
+    <div>
+        设置div的内容
+    </div>
+    <span></span>
+    <section></section>
+</body>
+</html>

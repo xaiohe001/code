@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        svg动画
+            requestAnimationFrame
+                1 经过浏览器优化 动画可以更加流畅
+                2 浏览器没有被激活时 动画会被暂停 省去了计算资源的时间
+                3 对于移动端比较友好 省点
+
+            使用方法 
+                function animation() {
+                    requestAnimationFrame(animation)   // animation对应的是 function函数名
+                }
+
+                可以使用cancelAnimationFrame()取消动画
+
+
+     -->
+     <p id="txt"></p>
+     <!-- <svg width="200" height="200" style="border: 1px solid #ccc">
+
+     </svg> -->
+
+     <script>
+         var num=0
+         var p=document.getElementById("txt")
+
+         function txt() {
+            var percent=num++
+            p.innerHTML=percent+'%'
+            timer=requestAnimationFrame(txt)
+            if(percent>75) {
+                p.innerHTML='75%'
+                cancelAnimationFrame(timer)
+            }
+         }
+         txt()
+     </script>
+</body>
+</html>

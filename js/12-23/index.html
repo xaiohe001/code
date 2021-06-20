@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+</head>
+<body>
+    <div class="container">内容
+        <div class="content">内容content</div>
+    </div>
+    <script>
+        // 事件类型: window事件   鼠标事件  键盘事件 form表单事件(提交 重置)
+        // 给一个dom节点绑定一个事件,希望给该事件赋值一个 事件处理函数;
+        // 三要素: 节点 事件类型 事件处理函数
+
+        // 事件执行顺序 遵循的原则
+        // 优先执行 html dom上设置绑定的方法
+        // 对于通过 addEventListener 注册的事件, 执行顺序是按照注册顺序
+        // 对于通过 attachEvent 注册的事件, 执行顺序是无序的 (了解)
+
+
+        // 事件注册的三个方式:
+        // 方式一: 给dom节点上的属性设置, 可以绑定多个函数,但是只能执行最后一个(确定)
+        // dom.onclick = function() {} 或者 dom.onclick = 事件名
+        // function 事件名() {}
+        var dom = document.querySelector('.container');
+        dom.onclick = function() {
+            console.log('container被点击了');
+        }
+
+        // setTimeout(function(){
+        //     dom.onclick = null;
+        // }, 5000)
+
+        // 方式二: 给html上的属性设置
+        // 如: <div class="box" onclick="fn()">box</div>
+
+        // 方式三: 通过 addEventListener (非ie低版本下,事件注册的固定写法)去注册绑定事件, 通过 attachEvent(ie低版本,来实现注册绑定事件,也是固定写法) 
+        var dom = document.querySelector('.container');
+        // 非ie低版本下 事件注册
+        // 参数说明: 第一个参数是 事件类型, 第二个参数是 事件处理函数(普通函数)
+        dom.addEventListener('click', handleDom, false)
+
+        function handleDom() {
+            dom.style.color = 'red';
+        }
+
+        // dom.addEventListener('click',function(){
+        //     dom.style.fontSize = '30px';
+        // }, false)
+
+        // ie低版本下 事件注册
+        // 参数说明: 第一个参数是 'on'+事件类型, 第二个参数是 事件处理函数(普通函数)
+        // dom.attachEvent('onclick', function(){
+        //     dom.style.color = 'red';
+        // });
+
+        // 封装
+        // 参数: 第一个参数是:dom节点, 第二个参数是: 事件类型(如 click), 第三个参数是  事件处理函数
+        // function addEvent(dom, type, handler) {
+        //     if(dom.addEventListener) {
+        //         dom.addEventListener(type, handler,false);
+        //     } else if(dom.attachEvent) {
+        //         dom.attachEvent('on'+type, handler);
+        //     }
+        // }
+
+        // var content = document.querySelector('.content');
+        // addEvent(content, 'click', function(){
+        //     content.style.fontSize = '100px';
+        // })
+
+        function fn() {
+            alert('弹出了');
+        }
+
+        // 删除事件的三种方式
+        // 方式一:
+        // <div class="box" onclick=""></div>
+        // 方式二:
+        // dom.onclick = null;
+        // 方式三:
+        // ie9及以上浏览器 其他浏览器 通过 removeEventListener 来删除注册的事件
+        // 参数说明: 第一个参数是 事件类型 第二个参数是 事件处理函数, 第三个 默认值是false
+        // 注意的是: 在删除事件时,第二个参数不能是匿名函数,否则删除不掉.
+        setTimeout(function(){
+            dom.removeEventListener('click', handleDom, false);
+        }, 5000)
+
+        // ie8及以下浏览器的兼容
+        // dom.detachEvent('onclick', handleDom);
+    </script>
+</body>
+</html>

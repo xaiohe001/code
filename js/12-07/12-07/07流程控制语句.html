@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 一个弹出的输入框
+        // prompt("输入框上边的提示信息");
+
+        // var n = prompt("请输入一个数字");
+        // 得到输入框输入的内容 是字符串类型的值
+        // console.log(n);
+
+        // 流程控制语句(即判断语句)
+        // 在代码的执行过程中控制一段代码是否执行
+
+        // 语法:如果...就...
+        //      如果...就...不然...
+        //      如果...就...不然如果...就...(不然如果...就...)*n不然...
+        //      if(判断条件){条件为真时执行的代码}
+        //      if(判断条件){条件为真时执行的代码}else{条件为假时执行的代码}
+
+        // 判断条件
+        //  > 大于
+        //  < 小于
+        //  <= 小于等于
+        //  >= 大于等于
+        //  = 赋值
+        //  == 等于 判断值不包裹类型
+        //  === 全等  判断值包裹类型
+        //  !=  不等于 
+        //  !== 不全等
+
+
+        // true  条件正确  非0的数字 有值的字符串
+        // false  条件错误  0 没有值的字符串  null undefined NaN
+
+        // 字符串的值如果是数字的话 会自动先进行转换(隐式类型转换)成数字后判断
+        // if(true){
+        //     console.log("代码输出了");
+        //     console.log(1 + true); //2
+        //     console.log(1 + false);//1
+        //     console.log(1 + null);//1
+        //     console.log(1 + undefined);//NaN
+        //     console.log("10" + 2 * 2);//104
+        // }
+
+
+        // !是取反的意思 非
+
+        var ean = true;
+        console.log(ean); //true
+
+        ean = !ean;
+        console.log(ean); //false
+
+        if(!true){
+            console.log("条件为真");
+        }else{
+            console.log("条件为假");
+        }
+
+
+        var num = 10;
+        if(num < 10){
+            console.log("小于10");
+        }else if(num == 10){
+            console.log("等于10");
+        }else{
+            console.log("大于10");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 三目运算符 (本质是if的简写)
+
+        var str = prompt("请输入一个1-3的数字");
+        // 1 == 石头 2 == 剪刀 3 == 布
+        // if(str == 1){
+        //     console.log("石头");
+        // }
+
+        // if(str == 1) console.log("石头");
+
+        var s;
+
+        // if(str == 1){
+        //     s = "石头";
+        // }else if(str == 2){
+        //     s = "剪刀";
+        // }else{
+        //     s = '布'
+        // }
+
+        str == 1 ? s = "石头" : (str == 2 ? s = "剪刀" : s = "布");
+
+        s = str == 1 ? "石头" : (str == 2 ? "剪刀" : "布");
+        console.log(s);
+
+        if(str >= 10){
+            console.log("大于")
+        }else{
+            console.log("小于")
+        }
+
+        str >= 10 ? console.log("大于") : console.log("小于");
+
+
+        
+
+    </script>
+</body>
+</html>

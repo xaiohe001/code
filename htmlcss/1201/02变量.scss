@@ -1,0 +1,31 @@
+$num:10;
+$str:left;
+
+
+.li#{$num}{
+
+    $n:50px;
+
+    a{
+        font-size: $n;
+    }
+
+    margin-#{$str}:$n;
+}
+
+
+$arr:red,blue,green;
+.li{
+    background-color: nth($arr,1);
+}
+
+.#{nth($arr,1)}{
+    // font-size: $n;
+}
+
+// @each $v in $arr {
+//     div{
+//         background-color: $v;
+//     }
+// }
+

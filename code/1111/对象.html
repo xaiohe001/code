@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// 创建对象的第一种方式
+			var obj = {}//空对象 
+			var obj ={name:'小明',age:18};
+			var obj = {name:'小明',age:18,speak:function(){
+				console.log('我会蹦迪')
+			}
+			}		
+			console.log(obj);
+			console.log('-------------------')
+			//创建对象的第二种方式
+			var person  = new Object();
+			person.name = '小三';
+			person.age = 66;
+			person.sayHi = function(){
+				console.log('Good morning')
+			}
+			console.log(person);
+			//创建对象的第三种方式 this 这个
+			function person(name,age,job){
+				this.name = name;
+				this.age = age;
+				this.job = job;
+				this.sayHi = function(){
+					console.log('Good morning')
+				}
+			}
+			
+		</script>
+	</body>
+</html>

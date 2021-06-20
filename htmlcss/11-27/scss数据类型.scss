@@ -1,0 +1,18 @@
+/*
+    x = 10 || 100px  数字类型number
+    x = left  字符串string
+    x = red
+    x = #142536
+*/
+
+$number:100px;
+
+$str:"active";
+
+// 颜色也是一个单独的类型 不加引号
+$color:#142536;
+
+// 将变量作为属性名使用 #{变量名}{}
+#box > .#{$str}{
+    color: $color;
+}

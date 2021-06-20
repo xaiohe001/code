@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box" onclick="fn()">box</div>
+    <input type="text" id="input">
+    <script>
+        // 注册事件的方式一: 通过给dom绑定事件
+        var dom = document.querySelector('.box');
+        dom.onclick = function () {
+            console.log('box被点击了');
+        }
+        dom.onclick = function () {
+            console.log('box又被点击了');
+        }
+
+
+        // 注册事件的方式二: 通过给html绑定事件
+        // function fn() {
+        //     console.log('fn被调用了');
+        // }
+
+        // 注册事件的方式三: 通过addEventListner来注册监听事件
+        // addEventListener的参数: 第一个是事件类型,第二个参数是处理事件,
+        // var dom = document.querySelector('.box');
+        // dom.addEventListener('click', function(){
+        //     console.log('addEventListener监听的函数被调用了');
+        // }, false);
+
+        // dom.attachEvent('onclick', function(){
+        //     console.log('attachEvent监听的函数被调用了');
+        // })
+
+        // 事件注册 封装
+        // 参数说明: 第一个参数是:目标节点,第二个参数是:事件类型(如click),第三个参数是处理事件的函数
+        function addListener(target, type, handler) {
+            if(target.addEventListener) {
+                target.addEventListener(type, handler, false);
+            } else if(target.attachEvent) {
+                target.attachEvent('on'+type, handler);
+            } else {
+                return false;
+            }
+        }
+
+
+        // 删除事件
+        // 删除绑定事件方式一:
+        // dom.onclick = null;
+        // 删除绑定事件方式二:
+        // 给html的on[type] 赋值为 '';
+        // 删除绑定事件方式三:
+        function romoveEventListener(target, type, handler) {
+            if (target.removeEventListener) {
+                target.removeEventListener(type, handler, false);
+            } else if (target.detachEvent) {
+                target.detachEvent('on' + type, handler, false);
+            }
+        }
+
+        // 事件对象
+        var input = document.getElementById('input');
+        input.setAttribute('data-mouse', 'mouse');
+        input.setAttribute('data-keyup', 'keyup');
+
+        input.onclick = function (evt) { // evt 就是event对象
+            var event = evt || window.event;
+            var target = event.target || event.srcElement; // 目标元素
+            var mouse = target.dataset.mouse;
+            // var mouse = target.getAttribute('data-mouse');
+            var keyup = target.dataset.keyup;
+            console.log(event);
+            console.log(target);
+            console.log(target.dataset);
+            console.log(mouse, 'mouse===');
+            console.log(keyup, 'keyup===');
+        }
+    </script>
+</body>
+
+</html>

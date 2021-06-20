@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scable=no">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            font-size: 100px;
+        }
+
+        nav{
+            background-color: red;
+            /* padding: 8px; */
+            padding: 0.08rem;
+        }
+        nav > div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav span{
+            display: block;
+            /* border: 1px solid #000; */
+            /* width: 25px;
+            height: 25px; */
+            width: 0.25rem;
+            height: 0.25rem;
+            background-image: url(https://gw.alicdn.com/tfs/TB17oY3qbGYBuNjy0FoXXciBFXa-564-62.png_620x10000.jpg_.webp);
+            /* background-size: 250px; */
+            background-size: 2.5rem;
+        }
+        nav img{
+            /* width: 101px; */
+            width: 1.01rem;
+        }
+        nav a{
+            color: #fff;
+            font-size: 0.12rem;
+            text-decoration: none;
+        }
+        nav section{
+            position: relative;
+            margin-top: 0.08rem;
+        }
+        nav input{
+            border: none;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #fff;
+            outline: none;
+            border-radius: 4px;
+            height: 0.307rem;
+            padding-left: 0.3rem;
+        }
+        nav i{
+            position: absolute;
+            top: 0.03rem;
+            left: 0.02rem;
+            width: 0.3rem;
+            height: 0.3rem;
+            background-image: url(https://gw.alicdn.com/tfs/TB17oY3qbGYBuNjy0FoXXciBFXa-564-62.png_620x10000.jpg_.webp);
+            background-size: 2.5rem;
+            background-position: -0.68rem 0;
+        }
+        @media screen and (min-device-width: 320px){
+            html{
+                font-size: 100px;
+            }
+        }
+        @media screen and (min-device-width: 360px){
+            html{
+                font-size: 112.5px;
+            }
+        }
+        @media screen and (min-device-width: 375px){
+            html{
+                font-size: 117.2px;
+            }
+        }
+        @media screen and (min-device-width: 411px){
+            html{
+                font-size: 128.43px;
+            }
+        }
+        @media screen and (min-device-width: 414px){
+            html{
+                font-size: 129.37px;
+            }
+        }
+        @media screen and (min-device-width: 540px){
+            html{
+                font-size: 168.75px;
+            }
+        }
+        @media screen and (min-device-width: 768px){
+            html{
+                font-size: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- nav>(div>span+img+a{登录})+section>input+i -->
+    <nav>
+        <div>
+            <span></span>
+            <img src="https://gw.alicdn.com/tfs/TB1wQw8qamWBuNjy1XaXXXCbXXa-237-41.png_240x10000.jpg_.webp" alt="">
+            <a href="">登录</a>
+        </div>
+        <section><input type="text"><i></i></section>
+    </nav>
+</body>
+</html>

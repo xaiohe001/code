@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* border: 1px solid #000000; */
+            /* overflow: hidden; */
+        }
+        header{
+            /* overflow: hidden; */
+            height: 50px;
+            /* border: 1px solid #f00; */
+            /* margin外边距 设置的是一个标签距离其他兄弟标签||父标签的距离 */
+            /* margin-top: 50px; */
+            padding-top: 50px;
+        }   
+
+        /* 外边距重叠 行标签上下外边距无效  行内块标签上下外边距会叠加 块标签上下外边距会重叠 以高的为准 */
+        .box1{
+            margin-bottom: 50px;
+        }
+        .box2{
+            margin-top: 70px;
+        }
+
+        img{
+            width: 100%;
+            height: 40px;
+            background-color: red;
+            margin-bottom: 70px;
+        }
+        input{
+            margin-top: 50px;
+        }
+        a{
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>这是h1标签</h1>
+        
+    </header>
+    <div class="box1">这是div1</div>
+    <div class="box2">这是div2</div>
+    <img src="" alt=""><input type="text">
+
+    <a href="">这是a</a>
+</body>
+</html>

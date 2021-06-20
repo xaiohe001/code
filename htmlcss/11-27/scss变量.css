@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*
+    变量: 可变的值
+
+    js中声明变量
+    var x = 10;
+
+    在scss中声明变量
+    $x:10px
+
+
+    变量作为值使用
+    样式属性名:变量名; 例如:  width: $x;
+
+    作为属性名使用
+    变量名:样式属性值
+*/
+nav {
+  width: 10px;
+  float: left;
+  margin-left: 200px;
+}
+/*# sourceMappingURL=scss变量.css.map */

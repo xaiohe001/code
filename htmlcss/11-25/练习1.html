@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #000;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        ul > li{
+            width: 22%;
+            margin-bottom: 30px;
+            border: 1px solid #f00;
+            overflow: hidden;
+            position: relative;
+        }
+        ul img{
+            width: 100%;
+            display: block;
+            transition: all .3s linear;
+        }
+
+        ul div{
+            position: absolute;
+            /* left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0; */
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            line-height: 200px;
+            color: #fff;
+            opacity: 0;
+            transition: all .3s linear;
+        }
+
+        ul > li:hover img{
+            /* animation: d 1s linear; */
+            transform: rotate(-45deg) scale(1.7);
+        }
+        ul > li:hover div{
+            opacity: 1;
+        }
+
+        .li{
+            height: 0;
+            border: none;
+            margin: 0;
+        }
+
+        @keyframes d {
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0.5;
+            }
+            100%{
+                opacity: 1;
+            }
+
+        }
+
+        @media all and (max-width:1200px){
+            ul{
+                width: 900px;
+            }
+            ul> li{
+                width: 30%;
+            }
+        }
+
+        @media all and (max-width:910px){
+            ul{
+                width: 700px;
+            }
+            ul> li{
+                width: 48%;
+            }
+        }
+        @media all and (max-width:710px){
+            ul{
+                width: 310px;
+            }
+            ul> li{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ul>(li>img[src="./16.png"])*8 -->
+    <ul>
+        <li><img src="./16.png" alt=""><div>内容</div></li>
+        <li><img src="./16.png" alt=""><div>内容</div></li>
+        <li><img src="./16.png" alt=""><div>内容</div></li>
+        <li><img src="./16.png" alt=""><div>内容</div></li>
+        <li><img src="./16.png" alt=""><div>内容</div></li>
+        <li><img src="./16.png" alt=""><div>内容</div></li>
+        <li><img src="./16.png" alt=""><div>内容</div></li>
+        <li><img src="./16.png" alt=""><div>内容</div></li>
+        <li class="li"></li>
+        <li class="li"></li>
+    </ul>
+</body>
+</html>

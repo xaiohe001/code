@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 闭包是造成 内存泄漏的 一个主要原因
+        function greeting(name) { // name 和 index都是局部变量,被放在一个新对象中,一直放在内存中,不会被释放
+            var index = 0;  // 局部变量 私有变量
+            function fn() {
+                console.log(++index);
+                return 'Hello ' + name;
+            }
+            return fn;
+        }
+        var some1 = greeting('world');
+        var some2 = greeting('js');
+        var some3 = greeting('jsss');
+
+        console.log(typeof some1);
+        console.log(typeof some1()); // string  some()  'Hello world'
+        console.log(some1());
+        console.log(some1('js'));
+        console.log('----------');
+        console.log(some2());
+        console.log(some2());
+        console.log(some3());
+
+
+        // 在闭包中,当我们去调用函数时, 会生成一个新对象来存储局部变量, 然后把这个新对象添加到当前的作用域链上; 当时调用结束后, 当前的局部变量不会被释放掉,继续在内存中.
+
+        // 而且外层函数只要调用一次,就会生成一次新的对象,来重新存储局部变量
+    </script>
+</body>
+</html>

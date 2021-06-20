@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 在js中一切皆对象
+
+       
+
+        // 对象(用来包裹多个不同类型的值)
+
+        var name1 = "赵元凯",age1 = 21,h1 = 178,w1 = 57,phone1 = 1245789789;
+        var name2 = "王苗迪",age2 = 21,h2 = 155,w2 = 75,phone2 = 456789789;
+
+
+        // 数组Array == []  对象Object == {}
+        // var obj = {};
+
+        // 对象内的内容是键值对的格式编辑的 键名:键值 属性名:属性值
+        var obj = {
+            name:"赵元凯",
+            age:21,
+        };
+
+        var obj1 = {
+            name:"王苗迪",
+            age:21,
+        }
+
+        console.log(obj);
+        // console.log(obj1);
+
+        // 获取对象中的某个属性的值
+        console.log(obj.name);
+        console.log(obj["name"]);
+
+        var a = obj.name;
+        console.log(a);
+
+
+        // 设置对象下某个属性的值, 如果有这个属性是修改, 没有则添加这个属性
+        obj.name = "肖雪雨";
+        console.log(obj);
+
+        obj["name"] = "赵元凯";
+        console.log(obj);
+
+        obj.h = 178;
+        console.log(obj);
+
+
+        // 字符串也有length属性,也可以通过 名称[索引值] 获取某个字符
+        var str = "qwertyuiop";
+        console.log(str.length);
+        console.log(str[0]);
+
+
+        // for...in... 是一种用来循环对象的语法(也可以循环字符串和数组)
+        for(var key in obj){
+            // key是获取对象的直系属性名 是string类型的
+            // console.log(typeof key);
+            console.log(obj[key]); //因为是字符串所以需要用 对象名[属性名] 的格式获取每个值
+            // console.log(obj.key);
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    canvas {
+        border: 1px solid red;
+    }
+</style>
+<body>
+    <!-- 
+        canvas
+            canvas是一个标签  可以自定义图形 比如圆形 正方形 三角形等等
+            但是canvas仅仅只是一个标签容器  你必须使用js来绘制图形
+            这个元素是为了在客户端进行图形设计的  它自身是没有任何行为
+            图形的绘制是必须在canvas画布上
+
+            canvas绘制图形api:
+                canvas属性
+                    width
+                    height
+                    这两个属性是用来设置当前画布的宽度和高度
+
+                    canvas绘制图形的话
+                        fillStyle
+                            该属性可以设置css的颜色 渐变或者图形   如果是颜色  这个颜色值可以是 #333 red rgb()  rgba()等等
+
+                        fillRect(x, y, width, height)
+                            该方法可以绘制一个实心矩形
+                            x,y 表示绘制矩形在当前画布中的x,y轴位置
+                            width height 表示绘制矩形的宽度和高度
+
+                        strokeStyle
+                            该属性可以是一个css颜色  渐变或图形
+
+                        strokeRect(x,y,width,height)  无填充
+                            该方法可以绘制一个空心矩形
+                            x,y 表示绘制矩形在当前画布中的x,y轴位置
+                            width height 表示绘制矩形的宽度和高度
+
+                        clearRect(x,y,width,height) 
+                            在给定的矩形内进行指定像素的清除
+
+                            x,y表示要清除元素在当前画布中x,y轴位置
+                            width height 表示要清楚元素的宽度和高度
+ 
+     -->
+     <!-- 
+         canvas标签在使用的时候 如果没有设置宽度和高度  它是有一个磨人的宽度和高度  300*150
+      -->
+     <canvas width="500" height="500" id="canvas"></canvas>
+     <script>
+         var canvas=document.getElementById('canvas')
+         var ctx=canvas.getContext('2d')   // 代表现在绘图的环境为2d环境
+         ctx.fillStyle="red"
+         ctx.strokeStyle='blue'
+         ctx.fillRect(50,50,100,150)
+         ctx.strokeRect(49,49,102,152)
+        
+        // // ctx.strokeRect(20,30,80,50)
+        // ctx.clearRect(100,50,50,80)
+         
+
+     </script>
+</body>
+</html>

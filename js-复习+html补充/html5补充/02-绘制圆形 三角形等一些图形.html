@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        canvas绘制圆形 三角形 直线等图形
+            直线
+                moveTo()
+                    把路径移动到画布中的指定的点 不绘制线条
+                lineTo()
+                    添加一个新点 在画布中创建从新点到原点指定的线段
+
+                arc()
+                    绘制一个圆
+                    里边有arc(x,y,r,sAngle,eAngle,counterclockwise)  前五个为必须元素
+                        x,y表示圆的圆心坐标
+                        r表示圆的半径
+                        sAngle eAngle  表示圆的起始角度和结束角度
+                        counterclockwise可以用来控制当前绘制圆形的方向 如果该值为false时候 顺时针  为true就是逆时针  可选元素
+
+                arc()
+                    绘制圆弧或者是曲线
+                        起始角度我们可以设为0
+                        结束角度我们就可以使用 2*Math.PI
+
+                fill()
+                    给当前图形填充
+
+                lineWidth
+                    线的宽度
+
+                ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlockwise)
+                参数的意思：(起点x.起点y,半径x,半径y,旋转的角度，起始角，结果角，顺时针还是逆时针)
+     -->
+
+    <canvas width="500" height="500" style="border: 1px solid #ccc" id="canvas"></canvas>
+    <script>
+        var canvas = document.getElementById('canvas')
+        var ctx = canvas.getContext('2d')
+            //  console.log(ctx)
+            //  ctx.moveTo(100,200)
+            //  ctx.lineTo(20,20)
+            //  ctx.lineWidth=5   // 线段宽度的时候我们可以直接进行赋值
+            //  ctx.strokeStyle='red'
+            //  ctx.stroke()
+
+        // 绘制一个等腰三角形
+        // ctx.moveTo(100,20)
+        // ctx.lineTo(20,120)
+        // ctx.lineTo(180,120)
+        // ctx.lineTo(100,20)
+        // ctx.strokeStyle="blue"
+        // ctx.lineWidth=5
+        // ctx.stroke()
+        // ctx.fillStyle='red'
+        // ctx.fill()
+
+        // 直角梯形
+        // ctx.moveTo(20,20)
+        // ctx.lineTo(100,20)
+        // ctx.lineTo(150,100)
+        // ctx.lineTo(20,100)
+        // ctx.lineTo(20,20)
+        // ctx.stroke()
+
+        // 绘制圆
+        // ctx.arc(100,100,50,0,2*Math.PI)
+        // ctx.strokeStyle="#eceae9"
+        // ctx.lineWidth=5
+        // ctx.stroke() 
+        // ctx.arc(100,100,50,0,1.5*Math.PI)
+        // ctx.strokeStyle="#222"
+        // ctx.lineWidth=5
+        // ctx.stroke() 
+
+        // 绘制椭圆
+        // ctx.ellipse(100,100,100,50,0,0,2*Math.PI,false)
+        // ctx.stroke()
+    </script>
+</body>
+
+</html>

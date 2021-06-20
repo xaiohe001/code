@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>百度一下,你就不知道</title>
+		<style type="text/css">
+			*{
+				padding: 0;margin: 0;
+			}
+			.tou{
+				width: 100#;height: 60px;
+			/* 	background-color: bisque; */
+			/* 	border: 1px solid #222222; */
+				
+			}
+			a{
+				text-decoration: none;
+			}
+			.touzuo{
+				width: 450px;height: 60px;
+				/* background-color: aqua; */
+				/* display: inline block; */
+				/* padding: 20px; */
+				line-height: 60px;
+				text-align: center;
+				float:left;	
+			}
+			.touzuo>a{
+				
+				margin: 0 10px;
+				color: #222;
+			}
+			a:hover{
+				color: #4662d9
+			}
+			.touyou{
+				width: 162px;height: 60px;
+				/* background-color: aqua; */
+				float:right;
+				line-height: 60px;
+				text-align: center;
+				
+			}
+			.you{
+				margin: 0 20px;
+				color: #222;
+			}
+			.you:hover{
+				color: #4662d9
+			}
+			.bei{
+				width: 162px;height: 30px;
+				/* border: 1px solid #F0FFFF; */
+				background-color: #4e71f2;
+				color: azure;
+				margin: 0 10px;
+				padding: 5px 10px;
+				border-radius: 10px;
+			}
+			
+			#tupian{
+				text-align: center;
+				
+			}
+			#sou{
+				width: 654px;height: 44px;
+				/* background-color: aqua; */
+				margin: 10px auto;
+			}
+			[name="wd"]{
+				width: 542px;height: 44px;
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+				outline: none;
+				border: 2px solid #a7aab5;
+				border-right: 0;
+				vertical-align: middle;
+				
+				
+			}
+			[name="wd"]:hover{
+				border-color: #c4c7ce;
+			}
+			[type="submit"]{
+				width: 110px;height: 48px;
+				float: right;
+				background-color: #4e6ef2;
+				border-top-right-radius: 10px;
+				border-bottom-right-radius: 10px;
+				border: 2px solid #a7aab5;
+				font-size: 17px;
+				color: #ffffff;
+				border: none;
+				vertical-align: middle;
+				cursor: pointer;
+				
+			}
+			[type="submit"]:hover{
+				background-color: #4662D9;
+			}
+			.piao{
+				margin: auto;
+				cursor:pointer
+				
+			}
+			.biao{
+				margin: auto;
+				}
+			.biao:hover{
+				color: #4E6EF2;
+				cursor:pointer
+			}
+			#di{
+				
+				width: 100%; height: 40px;
+				/* background-color: mediumturquoise; */
+				
+				position: fixed;
+				bottom: 0;
+			}
+			.zuoxia{
+				width: 560px;height: 40px;
+				/* background-color: antiquewhite; */
+				float:left:bottom;
+				line-height: 40px;
+				font-size: 10px;
+				text-align: center;
+				
+				
+			}
+			.zuoxia>a{
+				margin: 0 8px;
+				color: #9195a3;
+			}
+			.zuoxia>a:hover{
+				color: #222222;
+			}
+			.youxia{
+				width: 540px;height: 40px;
+				float:bottom:right;
+				/* line-height: 40px; */
+					float: none;
+				/* text-align: center; */
+				background-color: red;
+			}
+			.youxia>a{
+				/* margin: 0 8px; */
+				color: #9195A3;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div class="tou">
+			<div class="touzuo">
+				<a href="#">新闻</a>
+				<a href="#">hao123</a>
+				<a href="#">地图</a>
+				<a href="#">视频</a>
+				<a href="#">贴吧</a>
+				<a href="#">学术</a>
+				<a href="#">更多</a>
+					
+			</div>
+			<div class="touyou">
+				<a href="#" class="you">设置</a>
+				<a href="#" class="bei">登录</a>
+				
+			</div>
+		</div>
+		<div id="tupian">
+			<img src="./img/logo.png" alt="" width="270" height="129">
+		</div>
+		<div id="sou">
+			<form>
+				<input type="text" name="wd" id="wd" value="" />
+				
+				<input type="submit" name="" id="" value="百度一下" />
+			</form>
+		</div>
+		<table class="piao" border="0" width="600" height="50" cellspacing="0" cellpadding="0">
+			<tr align="left">
+				<td>百度热榜</td>
+			</tr>
+			</table>
+			<table class="biao" border="0" width="600" height="120" cellspacing="0" cellpadding="0">
+				
+			
+			<tr>
+				<td <a href="#">1</a> 华为55岁外籍副总裁在深圳去世</td>
+				<td <a href="#">4</a> 玛莎拉蒂案死者女儿抑郁休学</td>
+			</tr>
+			<tr>
+				<td <a href="#">2</a> 美国大选选举日投票正式开始</td>
+				<td <a href="#">5</a> 王岳伦退出李湘关联公司</td>
+				
+			</tr>
+			<tr>
+				<td <a href="#">3</a> 央视呼吁双11促销少一些套路</td>
+				<td <a href="#">6</a> 马云被四部门联合约谈</td>
+			</tr>
+			</table>
+			<div id="di">
+				<div class="zuoxia">
+				<a href="#">设为首页</a>
+				<a href="#">关于百度</a>
+				<a href="#">About Baidu</a>
+				<a href="#">百度营销</a>
+				<a href="#">使用百度前必读</a>
+				<a href="#">意见反馈</a>
+				<a href="#">帮助中心</a>
+				
+				</div>
+				
+				
+				<div class="youxia">
+				<a href="#">&copy;2020 Baidu</a>
+				<a href="#">(京)-经营性-2017-0020</a>
+				<a href="#">京公网安备11000002000001号</a>
+				<a href="#">京ICP证030173号</a>
+				
+				
+				
+				
+				
+				</div>
+				
+			</div>
+			
+		
+	</body>
+</html>

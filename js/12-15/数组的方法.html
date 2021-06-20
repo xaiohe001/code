@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // typeof 基本数据类型
+        // console.log(typeof [1, 2]);
+        // instanceof
+        /* 
+            数组名 instanceof Array
+
+            返回布尔值,如果是数组返回true,如果不是返回false
+
+            // 拓展 isArray()
+        */
+        //    console.log([1, 2] instanceof Array);
+        //    console.log('123' instanceof Array);
+
+        // 反转数组
+        // 语法: 数组名.reverse()
+        //    var arr = [89, 09, 888, 56];
+
+        //    console.log(arr.reverse());
+
+        // 排序
+        // 语法: 数组名.sort()
+        // sort在执行排序前,现将所有元素转换成字符串
+        // var arr = [10, 1, 2, 27, 25, 5];
+
+        // console.log(arr.sort()); 
+
+        // 比较函数
+        // function compare(a, b){  // 升序排列
+        //     if(a < b){
+        //         return -1;
+        //     } else if(a == b){
+        //         return 0
+        //     } else{
+        //         return 1
+        //     }
+        // }
+        // console.log(arr.sort(compare));
+
+        // a-b升序
+        // console.log(arr.sort(function(a,b){
+        //     return a - b;
+        // }));
+        // // b-a降序
+        // console.log(arr.sort(function(a,b){
+        //     return b - a;
+        // }));
+
+        // 数组合并
+        // var arr1 = ['A','B', 'C'];
+        // var arr2 = ['J','K', 'L'];
+        // var arr4 = ['mm','aa', '11'];
+
+        // concat()
+        /* 
+            var 新的数组名 = 数组1.concat(数组2, 数组3, 其他类型)
+            
+            不改变原数组,需要你新建一个数组进行存储
+        */
+        //    var arr3 = arr1.concat(arr2);
+
+        //    console.log(arr1);
+        //    console.log(arr3);
+        // 多个参数需要使用逗号隔开
+        // console.log(arr2.concat(arr1, arr4))
+        // console.log(arr2.concat(arr1, arr4, 222, 111))
+
+        // 位置方法
+        // indexOf
+        /* 
+            数组名.indexOf(数组的元素, 参数2)
+    
+            参数2: 你开始查找的初始位置,索引值
+            去查找该元素在这个数组中的第一个值索引值,从前往后查找的
+            如果找不到该元素将返回-1
+            */
+        // var arr = [1, 2, 2, 6, 2, 10];
+
+        // console.log(arr.indexOf(2)); // 1
+        // console.log(arr.indexOf(2, 3)); // 4
+
+        /* 
+            lastIndexOf
+    
+            数组名.lastIndexOf(数组元素)
+    
+            从后往前查找,查到第一个元素停止,将该元素的索引值返回
+            如果找不到该元素将返回-1
+            */
+        //    console.log(arr.lastIndexOf(2)); //4
+
+        // 用indexOf将前面的作业,数组去重再做一遍
+        //    var arr = [1,2,2,6,5,2,10];
+        //    // 用于存放新的已经去重以后的数组
+        //    var newArr = [];
+
+        //    // 遍历数组
+        //    for(var i=0; i<arr.length; i++){
+        //        // 判断在新数组中,arr[i]是否存在
+        //         if(newArr.indexOf(arr[i]) == -1){
+        //              // [1], i=1, [1, 2]; i=2
+        //             newArr.push(arr[i]);
+        //         }
+        //    }
+
+        //    console.log(newArr);
+
+        // every
+        // 语法: 数组名.every(function(item, index, array){     
+        //})
+        // item: 数组的元素
+        // index: 该数组元素的索引值
+        // array: 就是原数组
+        // 如果数组中的每一个元素都满足函数中return后面的条件,那么才返回true,否则,返回false
+
+        // var arr = [1, 2, 10, 6, 5];
+
+        // // 判断数组arr中的元素是否都大于2
+        // console.log(arr.every(function (item, index, array) { // 形参
+        //     return item > 2;
+        // }));  // every函数返回值为布尔值,true或者false
+
+        // // some
+        // // 语法: 数组名.some(function(item, index, array){})
+        // // 如果数组中只要有一个元素满足函数中return后面的条件,那么久返回true,否则,返回false
+        // console.log(arr.some(function (item) {
+        //     return item > 2;
+        // }));  //  some函数返回值为布尔值,true或者false
+
+
+
+        // filter
+        /* 
+            语法: 数组名.filter(function(item, index, array){})
+            
+            如果数组有满足,函数中return后面的条件的元素,
+            就将他们储存在一个新的数组中,并将新的数组返回
+            */
+        // var arr = [12, 20, 32, 10];
+
+        // console.log(arr.filter(function(item, index, array){
+        //     return item > 18;
+        // }));; // 新的数组,这个数组里面应该存放着大于18 的元素
+
+        // var arr = [
+        //     {name: 'lily1', age: 18, num: 2},
+        //     {name: 'lily2', age: 20, num: 2},
+        //     {name: 'lily3', age: 17, num: 2},
+        //     {name: 'lily4', age: 30, num: 2},
+        // ]
+
+        // 用于存放年龄大于18 的人员的名字
+        // var newArr = [];
+
+        // 去筛选出一个对象数组,筛选出大于18岁的人员的姓名
+        // var arr2 = arr.filter(function(item){
+        //     return item.age > 18;
+        // })
+
+        // 遍历数组
+        // for(var i=0; i<arr2.length; i++){
+        //     newArr.push(arr2[i].name);
+        // }
+
+        // 使用map
+        // var newArr = arr2.map(function(item){
+        //     return item.name;
+        // })
+
+        // console.log(newArr);
+
+        // map
+        /* 
+            数组名.map(function(item,index,array){})
+
+            返回匿名函数中,return后面的运算结果
+        */
+    //    var arr = [1,2,10,6];
+
+    //    console.log(arr.map(function(item){
+    //        return item * 4;
+    //    }));
+
+    // forEach
+    /* 
+        数组名.forEach(function(item, index, array){})
+
+        // 不返回数据, 我们只是需要在他的内部进行一些操作,
+        相当于遍历数组
+    */
+        // var arr=[1,1,2,3];
+
+        // for(var i=0; i<arr.length; i++){
+        //     // 执行一些操作
+        //      arr[i]
+        //      i
+        // }
+
+        // var num = 1;
+        // // 遍历数组
+        // arr.forEach(function(item, index, array){
+        //     console.log(item);
+        //     num ++;
+        // })
+
+        // console.log(num);
+
+        // join()
+        // 将数组转换成字符串的方法
+        // 语法: 数组名.join(参数) 
+        // 参数是'-',表明你想要将数组的元素用'-';连接成字符串,并输出
+        // 如果参数不填,默认是用逗号连接
+        var arr = ['hello', 'world'];
+
+        console.log(arr.join(''));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

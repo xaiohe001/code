@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 八进制,必须以0开头,值的范围0~7
+        // var num1 = 017; // 1*8 + 7 * 1 = 15
+        // 十六进制,必须以0x开头,值的范围0~9,A~F,字母可以是小写
+        // var num2 = 0x17; // 1*16 + 7 * 1 = 23
+        // console.log(num1);
+        // console.log(num2);
+
+        // 科学计数法,可以把一个数表示为数字（包括十进制数字）加e（或E），后面加乘以10的倍数
+        var num3 = 2.5e3; // 2.5 * 10 * 10 * 10 = 2500
+        var num4 = -6e2; // -600
+        var num5 = 6e-2; // 6 * 10 (-2) 0.06
+        console.log(num3);
+        console.log(num4);
+        console.log(num5);
+
+        // 写一个很小的数,会自动转化为科学计数法,ECMAScript默认把具有6个或6个以上前导0的浮点数转换成科学记数法。
+        var num6 = 0.0000002;
+        var num5 = 0.000002;
+
+        console.log(num6);
+        console.log(num5);
+
+        // 定义一个常量时,使用大写,每个单词之间使用下划线连接
+        // var SUM_NUM = 66;
+
+        // 数字型的最大值Number.MAX_VALUE
+        console.log(Number.MAX_VALUE);
+        // 数字型的最大值Number.MIN_VALUE
+        console.log(Number.MIN_VALUE);
+
+        // 正无穷
+        console.log(Number.POSITIVE_INFINITY);
+        // 负无穷
+        console.log(Number.NEGATIVE_INFINITY);
+        // 判断是否为有穷值isFinite
+        // console.log(isFinite(Number.POSITIVE_INFINITY));
+
+        console.log('string' - 1); // 字符串减1,NaN
+
+        // isNaN()用于判断是否是非数值
+        console.log(isNaN(NaN)); //true
+        console.log(isNaN(12)); //false
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

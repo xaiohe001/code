@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        canvas绘制文本
+            font
+                定义字体
+
+            fillText(text,x,y)  
+                实心字体
+                text 表示要绘制文本内容
+                xy 绘制文本的坐标
+            
+            strokeText(text,x,y)
+                空心字体
+     -->
+     <canvas id="canvas" width="500" height="500" style="border: 1px solid #ccc"></canvas>
+     <script>
+         var canvas=document.getElementById('canvas')
+         var ctx=canvas.getContext('2d')
+         ctx.font="120px 微软雅黑"
+         ctx.fillStyle="green"
+        //  ctx.fillStyle='blue'
+        //  ctx.fillText('宋昂',50,150)
+        // ctx.strokeStyle="red"
+        // ctx.lineWidth=5
+        // ctx.strokeText('宋昂',50,150)
+     </script>
+</body>
+</html>

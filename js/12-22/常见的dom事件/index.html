@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        内容
+        <div class="box">box内容</div>
+        <img src="https://500px.com.cn/community/photo-details/500px1026124256" alt="">
+
+        <input type="text" value="" id="input">
+        <hr />
+        <form action="" id="form">
+            <input type="text" id="inputs" />
+            <textarea name="" id="textarea" cols="30" rows="10">JJKLK</textarea>
+            <input type="reset" id="reset" />
+            <input type="submit" id="submit" />
+        </form>
+    </div>
+    <script>
+        // window
+        // onload 页面加载完成(文档 图片 js资源)
+        window.onload = function() {
+                console.log('页面加载完成,包含图片 js等资源');
+            }
+            // onresize 视口大小发现变化
+        window.onresize = function() {
+                console.log('视口打下发生了变化');
+            }
+            // onscroll 页面发生滚动
+        window.onscroll = function() {
+            console.log('页面发生滚动');
+        }
+
+        // 鼠标事件
+        var box = document.getElementsByClassName('box')[0];
+        // onclick 元素被点击时触发
+        box.onclick = function() {
+                console.log('box被点击了');
+            }
+            // ondblclick 元素被双击时触发
+        box.ondblclick = function() {
+                console.log('box被双击了');
+            }
+            // oncontextmenu 鼠标右键被点击
+        box.oncontextmenu = function() {
+                console.log('右键被点击了');
+            }
+            // onmousedown 鼠标被按下
+        box.onmousedown = function() {
+                console.log('鼠标被按下了');
+            }
+            // onmouseup 鼠标弹起
+        box.onmouseup = function() {
+                console.log('鼠标被弹起了');
+            }
+            // onmouseover 鼠标划过时触发
+        box.onmouseover = function() {
+                console.log('鼠标划过该区域');
+            }
+            // onmouseover 鼠标移出该区域时触发
+        box.onmouseout = function() {
+            console.log('鼠标移出被监听的区域');
+        }
+
+        // 键盘事件
+        var input = document.getElementById('input');
+        input.onkeydown = function() {
+            console.log('按键被按下了');
+        }
+        input.onkeypress = function() {
+            console.log('按键被按下并弹起时调用');
+        }
+        input.onkeyup = function() {
+            console.log('按键被弹起时调用');
+        }
+
+        // onkeypress 和 onkeyup的区别,当点击键盘上的功能键(方向键 enter键),
+        // 不会去调用onkeypress
+
+        // form表单时间
+        var form = document.getElementById('form');
+        var inputs = document.getElementById('inputs');
+        var textarea = document.getElementById('textarea');
+        var reset = document.getElementById('reset');
+        var submit = document.getElementById('submit');
+
+        // 获得焦点时被调用
+        inputs.onfocus = function() {
+            console.log('获得焦点');
+        }
+
+        // input框失去焦点时触发
+        inputs.onblur = function() {
+                console.log('失去焦点');
+            }
+            // 当input的数据值发生了变化且失去焦点
+        inputs.onchange = function() {
+                console.log('onchange事件触发了');
+            }
+            // onselect 用户在选择文本时触发的
+        inputs.onselect = function() {
+            console.log('onselect事件触发了');
+            var selectedText = window.getSelection();
+            console.log(selectedText + '');
+            // var selectedText;
+            // selectedText = inputs.value.slice(inputs.selectionStart, inputs.selectionEnd);
+            // console.log(selectedText);
+        }
+
+        form.onsubmit = function(e) {
+            console.log('onsubmit事件被触发了');
+            e.preventDefault();
+        }
+
+        form.onreset = function() {
+            console.log('onreset事件被触发了');
+        }
+    </script>
+</body>
+
+</html>

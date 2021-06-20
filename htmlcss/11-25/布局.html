@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 流式布局 */
+
+
+        .box{
+            border: 2px solid #000;
+            /* overflow: hidden; */
+            /*圣杯布局 */
+            /* padding: 0 410px; */
+            height: 500px;
+            /* 双飞翼布局 */
+            margin: 0 410px;
+        }
+        .box> div{
+            height: 500px;
+            border: 2px solid #f00;
+            float: left;
+           
+        }
+        .box> div:nth-child(2){
+            width: 100%;
+        }
+        .box > div:nth-child(1){
+            width: 400px;
+            margin-left: -404px;
+        }
+        .box > div:nth-child(3){
+            width: 400px;
+            margin-right: -404px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

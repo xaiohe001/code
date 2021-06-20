@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div></div>
+    <script>
+        // var name1 = "赵元凯",name2 = "王苗迪",name3 = "肖雪雨";
+
+        // document.write(name1);
+        // document.write(name2);
+        // document.write(name3);
+
+        // for(var k = 1;k <= 3;k++){
+        //     document.write("name" + k)
+        // }
+
+
+        // 当有很多个值时,这些值多次运用的场景(同一种类型的值)都是一样的,声明变量时起名字不方便,获取也不方便
+        // 所以有了数组(装同种类型的多个值) 推荐(常用于)装同类型的值
+        // 装什么类型多可以
+
+        var arr = [4,78,"aaa",true,undefined,null,NaN];
+        arr = ["aaa","bbb","ccc"];
+        console.log(arr); // ["aaa","bbb","ccc"]
+        // 通过索引值获取数组中的某一个值
+        // 索引值:即计算机语言中从0开始计量的序号(下标)
+        console.log(arr[0]);
+
+        // 如果获取这个索引值位置没有值得到undefined
+        var a = arr[3];
+        console.log(a);
+
+        
+        // 修改数组某个位置(索引值index)的值
+        arr[0] = "赵元凯";
+        console.log(arr);
+        
+        // 添加了一个新的值
+        arr[3] = "肖雪雨";
+        console.log(arr);
+        // 获取数组的长度(数组内值的个数) (长度比索引值大1)
+        console.log(arr.length);
+        
+        // 不管数组有多长,都是在数组的最后追加一个新的值
+        arr[arr.length] = "王苗迪";
+        console.log(arr);
+
+        document.write(arr[0]);
+        document.write(arr[1]);
+        document.write(arr[2]);
+        document.write(arr[3]);
+        document.write(arr[4]);
+        
+        var a = ['王斌', '陈家鑫', '孙世源', '张于亮', '赵元凯', '梅永康', '张涛', '武福涛', '常红雷', '杨通', '王卡', '王苗迪', '郭旭', '刘畅', '刘政', '胡金龙', '从超超', '张靖阳', '罗艳龙', '张欣梦', '王润达', '邢朝令', '梁申涛', '孙天利', '赵修淼', '张家祥', '陈新宇', '朱家臣', '张梦秋', '宋昂', '郭辰露', '尚帅宏', '曾庆贺', '张浩哲', '魏一凡', '王松威', '石博', '王文龙', '胡俊', '张浩林', '刘力源', '肖雪雨'];
+        var str = "<ul class='box'>";
+        for(var m = 0; m < a.length;m++){
+            str += `<li>${a[m]}</li>`;
+            // console.log(str);
+        }
+        str += "</ul>";
+        console.log(str);
+        document.write(str);
+
+        // var div = document.querySelector("div");
+        // div.innerHTML = str;
+    </script>
+</body>
+</html>

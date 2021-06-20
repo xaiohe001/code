@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 只要加了引号(单引号或双引号),但是这两个不能混着用
+        var str = '我是一串字符';
+        var str1 = "我ye是一串字符";
+        // var str2 = "我也是一串字符吧?'; // 不能混着用
+        // 字符串进行嵌套,外面是单引号时,里面应该是双引号,反之亦然.(外单内双,外双内单)
+        var str3 = '我是一个"学霸"';
+        // var str3 = "我是一个"学霸""; // 不能双引号嵌套双引号 
+
+        // 如果你非要在单引号内部使用单引号,你可以使用转义符\,将具有特殊意义的字符转义为普通字符
+        var str4 = '我是一个"学霸",所有我很\'爱学习\'';
+
+        console.log(str3);
+        console.log(str4);
+
+        // 添加换行的效果 \n n就是newline 新的一行
+        var str5 = "世界旅行不像它看上去的那么美好，\n只是在你从所有炎热和狼狈中归来之后，\n你忘记了所受的折磨，\n回忆着看见过的不可思议的景色，\n它才是美好的。"
+
+        console.log(str5);
+
+        // 加一个反斜杠在字符串内 \\
+        var str6 = "\\我是一个反斜杠";
+
+        console.log(str6);
+
+        // 字符串的长度,使用length
+        var str7 = "你猜一猜我有几个字符?"; //
+
+        console.log(str7.length);
+
+        // 拼接字符串 字符串 + 任意类型 = 拼接后的字符串
+        var str8 = "我是将要与你拼接的字符串";
+
+        console.log(str8 + 2);  
+        console.log(str8 + true);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

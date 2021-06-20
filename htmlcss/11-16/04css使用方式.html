@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        根据rel属性值关联href引入的文件是那种文件
+        stylesheet: 引入的是css文件
+        icon: 引入的是文档标签前的小图标 .ico
+     -->
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <!-- <link rel="icon" href=""> -->
+    <!-- 
+        css:层叠样式表 给html设置样式的
+        css写在哪:
+            1.在head标签内编辑一个sytle标签 在这个标签内编辑css样式
+            2.使用link标签的href属性引入一个外部的css文件
+            3.在标签的开始标签内添加style属性,属性值是设置的样式
+        怎么找到标签设置样式: 选择器(找到标签的方式)
+        关于设置文本样式: 字体的样式
+        关于设置位置: 定位 浮动 盒模型的内外边距
+        
+     -->
+    <style>
+
+        /* 
+            选择器选中标签{
+                设置给选中标签的样式,样式是以键值对的形式存在的  键名:键值;键名=键值;属性名=属性值; 每个键值对需要以分号隔开
+                分号;结束一段语句
+                样式属性名:样式属性值;
+            }
+        
+        */
+
+        div{
+            width: 100px;
+            height: 100px;
+            /* background-color: red; */
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: blue;"></div>
+</body>
+</html>

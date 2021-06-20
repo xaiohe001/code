@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则</title>
+</head>
+<body>
+    <script>
+        // 正则
+        // 定义: 就是特殊语法的字符串
+        // 功能: 匹配字符串, 替换字符串
+
+        // 反斜杠  就是转义字符
+        console.log('ab\'c');
+        // var str = "
+        //     <div>内容</div>
+        //     <div>内容</div>
+        // ";
+
+        var str = "" +
+            "<div>内容</div>" +
+            "<div>内容</div>" +
+        "";
+
+        // 利用 \ 实现多行字符的拼接
+        var str1 = "\
+            <div>内容</div>\
+            <div>内容</div>\
+        ";
+
+        document.write(str);
+        document.write(str1);
+    </script>  
+</body>
+</html>

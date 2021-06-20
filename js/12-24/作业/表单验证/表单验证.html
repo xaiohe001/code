@@ -1,0 +1,72 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>无标题文档</title>
+</head>
+<style type="text/css">
+  p label {
+    float: left;
+    margin-right: 20px;
+    width: 50px;
+    text-align: right;
+  }
+
+  #uname,
+  #upass {
+    float: left;
+    width: 200px;
+    margin-right: 10px;
+    height: 24px;
+    line-height: 20px;
+  }
+
+  .sub {
+    margin-left: 70px;
+  }
+
+  p {
+    clear: both;
+  }
+
+  /*#upassl{ font-size:11px; line-height:20px;}*/
+  .cue {
+    border: solid 1px #ffb8b8;
+    background: #fef2f2;
+    color: #f40000;
+    display: inline-block;
+    line-height: 24px;
+    padding: 0 20px;
+    overflow: hidden;
+    background: url(register_err.png) no-repeat 0px 3px;
+  }
+
+  .cor {
+    display: inline-block;
+    line-height: 24px;
+    padding: 0 20px;
+    overflow: hidden;
+    background: url(register_cor.png) no-repeat 0px 3px;
+    color: green;
+  }
+</style>
+<body>
+  <form id="form1" name="form1" method="post" action="http://www.baidu.com">
+    <p>
+      <label for="textfield">用户名</label>
+      <input type="text" name="textfield" id="uname" onblur="checkname()" />
+      <span id="unamel"></span>
+    </p>
+    <p>
+      <label for="textfield2">密码</label>
+      <input type="password" name="textfield2" id="upass" onblur="checkpass()" onclick="tipPass()" />
+      <span id="upassl"></span>
+    </p>
+    <p class="sub">
+      <input type="submit" name="button" id="button" value="提交" />
+      <input type="reset" name="reset" id="reset" value="重置" />
+    </p>
+  </form>
+</body>
+</html>

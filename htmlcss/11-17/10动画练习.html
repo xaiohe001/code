@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            position: absolute;
+            left: 0;
+        }
+        div{
+            width: 77px;
+            height: 91px;
+            background-image: url("./27.jpg");
+            background-position: -3px -12px;
+            animation: dong .5s step-end infinite;
+        }
+        section:nth-child(1){
+            top: 10%;
+            animation: hua 6s linear infinite;
+        }
+        section:nth-child(1) div{
+            animation: dong 0.4s step-end infinite;
+        }
+        section:nth-child(2){
+            top: 20%;
+            animation: hua 7s linear infinite;
+        }
+        section:nth-child(3){
+            top: 30%;
+            animation: hua 8s linear infinite;
+        }
+        section:nth-child(3) > div{
+            animation: dong .6s step-end infinite;
+        }
+
+        @keyframes hua{
+            from{
+                left: 0px;
+            }
+            to{
+                left: 100%;
+            }
+        }
+        @keyframes dong {
+            0%{
+                background-position: -3px -12px;
+            }
+            14.2%{
+                background-position: -110px -12px;
+            }
+            28.4%{
+                background-position: -223px -12px;
+            }
+            42.6%{
+                background-position: -333px -12px;
+            }  
+            56.8%{
+                background-position: -443px -12px;
+            }
+            71.1%{
+                background-position: -553px -12px;
+            }
+            85.3%{
+                background-position: -662px -12px;
+            }
+            100%{
+                background-position: -3px -12px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <section><div></div></section>
+    <section><div></div></section>
+    <section><div></div></section>
+
+    <header>
+        <nav>
+            <div></div>
+        </nav>
+    </header>
+</body>
+</html>

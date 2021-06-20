@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        单标签(所以功能都是通过属性添加的)
+        charset:设置字符集 
+        name与content属性结合使用
+        name属性值
+
+     -->
+    <meta charset="UTF-8">
+    <!-- 
+        在设置viewport的时候,pc端会自动忽略这句话,
+        当name属性值为viewport时,content的值是设置移动端页面显示的大小
+        content的属性值
+            width:设置视口的宽度 device-width设置屏幕宽度
+            initial-scale: 设置的是视口的显示比例
+            user-scalable: 是否可以手动缩放yes/no
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale=2.0,user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=2.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"> -->
+   
+     <!-- 设置网站的描述信息 -->
+    <meta name="description" content="网站的描述信息">
+     <!-- 设置关键字 -->
+    <meta name="keywords" content="关键字">
+     <!-- 设置作者 -->
+    <meta name="author" content="陈晓芳">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <div>内容</div>
+</body>
+</html>

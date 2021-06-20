@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        aside{
+            position: fixed;
+            left: 100px;
+            top:300px;
+            border: 1px solid #000;
+        }
+        aside a{
+            display: block;
+            line-height: 40px;
+        }
+
+        .box{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .box > div{
+            height: 1000px;
+            border: 2px solid #000;
+            background-image: linear-gradient(red,blue);
+            color: #fff;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 锚点: 也叫锚记 让页面快速定位的一种方式 -->
+    <aside>
+        <!-- a[href='#div$']{导航$$}*10 -->
+        <a href="#div1">导航01</a>
+        <a href="#div2">导航02</a>
+        <a href="#div3">导航03</a>
+        <a href="#div4">导航04</a>
+        <a href="#div5">导航05</a>
+        <a href="#div6">导航06</a>
+        <a href="#div7">导航07</a>
+        <a href="#div8">导航08</a>
+        <a href="#div9">导航09</a>
+        <a href="#div10">导航10</a>
+    </aside>
+    <div class="box">
+        <!-- div#div${这是div的内容$$}*10 -->
+        <div id="div1">这是div的内容01</div>
+        <div id="div2">这是div的内容02</div>
+        <div id="div3">这是div的内容03</div>
+        <div id="div4">这是div的内容04</div>
+        <div id="div5">这是div的内容05</div>
+        <div id="div6">这是div的内容06</div>
+        <div id="div7">这是div的内容07</div>
+        <div id="div8">这是div的内容08</div>
+        <div id="div9">这是div的内容09</div>
+        <div id="div10">这是div的内容10</div>
+    </div>
+</body>
+</html>

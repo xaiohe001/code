@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: brown;
+        }
+        nav > div{
+            background-color: pink;
+            height: 40px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+
+            width: 1200px;
+        }
+
+        /* 当视图窗口大小<=1200的时候 更改div的宽度为100% */
+
+        /* 定义一个媒体查询 */
+        /* @media all and (max-width: 1200px){
+            nav > div{
+                width: 100%;
+            }
+            section{
+                background-color: red;
+            }
+        } */
+
+        @media all and (min-width: 1300px){
+            nav{
+                background-color: chartreuse;
+            }
+        }
+
+
+        /* 设置一个标签 
+        当视图窗口宽度大于1200时 标签宽度为1200,背景颜色为红色
+        当视图窗口宽度在900-1200之间时 标签宽度为900,背景颜色为蓝色
+        当视图窗口宽度在600-900之间时 标签宽度为600,背景颜色为黄色
+        当视图窗口宽度小于600时 标签宽度为98%,背景颜色为绿色
+
+        设置一个标签宽度为1200,背景颜色为红色
+        当视图窗口宽度小于1200时 标签宽度为900,背景颜色为蓝色
+        当视图窗口宽度小于900时 标签宽度为600,背景颜色为黄色
+        当视图窗口宽度小于600时 标签宽度为98%,背景颜色为绿色
+         */
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <section>
+                左边的
+            </section>
+            <section>右边的</section>
+        </div>
+    </nav>
+</body>
+</html>

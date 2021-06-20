@@ -1,0 +1,36 @@
+// scss是css的扩展语言 保留css的所有样式 在css的基础上增加了一些东西
+nav{
+    height: 100px;
+    background-color: red;
+    // 可以根据标签的嵌套结构进行嵌套编辑
+
+    /*
+        css的选择器全部保留
+        选择器的嵌套(推荐不要太深
+
+    */
+    div{
+        width: 1200px;
+        margin: 0 auto;
+        ul{
+            display: flex;
+            li{
+                a{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .lis1{
+        background-color: pink;
+    }
+    a{
+        color: #fff;
+        &:hover{
+            color: blue;
+        }
+    }
+    section > a{
+        color: green;
+    }
+}
